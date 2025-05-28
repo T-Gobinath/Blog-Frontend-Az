@@ -1,0 +1,21 @@
+.alive-3d-card {
+    width: 480px;
+    height: 320px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    transition: transform 0.3s cubic-bezier(.25,.8,.25,1), box-shadow 0.3s;
+    will-change: transform;
+    background: #fff;
+    margin-bottom: 1.5rem;
+  }
+  .alive-3d-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .alive-3d-card:hover {
+    transform: perspective(600px) rotateY(8deg) scale(1.04);
+    box-shadow: 0 16px 48px rgba(31, 38, 135, 0.45);
+  }
