@@ -6,23 +6,29 @@ const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <div style={{
-      minHeight: '100vh',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      background: 'linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%)',
-      position: 'relative'
-    }}>
-      {/* Right-side buttons */}
-      <div style={{
-        position: 'absolute',
-        top: 40,
-        right: 40,
+    <div
+      style={{
+        minHeight: '100vh',
         display: 'flex',
-        gap: '1rem'
-      }}>
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: 'linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%)',
+        position: 'relative',
+        padding: '1rem'
+      }}
+    >
+      {/* Right-side buttons */}
+      <div
+        className="home-top-buttons"
+        style={{
+          position: 'absolute',
+          top: 40,
+          right: 40,
+          display: 'flex',
+          gap: '1rem'
+        }}
+      >
         <button className="btn btn-primary" onClick={() => navigate('/login')}>
           Login
         </button>
@@ -31,11 +37,11 @@ const Home = () => {
         </button>
       </div>
 
-      <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem', color: '#333' }}>
+      <h1 className="home-title">
         Welcome to Chatee Blog!
       </h1>
-      <p style={{ fontSize: '1.1rem', color: '#666', marginBottom: '2rem', maxWidth: 500, textAlign: 'center' }}>
-        Chatee gobi is your friendly space to share ideas, connect with others, and express yourself freely. Join our vibrant community and start meaningful conversations today!
+      <p className="home-description">
+        Chatee  is your friendly space to share ideas, connect with others, and express yourself freely. Join our vibrant community and start meaningful conversations today!
       </p>
       <div className="alive-3d-card">
         <img
@@ -43,7 +49,7 @@ const Home = () => {
           alt="Alive 3D"
         />
       </div>
-      <p style={{ marginTop: '2rem', fontSize: '1.2rem', color: '#555' }}>
+      <p className="home-footer">
         Explore, connect, and share your thoughts in a lively community!
       </p>
     </div>
