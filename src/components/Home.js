@@ -35,7 +35,7 @@ const Home = () => {
         Welcome to Chatee Blog!
       </h1>
       <p style={{ fontSize: '1.1rem', color: '#666', marginBottom: '2rem', maxWidth: 500, textAlign: 'center' }}>
-        Chatee is your friendly space to share ideas, connect with others, and express yourself freely. Join our vibrant community and start meaningful conversations today!
+        Chatee gobi is your friendly space to share ideas, connect with others, and express yourself freely. Join our vibrant community and start meaningful conversations today!
       </p>
       <div className="alive-3d-card">
         <img
