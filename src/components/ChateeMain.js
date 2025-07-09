@@ -1,3 +1,5 @@
+// ChateeMain.js
+
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -5,6 +7,11 @@ import ReplySection from './ReplySection';
 import LogoutButton from './LogoutButton';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
+// Import the CSS module
+import styles from './ChateeMain.module.css';
+// Import icons
+import { FiPlus } from 'react-icons/fi';
 
 const API_BASE = 'https://bloger-b7ayaeawb0cpf3e5.canadacentral-01.azurewebsites.net';
 
@@ -32,7 +39,9 @@ const ChateeMain = () => {
   const fetchPosts = async () => {
     try {
       const response = await axios.get(`${API_BASE}/api/posts`);
-      setPosts(response.data);
+      // Sort posts by creation date, newest first
+      const sortedPosts = response.data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+      setPosts(sortedPosts);
     } catch (err) {
       console.error('Failed to fetch posts:', err);
       setPosts([]);
@@ -44,12 +53,16 @@ const ChateeMain = () => {
 
   const handlePost = async (e) => {
     e.preventDefault();
+    if (!postTitle.trim() || !postContent.trim()) {
+      toast.warn('Title and content cannot be empty.');
+      return;
+    }
     try {
       const user = JSON.parse(localStorage.getItem('user'));
       await axios.post(`${API_BASE}/api/addPost`, {
         title: postTitle,
         content: postContent,
-        username: user?.username
+        username: user?.username,
       });
       setShowModal(false);
       setPostTitle('');
@@ -63,217 +76,109 @@ const ChateeMain = () => {
   };
 
   const toggleExpand = (id) => {
-    setExpandedPosts(prev => ({
+    setExpandedPosts((prev) => ({
       ...prev,
-      [id]: !prev[id]
+      [id]: !prev[id],
     }));
   };
 
+  const filteredPosts = posts.filter(
+    (post) =>
+      post.title?.toLowerCase().includes(search.toLowerCase()) ||
+      post.content?.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
     <>
-      <ToastContainer position="top-right" autoClose={3000} />
-      <div style={{
-        minHeight: '100vh',
-        background: 'linear-gradient(135deg, #f8fafc 0%, #e0eafc 100%)',
-        padding: 0,
-        margin: 0
-      }}>
-        <header style={{
-          width: '100%',
-          background: '#4f8cff',
-          color: '#fff',
-          padding: '1rem 2rem',
-          fontSize: '1.3rem',
-          fontWeight: 'bold',
-          letterSpacing: '1px',
-          boxShadow: '0 2px 8px rgba(0,0,0,0.04)'
-        }}>
-          Welcome, {username}! <LogoutButton />
+      <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} />
+      <div className={styles.pageWrapper}>
+        <header className={styles.header}>
+          <h1 className={styles.branding}>Chatee</h1>
+          <div>
+            Welcome, {username}! <LogoutButton />
+          </div>
         </header>
 
-        <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-          marginTop: '2rem'
-        }}>
+        <div className={styles.searchContainer}>
           <input
             type="text"
             value={search}
             onChange={handleSearch}
-            placeholder="Search discussions..."
-            style={{
-              width: '60%',
-              padding: '0.8rem 1rem',
-              borderRadius: '30px',
-              border: '1px solid #b5c9f7',
-              fontSize: '1.1rem',
-              outline: 'none',
-              boxShadow: '0 2px 8px rgba(79,140,255,0.07)'
-            }}
+            placeholder="Search discussions by title or content..."
+            className={styles.searchInput}
           />
         </div>
 
-        <div style={{
-          maxWidth: 800,
-          margin: '2rem auto',
-          background: '#fff',
-          borderRadius: '16px',
-          boxShadow: '0 2px 16px rgba(79,140,255,0.06)',
-          padding: '2rem'
-        }}>
-          <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '1rem' }}>
-            <button
-              onClick={() => setShowModal(true)}
-              style={{
-                backgroundColor: '#4f8cff',
-                color: 'white',
-                padding: '0.5rem 1rem',
-                borderRadius: '8px',
-                border: 'none',
-                cursor: 'pointer'
-              }}
-            >
-              + Post
+        <main className={styles.mainContent}>
+          <div className={styles.discussionsHeader}>
+            <h2>All Discussions</h2>
+            <button onClick={() => setShowModal(true)} className={styles.createPostBtn}>
+              <FiPlus /> Create Post
             </button>
           </div>
 
-          <h2 style={{ color: '#4f8cff' }}>All Discussions</h2>
-          {posts.length === 0 ? (
-            <p style={{ color: '#888' }}>No posts yet. Be the first to post!</p>
-          ) : (
-            posts
-              .filter(post =>
-                post.title?.toLowerCase().includes(search.toLowerCase()) ||
-                post.content?.toLowerCase().includes(search.toLowerCase())
-              )
-              .map(post => (
-                <div key={post.id} style={{
-                  border: '1px solid #e0eafc',
-                  borderRadius: '8px',
-                  padding: '1rem',
-                  marginBottom: '1rem',
-                  background: '#f8fafc'
-                }}>
-                  <h4 style={{ margin: 0, color: '#4f8cff' }}>{post.title}</h4>
-                  <div
-                    style={
-                      expandedPosts[post.id]
-                        ? { color: '#333', margin: '0.5rem 0' }
-                        : {
-                          color: '#333',
-                          margin: '0.5rem 0',
-                          display: '-webkit-box',
-                          WebkitLineClamp: 3,
-                          WebkitBoxOrient: 'vertical',
-                          overflow: 'hidden',
-                          textOverflow: 'ellipsis'
-                        }
-                    }
-                  >
-                    {post.content}
-                  </div>
-                  {post.content.length > 120 && (
-                    <button
-                      onClick={() => toggleExpand(post.id)}
-                      style={{
-                        background: 'none',
-                        border: 'none',
-                        color: '#4f8cff',
-                        cursor: 'pointer',
-                        padding: 0,
-                        fontSize: '1rem'
-                      }}
-                    >
-                      {expandedPosts[post.id] ? 'Show less' : 'Read more'}
-                    </button>
-                  )}
-                  <div style={{ fontSize: '0.95rem', color: '#888', marginBottom: '1rem' }}>Posted by: {post.username}</div>
-                  <ReplySection postId={post.id} />
-                </div>
-              ))
+          {posts.length > 0 && filteredPosts.length === 0 && (
+             <p>No posts match your search.</p>
           )}
-        </div>
+
+          {posts.length === 0 ? (
+            <p>No posts yet. Be the first to start a discussion!</p>
+          ) : (
+            filteredPosts.map((post) => (
+              <div key={post.id} className={styles.post}>
+                <h4 className={styles.postTitle}>{post.title}</h4>
+                <div className={styles.postMeta}>Posted by: {post.username}</div>
+                <div
+                  className={`${styles.postContent} ${
+                    expandedPosts[post.id] ? styles.postContentExpanded : ''
+                  }`}
+                >
+                  {post.content}
+                </div>
+                {post.content.length > 120 && (
+                  <button onClick={() => toggleExpand(post.id)} className={styles.readMoreBtn}>
+                    {expandedPosts[post.id] ? 'Show less' : 'Read more'}
+                  </button>
+                )}
+                <ReplySection postId={post.id} />
+              </div>
+            ))
+          )}
+        </main>
 
         {showModal && (
-          <div style={{
-            position: 'fixed',
-            top: 0, left: 0, right: 0, bottom: 0,
-            background: 'rgba(0,0,0,0.3)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            zIndex: 1000
-          }}>
-            <div style={{
-              background: '#fff',
-              borderRadius: '16px',
-              padding: '2.5rem',
-              minWidth: 600,
-              minHeight: 400,
-              boxShadow: '0 8px 32px rgba(0,0,0,0.18)',
-              position: 'relative'
-            }}>
-              <h3 style={{ marginBottom: '1.5rem', color: '#4f8cff', fontSize: '1.5rem' }}>Create Post</h3>
+          <div className={styles.modalOverlay} onClick={() => setShowModal(false)}>
+            <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+              <h3 className={styles.modalHeader}>Create a New Post</h3>
               <form onSubmit={handlePost}>
-                <div style={{ marginBottom: '1.5rem' }}>
+                <div className={styles.formGroup}>
                   <input
                     type="text"
                     placeholder="Title"
                     value={postTitle}
-                    onChange={e => setPostTitle(e.target.value)}
+                    onChange={(e) => setPostTitle(e.target.value)}
                     required
-                    style={{
-                      width: '100%',
-                      padding: '1rem',
-                      borderRadius: '8px',
-                      border: '1px solid #b5c9f7',
-                      fontSize: '1.15rem'
-                    }}
+                    className={styles.formInput}
                   />
                 </div>
-                <div style={{ marginBottom: '1.5rem' }}>
+                <div className={styles.formGroup}>
                   <textarea
                     placeholder="Compose your post..."
                     value={postContent}
-                    onChange={e => setPostContent(e.target.value)}
+                    onChange={(e) => setPostContent(e.target.value)}
                     required
-                    rows={10}
-                    style={{
-                      width: '100%',
-                      padding: '1rem',
-                      borderRadius: '8px',
-                      border: '1px solid #b5c9f7',
-                      fontSize: '1.1rem',
-                      resize: 'vertical',
-                      minHeight: 180
-                    }}
+                    className={styles.formTextarea}
                   />
                 </div>
-                <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '1rem' }}>
+                <div className={styles.modalActions}>
                   <button
                     type="button"
                     onClick={() => setShowModal(false)}
-                    style={{
-                      padding: '0.5rem 1rem',
-                      borderRadius: '8px',
-                      border: '1px solid #ccc',
-                      background: 'white',
-                      cursor: 'pointer'
-                    }}
+                    className={styles.cancelBtn}
                   >
                     Cancel
                   </button>
-                  <button
-                    type="submit"
-                    style={{
-                      padding: '0.5rem 1rem',
-                      borderRadius: '8px',
-                      border: 'none',
-                      background: '#4f8cff',
-                      color: 'white',
-                      cursor: 'pointer'
-                    }}
-                  >
+                  <button type="submit" className={styles.submitBtn}>
                     Post
                   </button>
                 </div>
