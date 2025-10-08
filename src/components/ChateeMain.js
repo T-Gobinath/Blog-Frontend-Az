@@ -13,7 +13,7 @@ import styles from './ChateeMain.module.css';
 // Import icons
 import { FiPlus } from 'react-icons/fi';
 
-const API_BASE = 'https://bloger-b7ayaeawb0cpf3e5.canadacentral-01.azurewebsites.net';
+const API_BASE = 'http://chateesp-cqbbbaccgvhpdmf0.canadacentral-01.azurewebsites.net';
 
 const ChateeMain = () => {
   const navigate = useNavigate();
