@@ -26,7 +26,7 @@ export default function Login() {
     setError('');
 
     try {
-      const response = await axios.post('http://chateesp-cqbbbaccgvhpdmf0.canadacentral-01.azurewebsites.net/api/login', credentials);
+      const response = await axios.post('https://chateesp-cqbbbaccgvhpdmf0.canadacentral-01.azurewebsites.net/api/login', credentials);
       if (response.data) {
         // Store user data in localStorage
         localStorage.setItem('user', JSON.stringify(response.data.data || response.data));

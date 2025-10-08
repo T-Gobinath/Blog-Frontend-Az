@@ -36,7 +36,7 @@ export default function Registration() {
     }
 
     try {
-      const response = await axios.post('http://chateesp-cqbbbaccgvhpdmf0.canadacentral-01.azurewebsites.net/api/addUser', formData);
+      const response = await axios.post('https://chateesp-cqbbbaccgvhpdmf0.canadacentral-01.azurewebsites.net/api/addUser', formData);
       if (response.data) {
         // Instead of an alert, we can navigate directly or show a success message.
         // For a better user experience, you might want to show a success page or modal.
