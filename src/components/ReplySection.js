@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const API_BASE = 'https://chateesp-cqbbbaccgvhpdmf0.canadacentral-01.azurewebsites.net';
+const API_BASE = 'https://blog-bcakend-az-1.onrender.com/';
 
 const ReplySection = ({ postId }) => {
   const [replies, setReplies] = useState([]);
