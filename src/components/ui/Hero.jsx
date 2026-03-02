@@ -1,12 +1,55 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React, { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { Navbar } from './Navbar'
 
-export function Hero() {
-    return (
-        <section className="relative h-screen w-full overflow-hidden flex flex-col">
+const backgroundImages = [
+    'https://images.unsplash.com/photo-1503694978374-8a2fa686963a?auto=format&fit=crop&q=80', // manufacturing machinery
+    'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80', // manufacturing
+    'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80', // tech circuits
+    'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80', // corporate structure
+    'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80', // teamwork/tech
+    'https://images.unsplash.com/photo-1531297122539-5692b6982261?auto=format&fit=crop&q=80', // digital networking
+    'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80', // modern corporate
+]
 
+
+export function Hero() {
+    const [currentImage, setCurrentImage] = useState(0)
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImage((prev) => (prev + 1) % backgroundImages.length)
+        }, 8000) // Change image every 8 seconds
+        return () => clearInterval(interval)
+    }, [])
+
+    return (
+        <section className="relative h-screen w-full overflow-hidden flex flex-col bg-black">
+
+            {/* Hidden preloader */}
+            <div className="hidden">
+                {backgroundImages.map((src, i) => <img key={i} src={src} alt="preload" />)}
+            </div>
+
+            {/* Auto-shifting 7 Images Background */}
+            <AnimatePresence>
+                <motion.div
+                    key={currentImage}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 2, ease: "easeInOut" }}
+                    className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+                    style={{
+                        backgroundImage: `url(${backgroundImages[currentImage]})`,
+                        animation: 'kenburns 8s linear forwards',
+                    }}
+                />
+            </AnimatePresence>
+
+            {/* Dark Overlay for Text Readability */}
+            <div className="absolute inset-0 z-0 bg-black/40" />
 
             {/* Navbar */}
             <Navbar />

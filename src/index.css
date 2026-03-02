@@ -73,6 +73,16 @@ body {
   }
 }
 
+@keyframes kenburns {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.15);
+  }
+}
+
 .marquee-scroll {
   display: inline-block;
   animation: marquee 15s linear infinite;

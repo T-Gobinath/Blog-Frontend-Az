@@ -20,16 +20,8 @@ const navLinks = [
         items: ['Who to handshake']
     },
     {
-        label: 'Investors',
-        items: ['Financial Reports', 'Stock Information', 'Annual Reports', 'Shareholder Services']
-    },
-    {
         label: 'Careers',
         items: ['Careers', 'Search & Apply', 'Working at TIMA']
-    },
-    {
-        label: 'News & Media',
-        items: ['Press Releases', 'Media Gallery', 'In the News', 'Events']
     },
 ]
 
@@ -111,7 +103,7 @@ export function Navbar() {
                 </div>
 
                 {/* Right Column: Rows */}
-                <div className="hidden xl:flex flex-col justify-center h-full flex-1 min-w-0 xl:pl-2 2xl:pl-4">
+                <div className="hidden xl:flex flex-col justify-center h-full flex-1 min-w-0 xl:pl-12 2xl:pl-24">
                     {/* Top Row: Utilities - hidden when scrolled */}
                     {!isScrolled && (
                         <div className={`flex justify-between items-center pt-3 pb-6 border-b text-[12px] sm:text-[13px] ${activeTheme === 'light' ? 'border-gray-300 text-gray-700' : 'border-white text-white/95'}`}>
@@ -132,14 +124,22 @@ export function Navbar() {
                                 </div>
                             </div>
                             <div className="flex items-center gap-4 sm:gap-6 font-medium flex-shrink-0">
-                                <a href="#" className={`transition-colors ${activeTheme === 'light' ? 'hover:text-gray-400' : 'hover:text-white/70'}`}>Sign Up for New</a>
+                                <Link to="/contact" className={`transition-colors ${activeTheme === 'light' ? 'hover:text-gray-400' : 'hover:text-white/70'}`}>Contact Us</Link>
                             </div>
                         </div>
                     )}
 
                     {/* Bottom Row: Nav Links + Icons */}
-                    <div className={`flex justify-between items-center ${isScrolled ? 'py-0' : 'pt-4'}`}>
-                        <div className="flex items-center gap-3 xl:gap-4 2xl:gap-8">
+                    <div className={`flex items-center ${isScrolled ? 'py-0' : 'pt-4'}`}>
+                        {/* Left-Aligned Links (matching the marquee above) */}
+                        <div className="flex items-center gap-6 xl:gap-8 2xl:gap-12">
+                            <Link to="/" className={`relative group flex items-center gap-1.5 text-[13px] xl:text-[14px] 2xl:text-[16px] font-medium tracking-wide whitespace-nowrap transition-colors py-1 ${activeTheme === 'light' ? 'text-gray-600 hover:text-gray-900' : 'text-white/80 hover:text-white'}`}>
+                                <span className="relative pb-1">
+                                    Home
+                                    <span className="absolute left-0 bottom-0 h-[4px] bg-tima-gold transition-all duration-300 rounded-full w-0 group-hover:w-full"></span>
+                                </span>
+                            </Link>
+
                             {navLinks.map((link) => (
                                 <button
                                     key={link.label}
@@ -161,14 +161,15 @@ export function Navbar() {
                                 </button>
                             ))}
                         </div>
-                        <div className={`flex items-center gap-3 xl:gap-4 ml-4 xl:ml-6 2xl:ml-16 ${activeTheme === 'light' ? 'text-gray-700' : 'text-white'}`}>
+
+                        {/* Right-aligned Icons pushed to the end */}
+                        <div className={`ml-auto flex items-center gap-3 xl:gap-4 ${activeTheme === 'light' ? 'text-gray-700' : 'text-white'}`}>
                             <button className={'hover:text-white/70 transition-colors p-1'}>
                                 <Headphones size={18} strokeWidth={1.5} />
                             </button>
                             <button onClick={toggleTheme} className={'hover:text-white/70 transition-colors p-1 focus:outline-none'} title={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}>
                                 {theme === 'dark' ? <Sun size={18} strokeWidth={1.5} /> : <Moon size={18} strokeWidth={1.5} />}
                             </button>
-
                         </div>
                     </div>
                 </div>
@@ -219,6 +220,13 @@ export function Navbar() {
             {/* Mobile menu */}
             {mobileOpen && (
                 <div className={`xl:hidden border-t px-4 sm:px-6 py-4 max-h-[70vh] overflow-y-auto ${activeTheme === 'light' ? 'bg-white border-gray-200' : 'bg-[#1a2234] border-white/10'}`}>
+                    <Link
+                        to="/"
+                        onClick={() => setMobileOpen(false)}
+                        className={`flex items-center justify-between w-full py-3 transition-colors border-b border-white/5 text-xs sm:text-sm font-bold ${activeTheme === 'light' ? 'text-gray-900 hover:text-tima-gold' : 'text-white/90 hover:text-tima-gold'}`}
+                    >
+                        Home
+                    </Link>
                     {navLinks.map((link) => (
                         <div key={link.label}>
                             <button
@@ -260,7 +268,7 @@ export function Navbar() {
                         </div>
                     ))}
                     <div className="flex gap-4 pt-4 text-xs text-white/60">
-                        <a href="#" className="hover:text-tima-gold">Sign Up for New</a>
+                        <Link to="/contact" className="hover:text-tima-gold">Contact Us</Link>
                     </div>
                 </div>
             )}

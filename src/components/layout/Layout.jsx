@@ -11,17 +11,6 @@ export function Layout({ children }) {
             : 'bg-transparent text-tima-white'
             }`}>
 
-            {/* Spline Background */}
-            <div id="spline-container" className="absolute inset-0 z-0 pointer-events-auto">
-                <iframe
-                    src='https://my.spline.design/clonercubesimplecopy-nSbqs91SBHRIxjhRqK7X6lsw/'
-                    frameBorder='0'
-                    width='100%'
-                    height='100%'
-                    title="Spline Background"
-                />
-            </div>
-
             {/* UI Overlay */}
             <main
                 id="main-scroll"
