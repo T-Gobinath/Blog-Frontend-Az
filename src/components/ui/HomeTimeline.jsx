@@ -46,6 +46,64 @@ const timelineData = [
     }
 ];
 
+/* Shared Left Column Component */
+function YearColumn({ activeIndex, setActiveIndex, setIsPaused, isMobile }) {
+    const arrowSize = isMobile ? 20 : 24;
+    return (
+        <div className={`${isMobile ? 'w-16 sm:w-20' : 'w-36 lg:w-44 xl:w-48'} flex-shrink-0 h-full flex flex-col items-center ${isMobile ? 'pt-8 pb-6' : 'pt-10 pb-8'}`}>
+
+            {/* Up arrow */}
+            <button
+                onClick={() => { setActiveIndex((prev) => Math.max(prev - 1, 0)); setIsPaused(true); }}
+                className="mb-4 text-white/30 hover:text-white/70 transition-colors"
+            >
+                <svg width={arrowSize} height={arrowSize} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                </svg>
+            </button>
+
+            {/* Year list */}
+            <div className={`flex-1 flex flex-col justify-between items-start w-full ${isMobile ? 'pl-3 sm:pl-4' : 'pl-32 lg:pl-40'} relative`}>
+                {/* Thin vertical line alongside years */}
+                <div className={`absolute top-0 bottom-0 ${isMobile ? 'left-2' : 'left-28 lg:left-32'} w-[1px] bg-white/15`}></div>
+
+                {timelineData.map((item, index) => {
+                    const isActive = index === activeIndex;
+                    return (
+                        <button
+                            key={index}
+                            onClick={() => { setActiveIndex(index); setIsPaused(true); }}
+                            className="relative outline-none py-0.5 flex items-center"
+                        >
+                            {/* Active dot on the line */}
+                            {isActive && (
+                                <div className={`absolute ${isMobile ? 'left-[-8px]' : 'left-[-13px] lg:left-[-15px]'} w-2 h-2 rounded-full bg-tima-gold shadow-[0_0_8px_rgba(212,175,55,0.6)]`}></div>
+                            )}
+                            <span className={`font-bold tracking-wide transition-all duration-300 ${isMobile
+                                ? `text-sm sm:text-base ${isActive ? 'text-tima-gold text-base sm:text-lg' : 'text-white/50'}`
+                                : `text-base lg:text-lg ${isActive ? 'text-tima-gold' : 'text-white/40 hover:text-white/70'}`
+                                }`}>
+                                {item.year}
+                            </span>
+                        </button>
+                    );
+                })}
+            </div>
+
+            {/* Down arrow */}
+            <button
+                onClick={() => { setActiveIndex((prev) => Math.min(prev + 1, timelineData.length - 1)); setIsPaused(true); }}
+                className="mt-4 text-white/30 hover:text-white/70 transition-colors"
+            >
+                <svg width={arrowSize} height={arrowSize} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </button>
+        </div>
+    );
+}
+
+
 export function HomeTimeline() {
     const [activeIndex, setActiveIndex] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
@@ -53,15 +111,13 @@ export function HomeTimeline() {
     // Auto-play timer
     useEffect(() => {
         if (isPaused) return;
-
         const timer = setInterval(() => {
             setActiveIndex((prev) => (prev + 1) % timelineData.length);
         }, 5000);
-
         return () => clearInterval(timer);
     }, [isPaused]);
 
-    // Keyboard navigation for accessibility
+    // Keyboard navigation
     useEffect(() => {
         const handleKeyDown = (e) => {
             if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
@@ -97,36 +153,19 @@ export function HomeTimeline() {
                 </motion.div>
             </AnimatePresence>
 
-            {/* Dark Overlay — stronger on mobile for readability */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/60 to-black/20 md:from-black/90 md:via-black/50 md:to-transparent z-10 pointer-events-none"></div>
+            {/* Dark Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/70 to-transparent z-10 pointer-events-none"></div>
 
-            {/* ===== MOBILE LAYOUT (below md) ===== */}
-            <div className="md:hidden relative z-20 w-full h-full flex flex-col">
 
-                {/* Top: Horizontal year navigation */}
-                <div className="flex items-center gap-1 px-4 pt-6 pb-4 overflow-x-auto no-scrollbar">
-                    {timelineData.map((item, index) => {
-                        const isActive = index === activeIndex;
-                        return (
-                            <button
-                                key={index}
-                                onClick={() => {
-                                    setActiveIndex(index);
-                                    setIsPaused(true);
-                                }}
-                                className={`flex-shrink-0 px-3 py-2 rounded-full text-xs font-semibold tracking-wider transition-all duration-300 ${isActive
-                                        ? 'bg-tima-gold/20 text-tima-gold border border-tima-gold/50'
-                                        : 'text-white/40 border border-transparent hover:text-white/70'
-                                    }`}
-                            >
-                                {item.year}
-                            </button>
-                        );
-                    })}
-                </div>
+            {/* ===================== */}
+            {/* MOBILE LAYOUT (<md)   */}
+            {/* ===================== */}
+            <div className="md:hidden relative z-20 w-full h-full flex">
+                <YearColumn activeIndex={activeIndex} setActiveIndex={setActiveIndex} setIsPaused={setIsPaused} isMobile={true} />
 
-                {/* Content */}
-                <div className="flex-1 flex flex-col justify-center px-6 pb-28">
+                {/* Right Column: Content overlay */}
+                <div className="flex-1 flex flex-col justify-center pr-4 pb-24">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={activeIndex}
@@ -135,30 +174,29 @@ export function HomeTimeline() {
                             exit={{ opacity: 0, y: -15 }}
                             transition={{ duration: 0.5, ease: "easeOut" }}
                         >
-                            {/* Year */}
-                            <div className="text-6xl sm:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-br from-tima-gold/90 to-tima-gold/30 tracking-tighter leading-none mb-4">
-                                {currentItem.year}
-                            </div>
-
-                            {/* Title & Description */}
-                            <div className="border-l-2 border-tima-gold pl-4">
-                                <h2 className="text-xl sm:text-2xl text-white font-medium tracking-wide mb-2 drop-shadow-md">
+                            {/* Large Year + Title inline */}
+                            <div className="flex items-baseline gap-2 mb-3">
+                                <span className="text-[72px] sm:text-[90px] font-black text-transparent bg-clip-text bg-gradient-to-br from-tima-gold/90 to-tima-gold/40 tracking-tighter leading-none">
+                                    {currentItem.year}
+                                </span>
+                                <span className="text-white/30 text-lg">|</span>
+                                <span className="text-white/70 text-sm sm:text-base font-light tracking-wide">
                                     {currentItem.title}
-                                </h2>
-                                <p className="text-sm sm:text-base text-gray-300 font-light leading-relaxed">
-                                    {currentItem.description}
-                                </p>
+                                </span>
                             </div>
+                            <p className="text-white/80 text-sm sm:text-base font-light leading-relaxed max-w-xs pr-2">
+                                {currentItem.description}
+                            </p>
                         </motion.div>
                     </AnimatePresence>
                 </div>
 
-                {/* Bottom controls */}
-                <div className="absolute bottom-6 left-6 right-6 z-40 flex items-center gap-4">
-                    <div className="text-white/80 font-medium text-xs tracking-widest">
-                        {activeIndex + 1}/{timelineData.length}
+                {/* Bottom Pagination — mobile */}
+                <div className="absolute bottom-5 left-16 sm:left-20 z-40 flex flex-col gap-2">
+                    <div className="text-white/70 font-medium text-xs tracking-widest">
+                        {activeIndex + 1} / {timelineData.length}
                     </div>
-                    <div className="flex-1 h-[2px] bg-white/20 relative rounded-full overflow-hidden">
+                    <div className="w-28 h-[2px] bg-white/20 relative rounded-full overflow-hidden">
                         <motion.div
                             className="absolute top-0 left-0 h-full bg-tima-gold"
                             animate={{ width: `${((activeIndex + 1) / timelineData.length) * 100}%` }}
@@ -166,7 +204,7 @@ export function HomeTimeline() {
                         />
                     </div>
                     <button
-                        className="flex items-center gap-1.5 text-white/60 hover:text-white transition-colors text-xs uppercase tracking-widest outline-none"
+                        className="flex items-center gap-1.5 text-white/50 hover:text-white transition-colors text-[10px] uppercase tracking-widest outline-none"
                         onClick={() => setIsPaused(!isPaused)}
                     >
                         <span>{isPaused ? 'Play' : 'Pause'}</span>
@@ -176,51 +214,14 @@ export function HomeTimeline() {
             </div>
 
 
-            {/* ===== TABLET & DESKTOP LAYOUT (md and above) ===== */}
-            <div className="hidden md:grid relative z-20 w-full h-full grid-cols-12 gap-0">
-
-                {/* Left Rail (Timeline Navigation) */}
-                <div className="col-span-2 lg:col-span-1 border-r border-white/20 h-full flex flex-col items-center py-[10vh]">
-
-                    <div className="flex-1 flex flex-col justify-between items-center w-full relative">
-                        {/* Vertical line */}
-                        <div className="absolute top-[2%] bottom-[2%] left-1/2 -translate-x-1/2 w-[1px] bg-white/20 -z-10"></div>
-
-                        {timelineData.map((item, index) => {
-                            const isActive = index === activeIndex;
-                            return (
-                                <button
-                                    key={index}
-                                    onClick={() => {
-                                        setActiveIndex(index);
-                                        setIsPaused(true);
-                                    }}
-                                    className="relative flex flex-col items-center justify-center group outline-none py-2"
-                                >
-                                    {/* Dot marker */}
-                                    <div
-                                        className={`rounded-full transition-all duration-300 z-10 ${isActive
-                                            ? 'w-2.5 h-2.5 bg-tima-gold shadow-[0_0_10px_rgba(212,175,55,0.7)]'
-                                            : 'w-1.5 h-1.5 bg-white/50 group-hover:bg-white'
-                                            }`}
-                                    ></div>
-
-                                    {/* Year text */}
-                                    <span
-                                        className={`absolute left-8 lg:left-7 text-xs lg:text-sm font-semibold tracking-wider transition-colors duration-300 whitespace-nowrap ${isActive ? 'text-tima-gold' : 'text-white/40 group-hover:text-white'
-                                            }`}
-                                    >
-                                        {item.year}
-                                    </span>
-                                </button>
-                            );
-                        })}
-                    </div>
-                </div>
+            {/* ================================ */}
+            {/* TABLET & DESKTOP LAYOUT (>=md)   */}
+            {/* ================================ */}
+            <div className="hidden md:flex relative z-20 w-full h-full">
+                <YearColumn activeIndex={activeIndex} setActiveIndex={setActiveIndex} setIsPaused={setIsPaused} isMobile={false} />
 
                 {/* Main Content Area */}
-                <div className="col-span-10 lg:col-span-11 flex flex-col justify-center px-10 md:px-16 lg:px-24 xl:px-32">
-
+                <div className="flex-1 flex flex-col justify-center pl-32 pr-12 lg:pl-48 lg:pr-16 xl:pl-64 xl:pr-20 pb-20">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={activeIndex}
@@ -228,40 +229,34 @@ export function HomeTimeline() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -20 }}
                             transition={{ duration: 0.6, ease: "easeOut" }}
-                            className="max-w-2xl relative"
+                            className="max-w-2xl"
                         >
-                            {/* Massive Year Display */}
-                            <div className="text-[100px] md:text-[130px] lg:text-[180px] font-black text-transparent bg-clip-text bg-gradient-to-br from-tima-gold/90 to-tima-gold/30 tracking-tighter drop-shadow-[0_4px_10px_rgba(0,0,0,0.5)] leading-none mb-6">
-                                {currentItem.year}
-                            </div>
-
-                            {/* Title & Description */}
-                            <div className="flex border-l-2 border-tima-gold pl-6 flex-col">
-                                <h2 className="text-2xl md:text-3xl lg:text-4xl text-white font-medium tracking-wide mb-4 drop-shadow-md">
+                            {/* Large Year + pipe + Title inline */}
+                            <div className="flex items-baseline gap-3 mb-4">
+                                <span className="text-[110px] lg:text-[140px] font-black text-transparent bg-clip-text bg-gradient-to-br from-tima-gold/90 to-tima-gold/40 tracking-tighter leading-none">
+                                    {currentItem.year}
+                                </span>
+                                <span className="text-white/25 text-2xl lg:text-3xl font-thin">|</span>
+                                <span className="text-white/60 text-lg lg:text-xl font-light tracking-wide">
                                     {currentItem.title}
-                                </h2>
-                                <p className="text-base md:text-lg lg:text-xl text-gray-300 font-light leading-relaxed max-w-xl pr-4">
-                                    {currentItem.description}
-                                </p>
+                                </span>
                             </div>
 
+                            {/* Description */}
+                            <p className="text-white/80 text-base lg:text-lg font-light leading-relaxed max-w-lg ml-1">
+                                {currentItem.description}
+                            </p>
                         </motion.div>
                     </AnimatePresence>
-
                 </div>
-
             </div>
 
-            {/* Bottom Left Pagination & Controls (Tablet/Desktop only) */}
-            <div className="hidden md:flex absolute bottom-8 left-[18%] lg:left-[12%] z-40 flex-col gap-3">
-
-                {/* Index Indicator */}
-                <div className="text-white/80 font-medium text-sm tracking-widest pl-1">
+            {/* Bottom Pagination (Desktop/Tablet) */}
+            <div className="hidden md:flex absolute bottom-12 left-48 lg:left-72 xl:left-96 z-40 flex-col gap-2">
+                <div className="text-white/60 font-bold text-lg lg:text-xl tracking-widest pl-0.5">
                     {activeIndex + 1}/{timelineData.length}
                 </div>
-
-                {/* Local Progress Bar */}
-                <div className="w-48 h-[2px] bg-white/20 relative rounded-full overflow-hidden">
+                <div className="w-56 h-[2px] bg-white/20 relative rounded-full overflow-hidden my-1">
                     <motion.div
                         className="absolute top-0 left-0 h-full bg-tima-gold"
                         initial={{ width: '0%' }}
@@ -269,18 +264,12 @@ export function HomeTimeline() {
                         transition={{ duration: 0.5, ease: "easeInOut" }}
                     />
                 </div>
-
-                {/* Pause / Play Button */}
                 <button
-                    className="flex items-center gap-2 text-white/60 hover:text-white transition-colors text-xs uppercase tracking-widest mt-1 group outline-none"
+                    className="flex items-center gap-1.5 text-white/50 hover:text-white transition-colors text-sm uppercase tracking-widest outline-none"
                     onClick={() => setIsPaused(!isPaused)}
                 >
-                    <span className="transition-colors w-10 text-left">
-                        {isPaused ? 'Play' : 'Pause'}
-                    </span>
-                    <span className={`font-bold transition-all ${isPaused ? 'translate-x-1' : ''}`}>
-                        {isPaused ? '►' : '||'}
-                    </span>
+                    <span>{isPaused ? 'PLAY' : 'PAUSE'}</span>
+                    <span className="font-bold">{isPaused ? '►' : '||'}</span>
                 </button>
             </div>
 
