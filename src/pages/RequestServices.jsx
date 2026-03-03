@@ -1,10 +1,78 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Layout } from '../components/layout/Layout'
 import { Navbar } from '../components/ui/Navbar'
 import { Building2, ChevronLeft, ChevronDown } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 export function RequestServices() {
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [email, setEmail] = useState('');
+    const [organization, setOrganization] = useState('');
+    const [region, setRegion] = useState('');
+    const [industry, setIndustry] = useState('');
+    const [message, setMessage] = useState('');
+    const [consent, setConsent] = useState(false);
+    const [marketingOptIn, setMarketingOptIn] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        // Basic validation for mandatory fields (which shouldn't trigger if 'required' is used, but good safeguard)
+        if (!firstName || !lastName || !email || !organization || !region || !industry || !message || !consent) {
+            alert("Please fill in all mandatory fields.");
+            return;
+        }
+
+        setIsSubmitting(true);
+
+        try {
+            await fetch(
+                "https://script.google.com/macros/s/AKfycbwCDIkrUsWZixchXPjIYZXIMxe6U_ec3Nii4NNl7VfJDICLnK4ITMbstFQOwj8A1DL2Gw/exec",
+                {
+                    method: "POST",
+                    mode: "no-cors",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        firstName,
+                        lastName,
+                        email,
+                        organization,
+                        region,
+                        industry,
+                        message,
+                        consent,
+                        marketingOptIn
+                    }),
+                }
+            );
+
+            // With no-cors, we can't read the response body or status easily, 
+            // but if the fetch completes without a network error, we assume success.
+            alert("Form submitted successfully");
+
+            // Clear form
+            setFirstName('');
+            setLastName('');
+            setEmail('');
+            setOrganization('');
+            setRegion('');
+            setIndustry('');
+            setMessage('');
+            setConsent(false);
+            setMarketingOptIn(false);
+
+        } catch (error) {
+            console.error(error);
+            alert("Submission failed");
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
     return (
         <Layout>
             <Navbar />
@@ -50,7 +118,7 @@ export function RequestServices() {
                     </div>
 
                     {/* Form Section */}
-                    <form className="flex flex-col gap-10 max-w-lg mt-4" onSubmit={(e) => e.preventDefault()}>
+                    <form className="flex flex-col gap-10 max-w-lg mt-4" onSubmit={handleSubmit}>
 
                         {/* Two Columns for Name */}
                         <div className="flex flex-col sm:flex-row gap-8 sm:gap-6">
@@ -58,6 +126,9 @@ export function RequestServices() {
                                 <input
                                     type="text"
                                     placeholder="First name*"
+                                    value={firstName}
+                                    onChange={(e) => setFirstName(e.target.value)}
+                                    required
                                     className="w-full bg-transparent border-b border-gray-600 focus:border-white outline-none pb-2 text-sm text-white placeholder-gray-400 transition-colors"
                                 />
                             </div>
@@ -65,6 +136,9 @@ export function RequestServices() {
                                 <input
                                     type="text"
                                     placeholder="Last name*"
+                                    value={lastName}
+                                    onChange={(e) => setLastName(e.target.value)}
+                                    required
                                     className="w-full bg-transparent border-b border-gray-600 focus:border-white outline-none pb-2 text-sm text-white placeholder-gray-400 transition-colors"
                                 />
                             </div>
@@ -76,6 +150,9 @@ export function RequestServices() {
                                 <input
                                     type="email"
                                     placeholder="Email*"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    required
                                     className="w-full bg-transparent border-b border-gray-600 focus:border-white outline-none pb-2 text-sm text-white placeholder-gray-400 transition-colors"
                                 />
                             </div>
@@ -83,6 +160,9 @@ export function RequestServices() {
                                 <input
                                     type="text"
                                     placeholder="Organization*"
+                                    value={organization}
+                                    onChange={(e) => setOrganization(e.target.value)}
+                                    required
                                     className="w-full bg-transparent border-b border-gray-600 focus:border-white outline-none pb-2 text-sm text-white placeholder-gray-400 transition-colors"
                                 />
                             </div>
@@ -90,8 +170,13 @@ export function RequestServices() {
 
                         {/* Select: Region */}
                         <div className="relative">
-                            <select className="w-full bg-transparent border-b border-gray-600 focus:border-white outline-none pb-2 text-sm text-white appearance-none cursor-pointer transition-colors custom-select">
-                                <option value="" disabled selected hidden>Region*</option>
+                            <select
+                                value={region}
+                                onChange={(e) => setRegion(e.target.value)}
+                                required
+                                className="w-full bg-transparent border-b border-gray-600 focus:border-white outline-none pb-2 text-sm text-white appearance-none cursor-pointer transition-colors custom-select"
+                            >
+                                <option value="" disabled hidden>Region*</option>
                                 <option value="asia-pacific" className="text-white bg-[#060713]">Asia Pacific</option>
                                 <option value="anz" className="text-white bg-[#060713]">Australia and New Zealand</option>
                                 <option value="europe" className="text-white bg-[#060713]">Europe</option>
@@ -106,8 +191,13 @@ export function RequestServices() {
 
                         {/* Select: Industry */}
                         <div className="relative">
-                            <select className="w-full bg-transparent border-b border-gray-600 focus:border-white outline-none pb-2 text-sm text-white appearance-none cursor-pointer transition-colors custom-select">
-                                <option value="" disabled selected hidden>Industry*</option>
+                            <select
+                                value={industry}
+                                onChange={(e) => setIndustry(e.target.value)}
+                                required
+                                className="w-full bg-transparent border-b border-gray-600 focus:border-white outline-none pb-2 text-sm text-white appearance-none cursor-pointer transition-colors custom-select"
+                            >
+                                <option value="" disabled hidden>Industry*</option>
                                 <option value="banking" className="text-white bg-[#060713]">Banking</option>
                                 <option value="capital-markets" className="text-white bg-[#060713]">Capital Markets</option>
                                 <option value="insurance" className="text-white bg-[#060713]">Insurance</option>
@@ -132,21 +222,35 @@ export function RequestServices() {
                             <textarea
                                 placeholder="How can we help you?*"
                                 rows="1"
+                                value={message}
+                                onChange={(e) => setMessage(e.target.value)}
+                                required
                                 className="w-full bg-transparent border-b border-gray-600 focus:border-white outline-none pb-2 text-sm text-white placeholder-gray-400 transition-colors resize-none overflow-hidden"
                             ></textarea>
-                            <div className="text-[10px] text-gray-500 text-right mt-1 w-full">(0/1500)</div>
+                            <div className="text-[10px] text-gray-500 text-right mt-1 w-full">({message.length}/1500)</div>
                         </div>
 
                         {/* Checkboxes */}
                         <div className="flex flex-col gap-5 mt-2">
                             <label className="flex items-start gap-4 cursor-pointer group">
-                                <input type="checkbox" className="mt-1 w-4 h-4 flex-shrink-0 bg-transparent border border-gray-500 rounded-sm appearance-none checked:bg-white transition-colors cursor-pointer" />
+                                <input
+                                    type="checkbox"
+                                    checked={consent}
+                                    onChange={(e) => setConsent(e.target.checked)}
+                                    required
+                                    className="mt-1 w-4 h-4 flex-shrink-0 bg-transparent border border-gray-500 rounded-sm appearance-none checked:bg-white transition-colors cursor-pointer"
+                                />
                                 <span className="text-xs text-gray-400 leading-relaxed max-w-sm group-hover:text-gray-300 transition-colors">
                                     I consent to processing of my personal data entered above for TIMA to contact me. *
                                 </span>
                             </label>
                             <label className="flex items-start gap-4 cursor-pointer group">
-                                <input type="checkbox" className="mt-1 w-4 h-4 flex-shrink-0 bg-transparent border border-gray-500 rounded-sm appearance-none checked:bg-white transition-colors cursor-pointer" />
+                                <input
+                                    type="checkbox"
+                                    checked={marketingOptIn}
+                                    onChange={(e) => setMarketingOptIn(e.target.checked)}
+                                    className="mt-1 w-4 h-4 flex-shrink-0 bg-transparent border border-gray-500 rounded-sm appearance-none checked:bg-white transition-colors cursor-pointer"
+                                />
                                 <span className="text-xs text-gray-400 leading-relaxed max-w-sm group-hover:text-gray-300 transition-colors">
                                     I would like to receive details about products, services and events from TIMA.
                                 </span>
@@ -164,8 +268,12 @@ export function RequestServices() {
                         </div>
 
                         {/* Submit Button */}
-                        <button type="submit" className="mt-4 self-start bg-gray-500 hover:bg-gray-400 text-white text-sm font-medium px-10 py-2.5 rounded-full transition-colors w-auto">
-                            Send
+                        <button
+                            type="submit"
+                            disabled={isSubmitting}
+                            className="mt-4 self-start bg-gray-500 hover:bg-gray-400 disabled:bg-gray-700 disabled:cursor-not-allowed text-white text-sm font-medium px-10 py-2.5 rounded-full transition-colors w-auto"
+                        >
+                            {isSubmitting ? 'Sending...' : 'Send'}
                         </button>
                     </form>
                 </div>
