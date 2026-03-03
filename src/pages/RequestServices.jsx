@@ -23,7 +23,7 @@ export function RequestServices() {
                 `}} />
 
                 {/* Left Side: Form Container */}
-                <div className="w-full lg:w-1/2 min-h-[120vh] pt-32 sm:pt-40 pb-44 px-6 sm:px-12 md:px-20 lg:px-24 xl:px-40 flex flex-col z-10 relative">
+                <div className="w-full lg:w-1/2 min-h-[120vh] pt-40 sm:pt-48 lg:pt-56 pb-44 px-6 sm:px-12 md:px-20 lg:px-24 xl:px-40 flex flex-col z-10 relative">
 
                     {/* BACK Button */}
                     <div className="mb-12">

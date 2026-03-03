@@ -24,18 +24,18 @@ export function ContactUs() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 max-w-4xl mx-auto">
 
                     {/* Request for Services Card */}
-                    <Link to="/services" className="group relative flex flex-col items-center justify-center p-12 sm:p-16 
+                    <Link to="/services" className="group relative flex flex-col items-center justify-center py-8 px-6 sm:p-16 
                                        border-2 border-gray-600 rounded-lg bg-black hover:border-gray-400 
                                        transition-all duration-300">
-                        <Building2 size={32} className="text-[#3b82f6] mb-6 group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
+                        <Building2 size={32} className="text-[#3b82f6] mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
                         <h3 className="text-white font-medium tracking-wide">Request for Services</h3>
                     </Link>
 
                     {/* Media Contacts Card */}
-                    <Link to="/media-contacts" className="group relative flex flex-col items-center justify-center p-12 sm:p-16 
+                    <Link to="/media-contacts" className="group relative flex flex-col items-center justify-center py-8 px-6 sm:p-16 
                                        border-2 border-gray-600 rounded-lg bg-black hover:border-gray-400 
                                        transition-all duration-300">
-                        <Radio size={32} className="text-[#3b82f6] mb-6 group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
+                        <Radio size={32} className="text-[#3b82f6] mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
                         <h3 className="text-white font-medium tracking-wide">Media contacts</h3>
                     </Link>
 
