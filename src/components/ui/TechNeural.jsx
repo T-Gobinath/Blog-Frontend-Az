@@ -1,148 +1,169 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useCallback } from 'react';
 import videoSrc from '../../assets/Photo_To_High_Quality_Video.mp4';
 
 export function TechNeural() {
     const canvasRef = useRef(null);
     const videoRef = useRef(null);
-    const containerRef = useRef(null);
-    const animFrameRef = useRef(null);
+    const rafRef = useRef(null);
 
-    useEffect(() => {
+    const draw = useCallback(() => {
         const canvas = canvasRef.current;
         const video = videoRef.current;
-        const container = containerRef.current;
-        if (!canvas || !video || !container) return;
+        if (!canvas || !video) return;
 
         const ctx = canvas.getContext('2d');
+        const parent = canvas.parentElement;
+        const rect = parent.getBoundingClientRect();
+        const dpr = window.devicePixelRatio || 1;
 
-        const resize = () => {
-            const rect = container.getBoundingClientRect();
-            const dpr = window.devicePixelRatio || 1;
-            canvas.width = rect.width * dpr;
-            canvas.height = rect.height * dpr;
-            canvas.style.width = rect.width + 'px';
-            canvas.style.height = rect.height + 'px';
-            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        // Set canvas size to match container
+        const w = rect.width;
+        const h = rect.height;
+        canvas.width = w * dpr;
+        canvas.height = h * dpr;
+        canvas.style.width = w + 'px';
+        canvas.style.height = h + 'px';
+        ctx.scale(dpr, dpr);
+
+        // Clear
+        ctx.clearRect(0, 0, w, h);
+
+        // Font setup — responsive sizing
+        const fontSize = w * 0.15;
+        const gap = fontSize * 0.15;
+        const totalTextH = fontSize * 2 + gap;
+        const topY = (h - totalTextH) / 2 + fontSize;
+        const bottomY = topY + fontSize + gap;
+        const cx = w / 2;
+
+        const fontStr = `900 ${fontSize}px Impact, "Arial Black", sans-serif`;
+        ctx.font = fontStr;
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'alphabetic';
+
+        // Helper to draw both lines
+        const drawText = (offsetX, offsetY) => {
+            ctx.fillText('GREEN', cx + offsetX, topY + offsetY);
+            ctx.fillText('SPHERE', cx + offsetX, bottomY + offsetY);
         };
 
-        const drawFrame = () => {
-            const w = canvasRef.current?.width;
-            const h = canvasRef.current?.height;
-            if (!w || !h) return;
-
-            const rect = container.getBoundingClientRect();
-            const cw = rect.width;
-            const ch = rect.height;
-
-            // Clear canvas
-            ctx.clearRect(0, 0, cw, ch);
-
-            // Calculate font size based on container width
-            const fontSize = Math.max(cw * 0.16, 36);
-            const lineHeight = fontSize * 1.1;
-            const centerX = cw / 2;
-            const totalHeight = lineHeight * 2;
-            const startY = (ch - totalHeight) / 2 + fontSize * 0.8;
-            const line1Y = startY;
-            const line2Y = startY + lineHeight;
-
-            ctx.font = `900 ${fontSize}px Impact, "Arial Black", sans-serif`;
-            ctx.textAlign = 'center';
-            ctx.textBaseline = 'middle';
-            ctx.letterSpacing = `${fontSize * 0.05}px`;
-
-            // 1. Gold 3D extrusion layers
-            const layers = [
-                { color: '#8A681B', dx: 4, dy: 4 },
-                { color: '#B88E2F', dx: 3, dy: 3 },
-                { color: '#D4AF37', dx: 1, dy: 1 },
-            ];
-
-            layers.forEach(({ color, dx, dy }) => {
-                ctx.fillStyle = color;
-                ctx.fillText('GREEN', centerX + dx, line1Y + dy);
-                ctx.fillText('SPHERE', centerX + dx, line2Y + dy);
-            });
-
-            // 2. Draw video clipped to text shape
-            ctx.save();
-            ctx.beginPath();
-            ctx.fillStyle = 'red'; // dummy
-            ctx.fillText('GREEN', centerX, line1Y);
-            ctx.fillText('SPHERE', centerX, line2Y);
-
-            // Use compositing to clip video to text
-            ctx.globalCompositeOperation = 'source-in';
-
-            // Draw video to fill canvas area
-            if (video.readyState >= 2) {
-                const vw = video.videoWidth;
-                const vh = video.videoHeight;
-                const scale = Math.max(cw / vw, ch / vh);
-                const sw = vw * scale;
-                const sh = vh * scale;
-                ctx.drawImage(video, (cw - sw) / 2, (ch - sh) / 2, sw, sh);
-            }
-
-            ctx.restore();
-
-            // 3. Gold stroke outline on top
-            ctx.globalCompositeOperation = 'source-over';
-            ctx.strokeStyle = '#FFDF73';
-            ctx.lineWidth = 2;
-            ctx.strokeText('GREEN', centerX, line1Y);
-            ctx.strokeText('SPHERE', centerX, line2Y);
-
-            animFrameRef.current = requestAnimationFrame(drawFrame);
+        const strokeText = (offsetX, offsetY) => {
+            ctx.strokeText('GREEN', cx + offsetX, topY + offsetY);
+            ctx.strokeText('SPHERE', cx + offsetX, bottomY + offsetY);
         };
 
-        const onVideoReady = () => {
-            resize();
-            drawFrame();
-        };
+        // --- Layer 1: Drop shadow ---
+        ctx.save();
+        ctx.shadowColor = 'rgba(0,0,0,0.5)';
+        ctx.shadowBlur = 8;
+        ctx.shadowOffsetX = 5;
+        ctx.shadowOffsetY = 5;
+        ctx.fillStyle = '#6B5210';
+        drawText(0, 0);
+        ctx.restore();
 
-        video.addEventListener('loadeddata', onVideoReady);
-        window.addEventListener('resize', resize);
+        // --- Layer 2: 3D extrusion (bottom to top) ---
+        const extrusionLayers = [
+            { color: '#6B5210', dx: 5, dy: 5 },
+            { color: '#8A681B', dx: 4, dy: 4 },
+            { color: '#A07B22', dx: 3, dy: 3 },
+            { color: '#B88E2F', dx: 2, dy: 2 },
+            { color: '#D4AF37', dx: 1, dy: 1 },
+        ];
 
-        // If video already ready
+        extrusionLayers.forEach(({ color, dx, dy }) => {
+            ctx.fillStyle = color;
+            drawText(dx, dy);
+        });
+
+        // --- Layer 3: Video fill clipped to text ---
+        ctx.save();
+        // Draw invisible text to create a path for clipping
+        ctx.beginPath();
+
+        // We need to use a clipping approach:
+        // First fill text to create the shape, then composite video into it
+        ctx.fillStyle = '#000';
+        drawText(0, 0);
+
+        // Composite: only draw video where text pixels exist
+        ctx.globalCompositeOperation = 'source-in';
+
         if (video.readyState >= 2) {
-            onVideoReady();
+            const vw = video.videoWidth;
+            const vh = video.videoHeight;
+            const scale = Math.max(w / vw, h / vh);
+            const dw = vw * scale;
+            const dh = vh * scale;
+            ctx.drawImage(video, (w - dw) / 2, (h - dh) / 2, dw, dh);
         }
 
-        return () => {
-            video.removeEventListener('loadeddata', onVideoReady);
-            window.removeEventListener('resize', resize);
-            if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current);
-        };
+        ctx.restore();
+
+        // --- Layer 4: Gold stroke outline on top ---
+        ctx.globalCompositeOperation = 'source-over';
+        ctx.strokeStyle = '#FFDF73';
+        ctx.lineWidth = Math.max(1.5, fontSize * 0.015);
+        ctx.lineJoin = 'round';
+        strokeText(0, 0);
+
+        rafRef.current = requestAnimationFrame(draw);
     }, []);
 
-    return (
-        <section className="relative w-full flex flex-col items-center justify-center bg-[#f5efe6] overflow-hidden py-8 sm:py-12 md:py-14 lg:py-16 z-0">
-            {/* Faint background texture */}
-            <div className="absolute inset-0 opacity-[0.1] pointer-events-none" style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/stardust.png")' }} />
+    useEffect(() => {
+        const video = videoRef.current;
+        if (!video) return;
 
-            <div className="relative w-full max-w-[1920px] mx-auto flex flex-col items-center z-10 px-4 sm:px-8 md:px-12">
-                {/* Hidden video element */}
+        const startDrawing = () => {
+            if (rafRef.current) cancelAnimationFrame(rafRef.current);
+            rafRef.current = requestAnimationFrame(draw);
+        };
+
+        video.addEventListener('playing', startDrawing);
+        video.addEventListener('loadeddata', startDrawing);
+        window.addEventListener('resize', startDrawing);
+
+        // Start if already ready
+        if (video.readyState >= 2) startDrawing();
+
+        return () => {
+            video.removeEventListener('playing', startDrawing);
+            video.removeEventListener('loadeddata', startDrawing);
+            window.removeEventListener('resize', startDrawing);
+            if (rafRef.current) cancelAnimationFrame(rafRef.current);
+        };
+    }, [draw]);
+
+    return (
+        <section className="relative w-full bg-[#f5efe6] overflow-hidden z-0">
+            {/* Faint texture */}
+            <div
+                className="absolute inset-0 opacity-[0.08] pointer-events-none"
+                style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/stardust.png")' }}
+            />
+
+            <div className="relative z-10 w-full flex items-center justify-center py-8 sm:py-10 md:py-14 lg:py-16 px-4">
+                {/* Hidden video source */}
                 <video
                     ref={videoRef}
                     autoPlay
                     loop
                     muted
                     playsInline
-                    className="hidden"
+                    className="absolute w-0 h-0 opacity-0 pointer-events-none"
+                    style={{ position: 'absolute', top: 0, left: 0 }}
                 >
                     <source src={videoSrc} type="video/mp4" />
                 </video>
 
-                {/* Canvas container */}
+                {/* Canvas wrapper — responsive width, fixed aspect ratio */}
                 <div
-                    ref={containerRef}
-                    className="w-full max-w-[320px] sm:max-w-[500px] md:max-w-[700px] lg:max-w-[850px] xl:max-w-[1000px]"
-                    style={{ aspectRatio: '1000 / 450' }}
+                    className="w-[85vw] sm:w-[75vw] md:w-[65vw] lg:w-[55vw] xl:w-[50vw] 2xl:w-[45vw]"
+                    style={{ aspectRatio: '2.2 / 1' }}
                 >
                     <canvas
                         ref={canvasRef}
-                        className="w-full h-full"
+                        className="block w-full h-full"
                     />
                 </div>
             </div>
