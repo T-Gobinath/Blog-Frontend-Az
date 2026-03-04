@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom'
 import { useStore } from '../../stores/useStore'
 import defaultLogo from '../../assets/tima-logo.png'
 import scrolledLogo from '../../assets/Logo1.png'
+import manufacturingImg from '../../assets/manufacturing.png'
+import itSolutionsImg from '../../assets/it-solutions.png'
 
 const navLinks = [
     {
@@ -13,7 +15,57 @@ const navLinks = [
     },
     {
         label: 'Businesses',
-        items: ['names need to be given by manos']
+        isMega: true,
+        categories: [
+            {
+                title: 'Manufacturing',
+                image: manufacturingImg,
+                groups: [
+                    {
+                        heading: 'Materials',
+                        items: []
+                    },
+                    {
+                        heading: 'Engineering Solutions',
+                        items: [
+                            'Die Making',
+                            'CNC Machining',
+                            'Laser Cutting & Engraving',
+                            'Light Metal Fabrication',
+                            'Tool Design',
+                            'Injection Molding',
+                            'Prototype Development',
+                            'PCB & Embedded Systems',
+                            'Medical Grade Manufacturing'
+                        ]
+                    },
+                    {
+                        heading: 'Services',
+                        items: [
+                            'On-site Installation',
+                            'Post Installation Support',
+                            'Bulk Production Services'
+                        ]
+                    }
+                ]
+            },
+            {
+                title: 'IT Solutions',
+                image: itSolutionsImg,
+                groups: [
+                    {
+                        heading: null,
+                        items: [
+                            'Software Development',
+                            'Web & E-Commerce',
+                            'Apps & Automation',
+                            'Cloud & Infrastructure',
+                            'Support Services'
+                        ]
+                    }
+                ]
+            }
+        ]
     },
     {
         label: 'Partners',
@@ -184,38 +236,89 @@ export function Navbar() {
             </div>
 
             {/* Desktop Dropdown Panel */}
-            {activeDropdown && (
-                <div
-                    className="hidden xl:block absolute left-0 right-0 bg-white shadow-xl border-t-2 border-tima-gold"
-                    style={{ animation: 'slideDown 0.2s ease-out' }}
-                >
-                    <div className="max-w-7xl mx-auto px-10 py-5">
-                        <div className="flex gap-12">
-                            {navLinks.find(l => l.label === activeDropdown)?.items.map((item) => (
-                                item === 'Overview' ? (
-                                    <Link
-                                        key={item}
-                                        to="/overview"
-                                        className="text-sm text-gray-700 hover:text-tima-gold transition-colors font-medium whitespace-nowrap py-1"
-                                        onClick={() => setActiveDropdown(null)}
-                                    >
-                                        {item}
-                                    </Link>
-                                ) : (
-                                    <a
-                                        key={item}
-                                        href="#"
-                                        className="text-sm text-gray-700 hover:text-tima-gold transition-colors font-medium whitespace-nowrap py-1"
-                                        onClick={() => setActiveDropdown(null)}
-                                    >
-                                        {item}
-                                    </a>
-                                )
-                            ))}
+            {activeDropdown && (() => {
+                const activeLink = navLinks.find(l => l.label === activeDropdown)
+                if (!activeLink) return null
+
+                // Mega menu for Businesses
+                if (activeLink.isMega) {
+                    return (
+                        <div
+                            className="hidden xl:block absolute left-0 right-0 bg-white shadow-2xl border-t-2 border-tima-gold"
+                            style={{ animation: 'slideDown 0.25s ease-out' }}
+                        >
+                            <div className="max-w-7xl mx-auto px-10 py-8">
+                                <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-tima-gold mb-6">Our Businesses</h3>
+                                <div className="grid grid-cols-2 gap-10">
+                                    {activeLink.categories.map((cat) => (
+                                        <div key={cat.title}>
+                                            <div className="flex-1">
+                                                <h4 className="text-base font-bold text-gray-900 mb-3 border-b-2 border-tima-gold pb-1 inline-block">{cat.title}</h4>
+                                                {cat.groups.map((group, gi) => (
+                                                    <div key={gi} className="mb-3">
+                                                        {group.heading && (
+                                                            <p className="text-sm font-semibold text-gray-800 mb-1">{group.heading}</p>
+                                                        )}
+                                                        {group.items.length > 0 && (
+                                                            <ul className="space-y-0.5">
+                                                                {group.items.map((item) => (
+                                                                    <li key={item}>
+                                                                        <a
+                                                                            href="#"
+                                                                            className="text-[13px] text-gray-600 hover:text-tima-gold hover:translate-x-1 transition-all duration-200 inline-block"
+                                                                            onClick={() => setActiveDropdown(null)}
+                                                                        >
+                                                                            {item}
+                                                                        </a>
+                                                                    </li>
+                                                                ))}
+                                                            </ul>
+                                                        )}
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    )
+                }
+
+                // Standard dropdown for other nav items
+                return (
+                    <div
+                        className="hidden xl:block absolute left-0 right-0 bg-white shadow-xl border-t-2 border-tima-gold"
+                        style={{ animation: 'slideDown 0.2s ease-out' }}
+                    >
+                        <div className="max-w-7xl mx-auto px-10 py-5">
+                            <div className="flex gap-12">
+                                {activeLink.items?.map((item) => (
+                                    item === 'Overview' ? (
+                                        <Link
+                                            key={item}
+                                            to="/overview"
+                                            className="text-sm text-gray-700 hover:text-tima-gold transition-colors font-medium whitespace-nowrap py-1"
+                                            onClick={() => setActiveDropdown(null)}
+                                        >
+                                            {item}
+                                        </Link>
+                                    ) : (
+                                        <a
+                                            key={item}
+                                            href="#"
+                                            className="text-sm text-gray-700 hover:text-tima-gold transition-colors font-medium whitespace-nowrap py-1"
+                                            onClick={() => setActiveDropdown(null)}
+                                        >
+                                            {item}
+                                        </a>
+                                    )
+                                ))}
+                            </div>
                         </div>
                     </div>
-                </div>
-            )}
+                )
+            })()}
 
             {/* Mobile menu */}
             {mobileOpen && (
@@ -243,26 +346,52 @@ export function Navbar() {
                             </button>
                             {mobileExpanded === link.label && (
                                 <div className="pl-4 pb-2">
-                                    {link.items.map((item) => (
-                                        item === 'Overview' ? (
-                                            <Link
-                                                key={item}
-                                                to="/overview"
-                                                className="block py-2 text-xs text-white/60 hover:text-tima-gold transition-colors"
-                                                onClick={() => { setMobileOpen(false); setMobileExpanded(null) }}
-                                            >
-                                                {item}
-                                            </Link>
-                                        ) : (
-                                            <a
-                                                key={item}
-                                                href="#"
-                                                className="block py-2 text-xs text-white/60 hover:text-tima-gold transition-colors"
-                                            >
-                                                {item}
-                                            </a>
-                                        )
-                                    ))}
+                                    {link.isMega ? (
+                                        // Mega menu categories for mobile
+                                        link.categories.map((cat) => (
+                                            <div key={cat.title} className="mb-3">
+                                                <p className={`text-xs font-bold uppercase tracking-wider py-1 border-b mb-1 ${activeTheme === 'light' ? 'text-gray-900 border-gray-300' : 'text-tima-gold border-white/10'}`}>{cat.title}</p>
+                                                {cat.groups.map((group, gi) => (
+                                                    <div key={gi} className="mb-2 pl-2">
+                                                        {group.heading && (
+                                                            <p className={`text-xs font-semibold py-1 ${activeTheme === 'light' ? 'text-gray-800' : 'text-white/80'}`}>{group.heading}</p>
+                                                        )}
+                                                        {group.items.map((item) => (
+                                                            <a
+                                                                key={item}
+                                                                href="#"
+                                                                className={`block py-1 text-xs transition-colors ${activeTheme === 'light' ? 'text-gray-500 hover:text-tima-gold' : 'text-white/50 hover:text-tima-gold'}`}
+                                                            >
+                                                                {item}
+                                                            </a>
+                                                        ))}
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        ))
+                                    ) : (
+                                        // Standard items for other nav links
+                                        link.items?.map((item) => (
+                                            item === 'Overview' ? (
+                                                <Link
+                                                    key={item}
+                                                    to="/overview"
+                                                    className="block py-2 text-xs text-white/60 hover:text-tima-gold transition-colors"
+                                                    onClick={() => { setMobileOpen(false); setMobileExpanded(null) }}
+                                                >
+                                                    {item}
+                                                </Link>
+                                            ) : (
+                                                <a
+                                                    key={item}
+                                                    href="#"
+                                                    className="block py-2 text-xs text-white/60 hover:text-tima-gold transition-colors"
+                                                >
+                                                    {item}
+                                                </a>
+                                            )
+                                        ))
+                                    )}
                                 </div>
                             )}
                         </div>
