@@ -3,7 +3,7 @@ import videoSrc from '../../assets/Photo_To_High_Quality_Video.mp4';
 
 export function TechNeural() {
     return (
-        <section className="relative w-full min-h-[15vh] md:min-h-[25vh] flex flex-col items-center justify-center bg-[#050505] overflow-hidden py-2 z-0">
+        <section className="relative w-full min-h-[15vh] md:min-h-[25vh] flex flex-col items-center justify-center bg-[#f5efe6] overflow-hidden py-2 z-0">
             {/* Very faint background texture to give it a premium feel */}
             <div className="absolute inset-0 opacity-[0.1] pointer-events-none" style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/stardust.png")' }} />
 
