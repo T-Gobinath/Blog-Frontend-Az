@@ -3,14 +3,14 @@ import videoSrc from '../../assets/Photo_To_High_Quality_Video.mp4';
 
 export function TechNeural() {
     return (
-        <section className="relative w-full min-h-[15vh] md:min-h-[25vh] flex flex-col items-center justify-center bg-[#f5efe6] overflow-hidden py-2 z-0">
+        <section className="relative w-full min-h-[20vh] sm:min-h-[22vh] md:min-h-[28vh] lg:min-h-[30vh] flex flex-col items-center justify-center bg-[#f5efe6] overflow-hidden py-6 sm:py-8 md:py-10 lg:py-12 z-0">
             {/* Very faint background texture to give it a premium feel */}
             <div className="absolute inset-0 opacity-[0.1] pointer-events-none" style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/stardust.png")' }} />
 
-            <div className="relative w-full max-w-[1920px] mx-auto flex flex-col items-center z-10 px-4 md:px-8">
+            <div className="relative w-full max-w-[1920px] mx-auto flex flex-col items-center z-10 px-6 sm:px-8 md:px-12">
 
                 {/* SVG for clipping the video and drawing the 3D stroke/shadow */}
-                <svg viewBox="0 20 1000 240" className="w-full h-auto max-w-[1000px]" preserveAspectRatio="xMidYMid meet">
+                <svg viewBox="0 20 1000 240" className="w-full h-auto max-w-[320px] sm:max-w-[500px] md:max-w-[700px] lg:max-w-[850px] xl:max-w-[1000px]" preserveAspectRatio="xMidYMid meet">
                     <defs>
                         <mask id="videoMask">
                             <rect width="100%" height="100%" fill="black" />
