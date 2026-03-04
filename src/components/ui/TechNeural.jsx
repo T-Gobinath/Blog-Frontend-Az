@@ -1,66 +1,150 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import videoSrc from '../../assets/Photo_To_High_Quality_Video.mp4';
 
 export function TechNeural() {
+    const canvasRef = useRef(null);
+    const videoRef = useRef(null);
+    const containerRef = useRef(null);
+    const animFrameRef = useRef(null);
+
+    useEffect(() => {
+        const canvas = canvasRef.current;
+        const video = videoRef.current;
+        const container = containerRef.current;
+        if (!canvas || !video || !container) return;
+
+        const ctx = canvas.getContext('2d');
+
+        const resize = () => {
+            const rect = container.getBoundingClientRect();
+            const dpr = window.devicePixelRatio || 1;
+            canvas.width = rect.width * dpr;
+            canvas.height = rect.height * dpr;
+            canvas.style.width = rect.width + 'px';
+            canvas.style.height = rect.height + 'px';
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        };
+
+        const drawFrame = () => {
+            const w = canvasRef.current?.width;
+            const h = canvasRef.current?.height;
+            if (!w || !h) return;
+
+            const rect = container.getBoundingClientRect();
+            const cw = rect.width;
+            const ch = rect.height;
+
+            // Clear canvas
+            ctx.clearRect(0, 0, cw, ch);
+
+            // Calculate font size based on container width
+            const fontSize = Math.max(cw * 0.16, 36);
+            const lineHeight = fontSize * 1.1;
+            const centerX = cw / 2;
+            const totalHeight = lineHeight * 2;
+            const startY = (ch - totalHeight) / 2 + fontSize * 0.8;
+            const line1Y = startY;
+            const line2Y = startY + lineHeight;
+
+            ctx.font = `900 ${fontSize}px Impact, "Arial Black", sans-serif`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.letterSpacing = `${fontSize * 0.05}px`;
+
+            // 1. Gold 3D extrusion layers
+            const layers = [
+                { color: '#8A681B', dx: 4, dy: 4 },
+                { color: '#B88E2F', dx: 3, dy: 3 },
+                { color: '#D4AF37', dx: 1, dy: 1 },
+            ];
+
+            layers.forEach(({ color, dx, dy }) => {
+                ctx.fillStyle = color;
+                ctx.fillText('GREEN', centerX + dx, line1Y + dy);
+                ctx.fillText('SPHERE', centerX + dx, line2Y + dy);
+            });
+
+            // 2. Draw video clipped to text shape
+            ctx.save();
+            ctx.beginPath();
+            ctx.fillStyle = 'red'; // dummy
+            ctx.fillText('GREEN', centerX, line1Y);
+            ctx.fillText('SPHERE', centerX, line2Y);
+
+            // Use compositing to clip video to text
+            ctx.globalCompositeOperation = 'source-in';
+
+            // Draw video to fill canvas area
+            if (video.readyState >= 2) {
+                const vw = video.videoWidth;
+                const vh = video.videoHeight;
+                const scale = Math.max(cw / vw, ch / vh);
+                const sw = vw * scale;
+                const sh = vh * scale;
+                ctx.drawImage(video, (cw - sw) / 2, (ch - sh) / 2, sw, sh);
+            }
+
+            ctx.restore();
+
+            // 3. Gold stroke outline on top
+            ctx.globalCompositeOperation = 'source-over';
+            ctx.strokeStyle = '#FFDF73';
+            ctx.lineWidth = 2;
+            ctx.strokeText('GREEN', centerX, line1Y);
+            ctx.strokeText('SPHERE', centerX, line2Y);
+
+            animFrameRef.current = requestAnimationFrame(drawFrame);
+        };
+
+        const onVideoReady = () => {
+            resize();
+            drawFrame();
+        };
+
+        video.addEventListener('loadeddata', onVideoReady);
+        window.addEventListener('resize', resize);
+
+        // If video already ready
+        if (video.readyState >= 2) {
+            onVideoReady();
+        }
+
+        return () => {
+            video.removeEventListener('loadeddata', onVideoReady);
+            window.removeEventListener('resize', resize);
+            if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current);
+        };
+    }, []);
+
     return (
-        <section className="relative w-full min-h-[20vh] sm:min-h-[22vh] md:min-h-[28vh] lg:min-h-[30vh] flex flex-col items-center justify-center bg-[#f5efe6] overflow-hidden py-6 sm:py-8 md:py-10 lg:py-12 z-0">
-            {/* Very faint background texture to give it a premium feel */}
+        <section className="relative w-full flex flex-col items-center justify-center bg-[#f5efe6] overflow-hidden py-8 sm:py-12 md:py-14 lg:py-16 z-0">
+            {/* Faint background texture */}
             <div className="absolute inset-0 opacity-[0.1] pointer-events-none" style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/stardust.png")' }} />
 
-            <div className="relative w-full max-w-[1920px] mx-auto flex flex-col items-center z-10 px-6 sm:px-8 md:px-12">
+            <div className="relative w-full max-w-[1920px] mx-auto flex flex-col items-center z-10 px-4 sm:px-8 md:px-12">
+                {/* Hidden video element */}
+                <video
+                    ref={videoRef}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="hidden"
+                >
+                    <source src={videoSrc} type="video/mp4" />
+                </video>
 
-                {/* SVG for clipping the video and drawing the 3D stroke/shadow */}
-                <svg viewBox="0 20 1000 240" className="w-full h-auto max-w-[320px] sm:max-w-[500px] md:max-w-[700px] lg:max-w-[850px] xl:max-w-[1000px]" preserveAspectRatio="xMidYMid meet">
-                    <defs>
-                        <mask id="videoMask">
-                            <rect width="100%" height="100%" fill="black" />
-                            <text x="50%" y="120" textAnchor="middle" fill="white" fontSize="110" fontWeight="900" fontFamily='Impact, "Arial Black", sans-serif' letterSpacing="0.05em">GREEN</text>
-                            <text x="50%" y="230" textAnchor="middle" fill="white" fontSize="110" fontWeight="900" fontFamily='Impact, "Arial Black", sans-serif' letterSpacing="0.05em">SPHERE</text>
-                        </mask>
-                        <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
-                            <feGaussianBlur in="SourceGraphic" stdDeviation="4" />
-                        </filter>
-                    </defs>
-
-                    {/* 1. Soft Black Drop Shadow */}
-                    <g transform="translate(6, 6)">
-                        <text x="50%" y="120" textAnchor="middle" fill="rgba(0,0,0,0.8)" fontSize="110" fontWeight="900" fontFamily='Impact, "Arial Black", sans-serif' letterSpacing="0.05em" filter="url(#softShadow)">GREEN</text>
-                        <text x="50%" y="230" textAnchor="middle" fill="rgba(0,0,0,0.8)" fontSize="110" fontWeight="900" fontFamily='Impact, "Arial Black", sans-serif' letterSpacing="0.05em" filter="url(#softShadow)">SPHERE</text>
-                    </g>
-
-                    {/* 2. Deep Gold Extrusion */}
-                    <g transform="translate(4, 4)">
-                        <text x="50%" y="120" textAnchor="middle" fill="#8A681B" fontSize="110" fontWeight="900" fontFamily='Impact, "Arial Black", sans-serif' letterSpacing="0.05em">GREEN</text>
-                        <text x="50%" y="230" textAnchor="middle" fill="#8A681B" fontSize="110" fontWeight="900" fontFamily='Impact, "Arial Black", sans-serif' letterSpacing="0.05em">SPHERE</text>
-                    </g>
-
-                    {/* 3. Mid Gold Extrusion */}
-                    <g transform="translate(3, 3)">
-                        <text x="50%" y="120" textAnchor="middle" fill="#B88E2F" fontSize="110" fontWeight="900" fontFamily='Impact, "Arial Black", sans-serif' letterSpacing="0.05em">GREEN</text>
-                        <text x="50%" y="230" textAnchor="middle" fill="#B88E2F" fontSize="110" fontWeight="900" fontFamily='Impact, "Arial Black", sans-serif' letterSpacing="0.05em">SPHERE</text>
-                    </g>
-
-                    {/* 4. Top Gold Extrusion */}
-                    <g transform="translate(1, 1)">
-                        <text x="50%" y="120" textAnchor="middle" fill="#D4AF37" fontSize="110" fontWeight="900" fontFamily='Impact, "Arial Black", sans-serif' letterSpacing="0.05em">GREEN</text>
-                        <text x="50%" y="230" textAnchor="middle" fill="#D4AF37" fontSize="110" fontWeight="900" fontFamily='Impact, "Arial Black", sans-serif' letterSpacing="0.05em">SPHERE</text>
-                    </g>
-
-                    {/* 5. The Video Layer */}
-                    <foreignObject x="0" y="0" width="100%" height="100%" mask="url(#videoMask)">
-                        <div xmlns="http://www.w3.org/1999/xhtml" style={{ width: '100%', height: '100%' }}>
-                            <video autoPlay loop muted playsInline style={{ width: '100%', height: '100%', objectFit: 'cover' }}>
-                                <source src={videoSrc} type="video/mp4" />
-                            </video>
-                        </div>
-                    </foreignObject>
-
-                    {/* 6. Gold Stroke Envelope */}
-                    <g>
-                        <text x="50%" y="120" textAnchor="middle" fill="transparent" stroke="#FFDF73" strokeWidth="2" fontSize="110" fontWeight="900" fontFamily='Impact, "Arial Black", sans-serif' letterSpacing="0.05em">GREEN</text>
-                        <text x="50%" y="230" textAnchor="middle" fill="transparent" stroke="#FFDF73" strokeWidth="2" fontSize="110" fontWeight="900" fontFamily='Impact, "Arial Black", sans-serif' letterSpacing="0.05em">SPHERE</text>
-                    </g>
-                </svg>
+                {/* Canvas container */}
+                <div
+                    ref={containerRef}
+                    className="w-full max-w-[320px] sm:max-w-[500px] md:max-w-[700px] lg:max-w-[850px] xl:max-w-[1000px]"
+                    style={{ aspectRatio: '1000 / 450' }}
+                >
+                    <canvas
+                        ref={canvasRef}
+                        className="w-full h-full"
+                    />
+                </div>
             </div>
         </section>
     );
