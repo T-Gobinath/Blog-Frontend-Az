@@ -4,6 +4,7 @@ import { Hero } from '../components/ui/Hero'
 import { TechNeural } from '../components/ui/TechNeural'
 import { HomeTimeline } from '../components/ui/HomeTimeline'
 import { OurBusinesses } from '../components/ui/OurBusinesses'
+import { Footer } from '../components/ui/Footer'
 
 export function Home() {
     return (
@@ -18,6 +19,9 @@ export function Home() {
 
             {/* Interactive Timeline Section */}
             <HomeTimeline />
+
+            {/* Footer */}
+            <Footer />
 
         </Layout>
     )
