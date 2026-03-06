@@ -135,14 +135,14 @@ export function TechNeural() {
     }, [draw]);
 
     return (
-        <section className="relative w-full bg-[#f5efe6] overflow-hidden z-0">
+        <section className="relative w-full h-[280px] bg-[#f5efe6] overflow-hidden z-0">
             {/* Faint texture */}
             <div
                 className="absolute inset-0 opacity-[0.08] pointer-events-none"
                 style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/stardust.png")' }}
             />
 
-            <div className="relative z-10 w-full flex items-center justify-center py-8 sm:py-10 md:py-14 lg:py-16 px-4">
+            <div className="relative z-10 w-full h-full flex items-center justify-center px-4">
                 {/* Hidden video source */}
                 <video
                     ref={videoRef}
@@ -158,7 +158,7 @@ export function TechNeural() {
 
                 {/* Canvas wrapper — responsive width, fixed aspect ratio */}
                 <div
-                    className="w-[85vw] sm:w-[75vw] md:w-[65vw] lg:w-[55vw] xl:w-[50vw] 2xl:w-[45vw]"
+                    className="w-[370px]"
                     style={{ aspectRatio: '2.2 / 1' }}
                 >
                     <canvas

@@ -162,6 +162,16 @@ body {
   overflow-y: scroll !important;
 }
 
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* Hide Spline Logo */
 .hide-spline-logo a,
 #spline-container a[href*="spline.design"] {
