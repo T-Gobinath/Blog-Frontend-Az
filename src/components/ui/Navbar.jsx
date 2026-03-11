@@ -146,12 +146,14 @@ export function Navbar() {
             <div className={`max-w-[1920px] mx-auto px-4 sm:px-6 md:px-8 xl:px-24 2xl:px-40 flex items-center justify-between transition-all duration-700 ${isScrolled ? 'h-12 sm:h-14 md:h-16' : 'h-16 sm:h-20 md:h-24 xl:h-28'}`}>
                 {/* Left Column: Logo */}
                 <div className="flex-shrink-0 flex items-center pr-4 sm:pr-6 md:pr-8 xl:pr-8 2xl:pr-12">
-                    <img
-                        src={isScrolled ? scrolledLogo : defaultLogo}
-                        onError={(e) => { e.target.style.display = 'none' }}
-                        alt="TIMA Logo"
-                        className={`w-auto object-contain mr-2 sm:mr-3 md:mr-4 drop-shadow-md transition-all duration-700 ${isScrolled ? 'h-10 sm:h-12 md:h-14 xl:h-14' : 'h-14 sm:h-18 md:h-20 xl:h-[90px]'}`}
-                    />
+                    <Link to="/">
+                        <img
+                            src={isScrolled ? scrolledLogo : defaultLogo}
+                            onError={(e) => { e.target.style.display = 'none' }}
+                            alt="TIMA Logo"
+                            className={`w-auto object-contain mr-2 sm:mr-3 md:mr-4 drop-shadow-md transition-all duration-700 cursor-pointer ${isScrolled ? 'h-10 sm:h-12 md:h-14 xl:h-14' : 'h-14 sm:h-18 md:h-20 xl:h-[90px]'}`}
+                        />
+                    </Link>
                 </div>
 
                 {/* Right Column: Rows */}
@@ -261,17 +263,23 @@ export function Navbar() {
                                                         )}
                                                         {group.items.length > 0 && (
                                                             <ul className="space-y-0.5">
-                                                                {group.items.map((item) => (
-                                                                    <li key={item}>
-                                                                        <a
-                                                                            href="#"
-                                                                            className="text-[13px] text-gray-600 hover:text-tima-gold hover:translate-x-1 transition-all duration-200 inline-block"
-                                                                            onClick={() => setActiveDropdown(null)}
-                                                                        >
-                                                                            {item}
-                                                                        </a>
-                                                                    </li>
-                                                                ))}
+                                                                {group.items.map((item) => {
+                                                                    const basePath = cat.title === 'Manufacturing' ? '/manufacturing' : '/it-solutions';
+                                                                    const slug = item.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(/&/g, '');
+                                                                    const targetPath = basePath + '/' + slug;
+                                                                    
+                                                                    return (
+                                                                        <li key={item}>
+                                                                            <Link
+                                                                                to={targetPath}
+                                                                                className="text-[13px] text-gray-600 hover:text-tima-gold hover:translate-x-1 transition-all duration-200 inline-block"
+                                                                                onClick={() => setActiveDropdown(null)}
+                                                                            >
+                                                                                {item}
+                                                                            </Link>
+                                                                        </li>
+                                                                    );
+                                                                })}
                                                             </ul>
                                                         )}
                                                     </div>
@@ -293,27 +301,24 @@ export function Navbar() {
                     >
                         <div className="max-w-7xl mx-auto px-10 py-5">
                             <div className="flex gap-12">
-                                {activeLink.items?.map((item) => (
-                                    item === 'Overview' ? (
+                                {activeLink.items?.map((item) => {
+                                    const basePath = activeLink.label === 'Partners' ? '/partners' : 
+                                                    activeLink.label === 'Careers' ? '/careers' : '/about';
+                                    const targetPath = item === 'Overview' ? '/overview' :
+                                                    item === 'Careers' ? '/careers' : 
+                                                    basePath + '/' + item.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(/&/g, '');
+                                    
+                                    return (
                                         <Link
                                             key={item}
-                                            to="/overview"
+                                            to={targetPath}
                                             className="text-sm text-gray-700 hover:text-tima-gold transition-colors font-medium whitespace-nowrap py-1"
                                             onClick={() => setActiveDropdown(null)}
                                         >
                                             {item}
                                         </Link>
-                                    ) : (
-                                        <a
-                                            key={item}
-                                            href="#"
-                                            className="text-sm text-gray-700 hover:text-tima-gold transition-colors font-medium whitespace-nowrap py-1"
-                                            onClick={() => setActiveDropdown(null)}
-                                        >
-                                            {item}
-                                        </a>
-                                    )
-                                ))}
+                                    );
+                                })}
                             </div>
                         </div>
                     </div>
@@ -356,41 +361,44 @@ export function Navbar() {
                                                         {group.heading && (
                                                             <p className={`text-xs font-semibold py-1 ${activeTheme === 'light' ? 'text-gray-800' : 'text-white/80'}`}>{group.heading}</p>
                                                         )}
-                                                        {group.items.map((item) => (
-                                                            <a
-                                                                key={item}
-                                                                href="#"
-                                                                className={`block py-1 text-xs transition-colors ${activeTheme === 'light' ? 'text-gray-500 hover:text-tima-gold' : 'text-white/50 hover:text-tima-gold'}`}
-                                                            >
-                                                                {item}
-                                                            </a>
-                                                        ))}
+                                                        {group.items.map((item) => {
+                                                            const basePath = cat.title === 'Manufacturing' ? '/manufacturing' : '/it-solutions';
+                                                            const slug = item.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(/&/g, '');
+                                                            const targetPath = basePath + '/' + slug;
+                                                            return (
+                                                                <Link
+                                                                    key={item}
+                                                                    to={targetPath}
+                                                                    className={`block py-1 text-xs transition-colors ${activeTheme === 'light' ? 'text-gray-500 hover:text-tima-gold' : 'text-white/50 hover:text-tima-gold'}`}
+                                                                    onClick={() => { setMobileOpen(false); setMobileExpanded(null) }}
+                                                                >
+                                                                    {item}
+                                                                </Link>
+                                                            );
+                                                        })}
                                                     </div>
                                                 ))}
                                             </div>
                                         ))
                                     ) : (
                                         // Standard items for other nav links
-                                        link.items?.map((item) => (
-                                            item === 'Overview' ? (
+                                        link.items?.map((item) => {
+                                            const basePath = link.label === 'Partners' ? '/partners' : 
+                                                            link.label === 'Careers' ? '/careers' : '/about';
+                                            const targetPath = item === 'Overview' ? '/overview' :
+                                                            item === 'Careers' ? '/careers' : 
+                                                            basePath + '/' + item.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(/&/g, '');
+                                            return (
                                                 <Link
                                                     key={item}
-                                                    to="/overview"
+                                                    to={targetPath}
                                                     className="block py-2 text-xs text-white/60 hover:text-tima-gold transition-colors"
                                                     onClick={() => { setMobileOpen(false); setMobileExpanded(null) }}
                                                 >
                                                     {item}
                                                 </Link>
-                                            ) : (
-                                                <a
-                                                    key={item}
-                                                    href="#"
-                                                    className="block py-2 text-xs text-white/60 hover:text-tima-gold transition-colors"
-                                                >
-                                                    {item}
-                                                </a>
-                                            )
-                                        ))
+                                            );
+                                        })
                                     )}
                                 </div>
                             )}

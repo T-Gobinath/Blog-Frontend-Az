@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 /* ── Topic Data ── */
 const leftTopics = [
@@ -193,19 +194,52 @@ function TopicButton({ topic, isActive, onHover, accentColor }) {
 
 /* ── Main Component ── */
 export function OurBusinesses() {
-    const [hoveredSide, setHoveredSide] = useState(null);
-    const [hoveredIndex, setHoveredIndex] = useState(null);
+    // Manufacturing carousel state
+    const [mfgIndex, setMfgIndex] = useState(0);
+    const [mfgPaused, setMfgPaused] = useState(false);
+    const mfgTimerRef = useRef(null);
 
-    const hoveredTopic = hoveredSide === 'left'
-        ? leftTopics[hoveredIndex]
-        : hoveredSide === 'right'
-            ? rightTopics[hoveredIndex]
-            : null;
+    const goMfgNext = useCallback(() => {
+        setMfgIndex((prev) => (prev + 1) % leftTopics.length);
+    }, []);
+
+    const goMfgPrev = useCallback(() => {
+        setMfgIndex((prev) => (prev - 1 + leftTopics.length) % leftTopics.length);
+    }, []);
+
+    // Auto-rotate Manufacturing every 4 seconds
+    useEffect(() => {
+        if (mfgPaused) return;
+        mfgTimerRef.current = setInterval(goMfgNext, 4000);
+        return () => clearInterval(mfgTimerRef.current);
+    }, [mfgPaused, goMfgNext]);
+
+    // IT Solutions carousel state
+    const [itIndex, setItIndex] = useState(0);
+    const [itPaused, setItPaused] = useState(false);
+    const itTimerRef = useRef(null);
+
+    const goNext = useCallback(() => {
+        setItIndex((prev) => (prev + 1) % rightTopics.length);
+    }, []);
+
+    const goPrev = useCallback(() => {
+        setItIndex((prev) => (prev - 1 + rightTopics.length) % rightTopics.length);
+    }, []);
+
+    // Auto-rotate IT Solutions every 4 seconds
+    useEffect(() => {
+        if (itPaused) return;
+        itTimerRef.current = setInterval(goNext, 4000);
+        return () => clearInterval(itTimerRef.current);
+    }, [itPaused, goNext]);
+
+    const currentMfgTopic = leftTopics[mfgIndex];
+    const currentItTopic = rightTopics[itIndex];
 
     return (
         <section
             className="relative w-full bg-[#0a0a0a] overflow-hidden font-sans"
-            onMouseLeave={() => { setHoveredSide(null); setHoveredIndex(null); }}
         >
             {/* Subtle grid */}
             <div
@@ -254,9 +288,9 @@ export function OurBusinesses() {
 
             {/* Two-Sided Interactive Layout */}
             <div className="relative z-10 max-w-[1300px] mx-auto px-4 sm:px-6 md:px-10 pb-14 sm:pb-18 md:pb-20">
-                <div className="flex flex-col md:flex-row gap-6 md:gap-0 min-h-[580px]">
+                <div className="flex flex-col lg:flex-row gap-8 lg:gap-0">
 
-                    {/* ── LEFT COLUMN ── */}
+                    {/* ── LEFT COLUMN — Manufacturing Carousel ── */}
                     <div className="flex-1 relative">
                         {/* Column Header */}
                         <div className="px-4 sm:px-5 mb-4">
@@ -267,37 +301,111 @@ export function OurBusinesses() {
                             <p className="text-white/35 text-xs sm:text-sm mt-1 ml-5">Precision Engineering & Production</p>
                         </div>
 
-                        <div className="relative min-h-[480px]">
-                            {/* Buttons — hidden when right side is hovered */}
-                            <div className={`transition-all duration-300 ${hoveredSide === 'right' ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
-                                <div className="flex flex-col gap-0.5">
-                                    {leftTopics.map((topic, i) => (
-                                        <TopicButton
-                                            key={topic.id}
-                                            topic={topic}
-                                            isActive={hoveredSide === 'left' && hoveredIndex === i}
-                                            onHover={() => { setHoveredSide('left'); setHoveredIndex(i); }}
-                                            accentColor="#D4AF37"
+                        <div
+                            className="relative min-h-[360px] sm:min-h-[420px] md:min-h-[480px]"
+                            onMouseEnter={() => setMfgPaused(true)}
+                            onMouseLeave={() => setMfgPaused(false)}
+                            onTouchStart={() => setMfgPaused(true)}
+                            onTouchEnd={() => setMfgPaused(false)}
+                        >
+                            <AnimatePresence mode="wait">
+                                <motion.div
+                                    key={currentMfgTopic.id}
+                                    initial={{ opacity: 0, y: 12 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -8 }}
+                                    transition={{ duration: 0.35, ease: 'easeOut' }}
+                                    className="absolute inset-0 flex flex-col sm:flex-row rounded-xl overflow-hidden border border-white/10"
+                                >
+                                    <div className="w-full sm:w-1/2 bg-[#0c0c0c] p-5 pb-16 sm:p-6 md:p-8 flex flex-col justify-center relative z-10 order-2 sm:order-1">
+                                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white tracking-tight mb-2 sm:mb-3">
+                                            {currentMfgTopic.label}
+                                        </h3>
+                                        <div className="w-10 h-[2px] bg-tima-gold rounded-full mb-3 sm:mb-5"></div>
+                                        <p className="text-white/60 text-xs sm:text-sm md:text-[15px] leading-relaxed mb-4 sm:mb-6 line-clamp-4 sm:line-clamp-none">
+                                            {currentMfgTopic.abstract}
+                                        </p>
+                                        <Link
+                                            to={`/manufacturing/${currentMfgTopic.label.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(/&/g, '')}`}
+                                            className="inline-flex items-center gap-2 border border-tima-gold/50 text-tima-gold rounded-full px-5 py-2 text-sm hover:bg-tima-gold/10 hover:border-tima-gold transition-all duration-300 group self-start"
+                                        >
+                                            read more
+                                            <svg
+                                                width="14" height="14" viewBox="0 0 24 24"
+                                                fill="none" stroke="currentColor" strokeWidth="2"
+                                                strokeLinecap="round" strokeLinejoin="round"
+                                                className="group-hover:translate-x-1 transition-transform duration-200"
+                                            >
+                                                <path d="M5 12h14m-7-7l7 7-7 7" />
+                                            </svg>
+                                        </Link>
+                                    </div>
+
+                                    {/* Image */}
+                                    <div className="w-full h-[180px] sm:h-auto sm:w-1/2 relative overflow-hidden order-1 sm:order-2">
+                                        <motion.img
+                                            key={currentMfgTopic.id + '-img'}
+                                            src={currentMfgTopic.image}
+                                            alt={currentMfgTopic.label}
+                                            className="w-full h-full object-cover"
+                                            initial={{ scale: 1.1, opacity: 0 }}
+                                            animate={{ scale: 1, opacity: 1 }}
+                                            transition={{ duration: 0.6, ease: 'easeOut' }}
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-r from-[#0c0c0c] via-transparent to-transparent w-1/3 hidden sm:block"></div>
+                                        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0c0c0c]/80 sm:hidden"></div>
+                                        <div className="absolute inset-0 bg-black/20"></div>
+                                    </div>
+                                </motion.div>
+                            </AnimatePresence>
+
+                            {/* Navigation Buttons */}
+                            <div className="absolute bottom-4 right-4 flex items-center gap-2 sm:gap-3 z-20">
+                                {/* Topic indicator dots */}
+                                <div className="flex items-center gap-1 sm:gap-1.5 mr-1 sm:mr-2">
+                                    {leftTopics.map((_, i) => (
+                                        <button
+                                            key={i}
+                                            onClick={() => setMfgIndex(i)}
+                                            className={`block rounded-full flex-shrink-0 transition-all duration-300 ${i === mfgIndex
+                                                ? 'w-[20px] h-[6px] bg-tima-gold'
+                                                : 'w-[6px] h-[6px] bg-white/25 hover:bg-white/40'
+                                            }`}
                                         />
                                     ))}
                                 </div>
-                            </div>
 
-                            {/* Description Panel with Image (when RIGHT topic is hovered) */}
-                            <AnimatePresence mode="wait">
-                                {hoveredSide === 'right' && hoveredTopic && (
-                                    <DescriptionPanel topic={hoveredTopic} />
-                                )}
-                            </AnimatePresence>
+                                {/* Previous Button */}
+                                <button
+                                    onClick={goMfgPrev}
+                                    className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-white/15 bg-white/5 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 hover:border-white/30 transition-all duration-300 backdrop-blur-sm"
+                                    aria-label="Previous topic"
+                                >
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M19 12H5m7-7l-7 7 7 7" />
+                                    </svg>
+                                </button>
+
+                                {/* Forward Button */}
+                                <button
+                                    onClick={goMfgNext}
+                                    className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-white/15 bg-white/5 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 hover:border-white/30 transition-all duration-300 backdrop-blur-sm"
+                                    aria-label="Next topic"
+                                >
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M5 12h14m-7-7l7 7-7 7" />
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
                     </div>
 
                     {/* ── CENTER DIVIDER ── */}
-                    <div className="hidden md:flex items-stretch justify-center px-4 lg:px-6">
+                    <div className="hidden lg:flex items-stretch justify-center px-4 xl:px-6">
                         <div className="w-[1px] bg-gradient-to-b from-transparent via-white/15 to-transparent"></div>
                     </div>
 
-                    {/* ── RIGHT COLUMN ── */}
+                    {/* ── RIGHT COLUMN — IT Solutions Carousel ── */}
                     <div className="flex-1 relative">
                         {/* Column Header */}
                         <div className="px-4 sm:px-5 mb-4">
@@ -308,28 +416,102 @@ export function OurBusinesses() {
                             <p className="text-white/35 text-xs sm:text-sm mt-1 ml-5">Digital Innovation & Technology</p>
                         </div>
 
-                        <div className="relative min-h-[480px]">
-                            {/* Buttons — hidden when left side is hovered */}
-                            <div className={`transition-all duration-300 ${hoveredSide === 'left' ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
-                                <div className="flex flex-col gap-0.5">
-                                    {rightTopics.map((topic, i) => (
-                                        <TopicButton
-                                            key={topic.id}
-                                            topic={topic}
-                                            isActive={hoveredSide === 'right' && hoveredIndex === i}
-                                            onHover={() => { setHoveredSide('right'); setHoveredIndex(i); }}
-                                            accentColor="#3B82F6"
+                        <div
+                            className="relative min-h-[360px] sm:min-h-[420px] md:min-h-[480px]"
+                            onMouseEnter={() => setItPaused(true)}
+                            onMouseLeave={() => setItPaused(false)}
+                            onTouchStart={() => setItPaused(true)}
+                            onTouchEnd={() => setItPaused(false)}
+                        >
+                            <AnimatePresence mode="wait">
+                                <motion.div
+                                    key={currentItTopic.id}
+                                    initial={{ opacity: 0, y: 12 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -8 }}
+                                    transition={{ duration: 0.35, ease: 'easeOut' }}
+                                    className="absolute inset-0 flex flex-col sm:flex-row rounded-xl overflow-hidden border border-white/10"
+                                >
+                                    <div className="w-full sm:w-1/2 bg-[#0c0c0c] p-5 pb-16 sm:p-6 md:p-8 flex flex-col justify-center relative z-10 order-2 sm:order-1">
+                                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white tracking-tight mb-2 sm:mb-3">
+                                                {currentItTopic.label}
+                                            </h3>
+                                        <div className="w-10 h-[2px] bg-tima-gold rounded-full mb-3 sm:mb-5"></div>
+                                        <p className="text-white/60 text-xs sm:text-sm md:text-[15px] leading-relaxed mb-4 sm:mb-6 line-clamp-4 sm:line-clamp-none">
+                                                {currentItTopic.abstract}
+                                            </p>
+                                            <Link
+                                                to={`/it-solutions/${currentItTopic.label.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(/&/g, '')}`}
+                                                className="inline-flex items-center gap-2 border border-tima-gold/50 text-tima-gold rounded-full px-5 py-2 text-sm hover:bg-tima-gold/10 hover:border-tima-gold transition-all duration-300 group self-start"
+                                            >
+                                                read more
+                                                <svg
+                                                    width="14" height="14" viewBox="0 0 24 24"
+                                                    fill="none" stroke="currentColor" strokeWidth="2"
+                                                    strokeLinecap="round" strokeLinejoin="round"
+                                                    className="group-hover:translate-x-1 transition-transform duration-200"
+                                                >
+                                                    <path d="M5 12h14m-7-7l7 7-7 7" />
+                                                </svg>
+                                            </Link>
+                                        </div>
+
+                                    {/* Image */}
+                                    <div className="w-full h-[180px] sm:h-auto sm:w-1/2 relative overflow-hidden order-1 sm:order-2">
+                                            <motion.img
+                                                key={currentItTopic.id + '-img'}
+                                                src={currentItTopic.image}
+                                                alt={currentItTopic.label}
+                                                className="w-full h-full object-cover"
+                                                initial={{ scale: 1.1, opacity: 0 }}
+                                                animate={{ scale: 1, opacity: 1 }}
+                                                transition={{ duration: 0.6, ease: 'easeOut' }}
+                                            />
+                                        <div className="absolute inset-0 bg-gradient-to-r from-[#0c0c0c] via-transparent to-transparent w-1/3 hidden sm:block"></div>
+                                        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0c0c0c]/80 sm:hidden"></div>
+                                        <div className="absolute inset-0 bg-black/20"></div>
+                                        </div>
+                                </motion.div>
+                            </AnimatePresence>
+
+                            {/* Navigation Buttons */}
+                            <div className="absolute bottom-4 right-4 flex items-center gap-2 sm:gap-3 z-20">
+                                {/* Topic indicator dots */}
+                                <div className="flex items-center gap-1 sm:gap-1.5 mr-1 sm:mr-2">
+                                    {rightTopics.map((_, i) => (
+                                        <button
+                                            key={i}
+                                            onClick={() => setItIndex(i)}
+                                            className={`block rounded-full flex-shrink-0 transition-all duration-300 ${i === itIndex
+                                                ? 'w-[20px] h-[6px] bg-tima-gold'
+                                                : 'w-[6px] h-[6px] bg-white/25 hover:bg-white/40'
+                                            }`}
                                         />
                                     ))}
                                 </div>
-                            </div>
 
-                            {/* Description Panel with Image (when LEFT topic is hovered) */}
-                            <AnimatePresence mode="wait">
-                                {hoveredSide === 'left' && hoveredTopic && (
-                                    <DescriptionPanel topic={hoveredTopic} />
-                                )}
-                            </AnimatePresence>
+                                {/* Previous Button */}
+                                <button
+                                    onClick={goPrev}
+                                    className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-white/15 bg-white/5 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 hover:border-white/30 transition-all duration-300 backdrop-blur-sm"
+                                    aria-label="Previous topic"
+                                >
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M19 12H5m7-7l-7 7 7 7" />
+                                    </svg>
+                                </button>
+
+                                {/* Forward Button */}
+                                <button
+                                    onClick={goNext}
+                                    className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-white/15 bg-white/5 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 hover:border-white/30 transition-all duration-300 backdrop-blur-sm"
+                                    aria-label="Next topic"
+                                >
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M5 12h14m-7-7l7 7-7 7" />
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
                     </div>
 

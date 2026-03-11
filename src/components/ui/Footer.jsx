@@ -21,13 +21,13 @@ export function Footer() {
                         <h4 className="font-bold text-gray-900 text-base sm:text-lg mb-4 tracking-wide">About</h4>
                         <ul className="space-y-2 mb-8">
                             <li><FooterLink label="Overview" to="/overview" /></li>
-                            <li><FooterLink label="Board of Directors" /></li>
-                            <li><FooterLink label="Timeline" /></li>
+                            <li><FooterLink label="Board of Directors" to="/about/board-of-directors" /></li>
+                            <li><FooterLink label="Timeline" to="/about/timeline" /></li>
                         </ul>
 
                         <h4 className="font-bold text-gray-900 text-base sm:text-lg mb-4 tracking-wide">Partners</h4>
                         <ul className="space-y-2">
-                            <li><FooterLink label="Who to Handshake" /></li>
+                            <li><FooterLink label="Who to Handshake" to="/partners/who-to-handshake" /></li>
                         </ul>
                     </div>
 
@@ -37,18 +37,18 @@ export function Footer() {
 
                         <p className="font-semibold text-gray-800 text-sm sm:text-[15px] mb-2">Manufacturing</p>
                         <ul className="space-y-1.5 mb-5">
-                            <li><FooterLink label="Materials" /></li>
-                            <li><FooterLink label="Engineering Solutions" /></li>
-                            <li><FooterLink label="Services" /></li>
+                            <li><FooterLink label="Materials" to="/manufacturing/materials" /></li>
+                            <li><FooterLink label="Engineering Solutions" to="/manufacturing/die-making" /></li>
+                            <li><FooterLink label="Services" to="/manufacturing/on-site-installation" /></li>
                         </ul>
 
                         <p className="font-semibold text-gray-800 text-sm sm:text-[15px] mb-2">IT Solutions</p>
                         <ul className="space-y-1.5">
-                            <li><FooterLink label="Software Development" /></li>
-                            <li><FooterLink label="Web & E-Commerce" /></li>
-                            <li><FooterLink label="Apps & Automation" /></li>
-                            <li><FooterLink label="Cloud & Infrastructure" /></li>
-                            <li><FooterLink label="Support Services" /></li>
+                            <li><FooterLink label="Software Development" to="/it-solutions/software-development" /></li>
+                            <li><FooterLink label="Web & E-Commerce" to="/it-solutions/web-e-commerce" /></li>
+                            <li><FooterLink label="Apps & Automation" to="/it-solutions/apps-automation" /></li>
+                            <li><FooterLink label="Cloud & Infrastructure" to="/it-solutions/cloud-infrastructure" /></li>
+                            <li><FooterLink label="Support Services" to="/it-solutions/support-services" /></li>
                         </ul>
                     </div>
 
@@ -56,9 +56,9 @@ export function Footer() {
                     <div>
                         <h4 className="font-bold text-gray-900 text-base sm:text-lg mb-4 tracking-wide">Careers</h4>
                         <ul className="space-y-2">
-                            <li><FooterLink label="Careers" /></li>
-                            <li><FooterLink label="Search & Apply" /></li>
-                            <li><FooterLink label="Working at TIMA" /></li>
+                            <li><FooterLink label="Careers" to="/careers" /></li>
+                            <li><FooterLink label="Search & Apply" to="/careers/search-apply" /></li>
+                            <li><FooterLink label="Working at TIMA" to="/careers/working-at-tima" /></li>
                         </ul>
                     </div>
 
