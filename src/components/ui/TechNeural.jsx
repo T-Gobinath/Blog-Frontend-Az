@@ -25,38 +25,38 @@ export function TechNeural() {
     };
 
     return (
-        <section className="relative w-full h-[260px] sm:h-[350px] bg-[#0a0a0a] overflow-hidden z-0 flex items-center justify-center border-y border-white/5">
+        <section className="relative w-full h-[320px] sm:h-[350px] bg-[#0a0a0a] overflow-hidden z-0 flex items-center justify-center border-y border-white/5">
             {/* Background Image */}
-            <div className="absolute inset-0">
+            <div className="absolute inset-0 flex items-center justify-center">
                 <img 
                     src={sphereImg} 
                     alt="Green Sphere Background" 
-                    className="w-full h-full object-cover opacity-80"
+                    className="w-full h-full object-cover sm:object-cover opacity-90"
                 />
                 {/* Darker overlays for better text readability */}
-                <div className="absolute inset-0 bg-black/20" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/80 via-transparent to-[#0a0a0a]/80" />
+                <div className="absolute inset-0 bg-black/30" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-[#0a0a0a]" />
             </div>
 
             {/* Animated Text Content */}
             <motion.div 
-                className="relative z-10 flex flex-col items-center justify-center text-center px-4"
+                className="relative z-10 flex flex-col items-center justify-center text-center px-6"
                 variants={textContainerVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, margin: "-50px" }}
+                viewport={{ once: true, margin: "-20px" }}
             >
                 <motion.h2 
                     variants={itemVariants}
                     style={{ fontFamily: "'Philosopher', sans-serif" }}
-                    className="text-3xl sm:text-5xl md:text-6xl font-bold italic tracking-[0.05em] text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-tima-gold/50 leading-tight drop-shadow-[0_0_20px_rgba(212,175,55,0.4)]"
+                    className="text-2xl sm:text-5xl md:text-6xl font-bold italic tracking-[0.1em] text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-tima-gold/50 leading-tight drop-shadow-[0_0_20px_rgba(212,175,55,0.5)]"
                 >
                     GREEN
                 </motion.h2>
                 <motion.h2 
                     variants={itemVariants}
                     style={{ fontFamily: "'Philosopher', sans-serif" }}
-                    className="text-3xl sm:text-5xl md:text-6xl font-bold italic tracking-[0.05em] text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-tima-gold/50 leading-tight -mt-1 sm:-mt-2 md:-mt-3 drop-shadow-[0_0_20px_rgba(212,175,55,0.4)]"
+                    className="text-2xl sm:text-5xl md:text-6xl font-bold italic tracking-[0.1em] text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-tima-gold/50 leading-tight sm:-mt-2 md:-mt-3 drop-shadow-[0_0_20px_rgba(212,175,55,0.5)]"
                 >
                     SPHERE
                 </motion.h2>
