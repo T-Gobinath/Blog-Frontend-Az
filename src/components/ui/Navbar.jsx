@@ -122,9 +122,9 @@ export function Navbar() {
         >
 
 
-            {/* Scrolling Marquee Banner — mobile/tablet only, hidden on xl desktop */}
+            {/* Scrolling Marquee Banner — mobile/tablet only, hidden on lg desktop */}
             {!isScrolled && (
-                <div className={`xl:hidden overflow-hidden py-2 text-[11px] sm:text-[12px] md:text-[13px] ${activeTheme === 'light' ? 'text-gray-600' : 'text-white/90'}`}>
+                <div className={`lg:hidden overflow-hidden py-2 text-[11px] sm:text-[12px] md:text-[13px] ${activeTheme === 'light' ? 'text-gray-600' : 'text-white/90'}`}>
                     <div className="marquee-scroll whitespace-nowrap font-medium tracking-wide">
                         <span className="inline-block">
                             <span className="px-10 sm:px-12">Together we Raise, Together we Thrive.</span>
@@ -143,21 +143,21 @@ export function Navbar() {
             )}
 
             {/* Desktop Layout Wrapper */}
-            <div className={`max-w-[1920px] mx-auto px-4 sm:px-6 md:px-8 xl:px-24 2xl:px-40 flex items-center justify-between transition-all duration-700 ${isScrolled ? 'h-12 sm:h-14 md:h-16' : 'h-16 sm:h-20 md:h-24 xl:h-28'}`}>
+            <div className={`max-w-[1920px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 2xl:px-40 flex items-center justify-between transition-all duration-700 ${isScrolled ? 'h-12 sm:h-14 md:h-16' : 'h-16 sm:h-20 md:h-24 lg:h-26 xl:h-28'}`}>
                 {/* Left Column: Logo */}
-                <div className="flex-shrink-0 flex items-center pr-4 sm:pr-6 md:pr-8 xl:pr-8 2xl:pr-12">
+                <div className="flex-shrink-0 flex items-center pr-4 sm:pr-6 md:pr-8 lg:pr-8 2xl:pr-12">
                     <Link to="/">
                         <img
                             src={isScrolled ? scrolledLogo : defaultLogo}
                             onError={(e) => { e.target.style.display = 'none' }}
                             alt="TIMA Logo"
-                            className={`w-auto object-contain mr-2 sm:mr-3 md:mr-4 drop-shadow-md transition-all duration-700 cursor-pointer ${isScrolled ? 'h-10 sm:h-12 md:h-14 xl:h-14' : 'h-14 sm:h-18 md:h-20 xl:h-[90px]'}`}
+                            className={`w-auto object-contain mr-2 sm:mr-3 md:mr-4 drop-shadow-md transition-all duration-700 cursor-pointer ${isScrolled ? 'h-10 sm:h-12 md:h-14 lg:h-14' : 'h-14 sm:h-18 md:h-20 lg:h-[80px] xl:h-[90px]'}`}
                         />
                     </Link>
                 </div>
 
                 {/* Right Column: Rows */}
-                <div className="hidden xl:flex flex-col justify-center h-full flex-1 min-w-0 xl:pl-12 2xl:pl-24">
+                <div className="hidden lg:flex flex-col justify-center h-full flex-1 min-w-0 lg:pl-8 xl:pl-12 2xl:pl-24">
                     {/* Top Row: Utilities - hidden when scrolled */}
                     {!isScrolled && (
                         <div className={`flex justify-between items-center pt-3 pb-6 border-b text-[12px] sm:text-[13px] ${activeTheme === 'light' ? 'border-gray-300 text-gray-700' : 'border-white text-white/95'}`}>
@@ -186,8 +186,8 @@ export function Navbar() {
                     {/* Bottom Row: Nav Links + Icons */}
                     <div className={`flex items-center ${isScrolled ? 'py-0' : 'pt-4'}`}>
                         {/* Left-Aligned Links (matching the marquee above) */}
-                        <div className="flex items-center gap-6 xl:gap-8 2xl:gap-12">
-                            <Link to="/" className={`relative group flex items-center gap-1.5 text-[13px] xl:text-[14px] 2xl:text-[16px] font-medium tracking-wide whitespace-nowrap transition-colors py-1 ${activeTheme === 'light' ? 'text-gray-600 hover:text-gray-900' : 'text-white/80 hover:text-white'}`}>
+                        <div className="flex items-center gap-4 lg:gap-6 xl:gap-8 2xl:gap-12">
+                            <Link to="/" className={`relative group flex items-center gap-1.5 text-[13px] lg:text-[14px] 2xl:text-[16px] font-medium tracking-wide whitespace-nowrap transition-colors py-1 ${activeTheme === 'light' ? 'text-gray-600 hover:text-gray-900' : 'text-white/80 hover:text-white'}`}>
                                 <span className="relative pb-1">
                                     Home
                                     <span className="absolute left-0 bottom-0 h-[4px] bg-tima-gold transition-all duration-300 rounded-full w-0 group-hover:w-full"></span>
@@ -198,7 +198,7 @@ export function Navbar() {
                                 <button
                                     key={link.label}
                                     onMouseEnter={() => setActiveDropdown(link.label)}
-                                    className={`relative group flex items-center gap-1.5 text-[13px] xl:text-[14px] 2xl:text-[16px] font-medium tracking-wide whitespace-nowrap transition-colors py-1 ${activeDropdown === link.label
+                                    className={`relative group flex items-center gap-1.5 text-[13px] lg:text-[14px] 2xl:text-[16px] font-medium tracking-wide whitespace-nowrap transition-colors py-1 ${activeDropdown === link.label
                                         ? (activeTheme === 'light' ? 'text-gray-900' : 'text-white')
                                         : (activeTheme === 'light' ? 'text-gray-600 hover:text-gray-900' : 'text-white/80 hover:text-white')
                                         }`}
@@ -230,7 +230,7 @@ export function Navbar() {
 
                 {/* Mobile menu toggle */}
                 <button
-                    className={`xl:hidden p-2 ml-auto self-center transition-colors ${activeTheme === 'light' ? 'text-gray-900' : 'text-white'}`}
+                    className={`lg:hidden p-2 ml-auto self-center transition-colors ${activeTheme === 'light' ? 'text-gray-900' : 'text-white'}`}
                     onClick={() => { setMobileOpen(!mobileOpen); setMobileExpanded(null) }}
                 >
                     {mobileOpen ? <X size={24} /> : <Menu size={24} />}
@@ -246,7 +246,7 @@ export function Navbar() {
                 if (activeLink.isMega) {
                     return (
                         <div
-                            className="hidden xl:block absolute left-0 right-0 bg-white shadow-2xl border-t-2 border-tima-gold"
+                            className="hidden lg:block absolute left-0 right-0 bg-white shadow-2xl border-t-2 border-tima-gold"
                             style={{ animation: 'slideDown 0.25s ease-out' }}
                         >
                             <div className="max-w-7xl mx-auto px-10 py-8">
@@ -296,7 +296,7 @@ export function Navbar() {
                 // Standard dropdown for other nav items
                 return (
                     <div
-                        className="hidden xl:block absolute left-0 right-0 bg-white shadow-xl border-t-2 border-tima-gold"
+                        className="hidden lg:block absolute left-0 right-0 bg-white shadow-xl border-t-2 border-tima-gold"
                         style={{ animation: 'slideDown 0.2s ease-out' }}
                     >
                         <div className="max-w-7xl mx-auto px-10 py-5">
@@ -327,7 +327,7 @@ export function Navbar() {
 
             {/* Mobile menu */}
             {mobileOpen && (
-                <div className={`xl:hidden border-t px-4 sm:px-6 py-4 max-h-[70vh] overflow-y-auto ${activeTheme === 'light' ? 'bg-white border-gray-200' : 'bg-[#1a2234] border-white/10'}`}>
+                <div className={`lg:hidden border-t px-4 sm:px-6 py-4 max-h-[70vh] overflow-y-auto ${activeTheme === 'light' ? 'bg-white border-gray-200' : 'bg-[#1a2234] border-white/10'}`}>
                     <Link
                         to="/"
                         onClick={() => setMobileOpen(false)}

@@ -158,7 +158,7 @@ export function HomeTimeline() {
                     >
                         {/* Large Year Number */}
                         <motion.span
-                            className="block text-[80px] sm:text-[100px] md:text-[120px] lg:text-[140px] font-black leading-none tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-tima-gold/80 to-tima-gold/30"
+                            className="block text-[64px] sm:text-[100px] md:text-[120px] lg:text-[140px] font-black leading-none tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-tima-gold/80 to-tima-gold/30"
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}

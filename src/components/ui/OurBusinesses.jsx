@@ -288,7 +288,7 @@ export function OurBusinesses() {
 
             {/* Two-Sided Interactive Layout */}
             <div className="relative z-10 max-w-[1300px] mx-auto px-4 sm:px-6 md:px-10 pb-14 sm:pb-18 md:pb-20">
-                <div className="flex flex-col lg:flex-row gap-8 lg:gap-0">
+                <div className="flex flex-col md:flex-row gap-8 md:gap-4 lg:gap-0">
 
                     {/* ── LEFT COLUMN — Manufacturing Carousel ── */}
                     <div className="flex-1 relative">

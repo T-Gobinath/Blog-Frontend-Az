@@ -113,9 +113,9 @@ export function FeatureShowcase() {
                                         animate={{
                                             zIndex: features.length - offset,
                                             scale: 1 - offset * 0.05,
-                                            x: offset * 25, // move right
-                                            y: offset * -65, // move up
-                                            rotate: -5, // Rotate the *entire* card slightly counter-clockwise to match the drawn line
+                                            x: typeof window !== 'undefined' && window.innerWidth < 640 ? offset * 12 : offset * 25, // Responsive X offset
+                                            y: typeof window !== 'undefined' && window.innerWidth < 640 ? offset * -35 : offset * -65, // Responsive Y offset
+                                            rotate: -5,
                                             opacity: 1 - offset * 0.15,
                                         }}
                                         transition={{ 

@@ -84,13 +84,13 @@ export function BoardOfDirectors() {
                             </div>
 
                             {/* Text Details */}
-                            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2 transition-colors duration-300 group-hover:text-tima-gold">
+                            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2 transition-colors duration-300 group-hover:text-tima-gold">
                                 {director.name}
                             </h3>
-                            <p className="text-tima-gold/80 text-sm font-semibold tracking-widest uppercase mb-6">
+                            <p className="text-tima-gold/80 text-[10px] sm:text-xs font-semibold tracking-[0.2em] uppercase mb-4 sm:mb-6">
                                 {director.title}
                             </p>
-                            <p className="text-white/50 text-sm sm:text-base leading-relaxed max-w-[320px] transition-colors duration-300 group-hover:text-white/70">
+                            <p className="text-white/50 text-xs sm:text-sm md:text-base leading-relaxed max-w-[280px] sm:max-w-[320px] transition-colors duration-300 group-hover:text-white/70">
                                 {director.description}
                             </p>
                         </motion.div>
