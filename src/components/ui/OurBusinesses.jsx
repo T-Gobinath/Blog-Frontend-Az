@@ -327,16 +327,19 @@ export function OurBusinesses() {
                                         </p>
                                         <Link
                                             to={`/manufacturing/${currentMfgTopic.label.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(/&/g, '')}`}
-                                            className="inline-flex items-center gap-2 border border-tima-gold/50 text-tima-gold rounded-full px-5 py-2 text-sm hover:bg-tima-gold/10 hover:border-tima-gold transition-all duration-300 group self-start"
+                                            className="animated-button self-start"
                                         >
-                                            read more
-                                            <svg
-                                                width="14" height="14" viewBox="0 0 24 24"
-                                                fill="none" stroke="currentColor" strokeWidth="2"
-                                                strokeLinecap="round" strokeLinejoin="round"
-                                                className="group-hover:translate-x-1 transition-transform duration-200"
-                                            >
-                                                <path d="M5 12h14m-7-7l7 7-7 7" />
+                                            <svg viewBox="0 0 24 24" className="arr-2" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                                ></path>
+                                            </svg>
+                                            <span className="text">read more</span>
+                                            <span className="circle"></span>
+                                            <svg viewBox="0 0 24 24" className="arr-1" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                                ></path>
                                             </svg>
                                         </Link>
                                     </div>
@@ -442,16 +445,19 @@ export function OurBusinesses() {
                                             </p>
                                             <Link
                                                 to={`/it-solutions/${currentItTopic.label.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(/&/g, '')}`}
-                                                className="inline-flex items-center gap-2 border border-tima-gold/50 text-tima-gold rounded-full px-5 py-2 text-sm hover:bg-tima-gold/10 hover:border-tima-gold transition-all duration-300 group self-start"
+                                                className="animated-button self-start"
                                             >
-                                                read more
-                                                <svg
-                                                    width="14" height="14" viewBox="0 0 24 24"
-                                                    fill="none" stroke="currentColor" strokeWidth="2"
-                                                    strokeLinecap="round" strokeLinejoin="round"
-                                                    className="group-hover:translate-x-1 transition-transform duration-200"
-                                                >
-                                                    <path d="M5 12h14m-7-7l7 7-7 7" />
+                                                <svg viewBox="0 0 24 24" className="arr-2" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                                    ></path>
+                                                </svg>
+                                                <span className="text">read more</span>
+                                                <span className="circle"></span>
+                                                <svg viewBox="0 0 24 24" className="arr-1" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                                    ></path>
                                                 </svg>
                                             </Link>
                                         </div>
