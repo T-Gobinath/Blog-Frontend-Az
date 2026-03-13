@@ -25,16 +25,16 @@ export function TechNeural() {
     };
 
     return (
-        <section className="relative w-full h-[320px] sm:h-[350px] bg-[#0a0a0a] overflow-hidden z-0 flex items-center justify-center border-y border-white/5">
+        <section className="relative w-full h-[200px] sm:h-[350px] bg-[#0a0a0a] overflow-hidden z-0 flex items-center justify-center border-y border-white/5">
             {/* Background Image */}
             <div className="absolute inset-0 flex items-center justify-center">
                 <img 
                     src={sphereImg} 
                     alt="Green Sphere Background" 
-                    className="w-full h-full object-cover sm:object-cover opacity-90"
+                    className="w-full h-full object-cover opacity-90 scale-110"
                 />
                 {/* Darker overlays for better text readability */}
-                <div className="absolute inset-0 bg-black/30" />
+                <div className="absolute inset-0 bg-black/40" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-[#0a0a0a]" />
             </div>
 
@@ -49,14 +49,14 @@ export function TechNeural() {
                 <motion.h2 
                     variants={itemVariants}
                     style={{ fontFamily: "'Philosopher', sans-serif" }}
-                    className="text-2xl sm:text-5xl md:text-6xl font-bold italic tracking-[0.1em] text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-tima-gold/50 leading-tight drop-shadow-[0_0_20px_rgba(212,175,55,0.5)]"
+                    className="text-3xl sm:text-5xl md:text-6xl font-bold italic tracking-[0.15em] text-white drop-shadow-[0_0_15px_rgba(212,175,55,0.6)] leading-none mb-1 sm:mb-2"
                 >
                     GREEN
                 </motion.h2>
                 <motion.h2 
                     variants={itemVariants}
                     style={{ fontFamily: "'Philosopher', sans-serif" }}
-                    className="text-2xl sm:text-5xl md:text-6xl font-bold italic tracking-[0.1em] text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-tima-gold/50 leading-tight sm:-mt-2 md:-mt-3 drop-shadow-[0_0_20px_rgba(212,175,55,0.5)]"
+                    className="text-3xl sm:text-5xl md:text-6xl font-bold italic tracking-[0.15em] text-tima-gold drop-shadow-[0_0_15px_rgba(212,175,55,0.6)] leading-none"
                 >
                     SPHERE
                 </motion.h2>
