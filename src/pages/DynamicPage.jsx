@@ -201,30 +201,6 @@ export function DynamicPage() {
                                     )}
                                 </motion.div>
 
-                                {/* Right Side: Images or other elements */}
-                                <motion.div 
-                                    initial={{ opacity: 0, x: 30 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true, margin: "-100px" }}
-                                    transition={{ duration: 0.6, delay: 0.2 }}
-                                    className="lg:col-span-4 space-y-8"
-                                >
-                                    {pageData.gridImages && (
-                                        <div className="grid grid-cols-1 gap-6">
-                                            {pageData.gridImages.map((src, i) => (
-                                                <div key={i} className="relative aspect-[4/5] overflow-hidden rounded-2xl group border border-white/5">
-                                                    <img 
-                                                        src={src} 
-                                                        alt={`Industry visual ${i+1}`}
-                                                        className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                                                    />
-                                                    <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300" />
-                                                </div>
-                                            ))}
-                                        </div>
-                                    )}
-                                </motion.div>
-
                         {/* Sidebar / Quick Contact */}
                         <div className="lg:col-span-4">
                             <motion.div 
@@ -252,8 +228,8 @@ export function DynamicPage() {
                                     <p className={`text-xs font-semibold uppercase tracking-wider mb-2 ${theme === 'light' ? 'text-gray-500' : 'text-gray-500'}`}>
                                         Direct Inquiries
                                     </p>
-                                    <a href="mailto:info@timagroup.net" className={`text-sm font-medium hover:text-tima-gold transition-colors ${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>
-                                        info@timagroup.net
+                                    <a href="mailto:info@techneural.com" className={`text-sm font-medium hover:text-tima-gold transition-colors ${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>
+                                        info@techneural.com
                                     </a>
                                 </div>
                             </motion.div>
