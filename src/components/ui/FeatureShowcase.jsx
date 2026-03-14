@@ -58,10 +58,10 @@ export function FeatureShowcase() {
             <div className="absolute bottom-1/4 right-0 w-[400px] h-[400px] bg-white/5 rounded-full blur-[150px] pointer-events-none"></div>
 
             <div className="relative z-10 max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-10">
-                
+
                 {/* Reference screenshot rounded container box */}
                 <div className="relative bg-[#0a0a0a] border border-white/[0.04] rounded-[2rem] p-10 lg:p-16 flex flex-col lg:flex-row items-center gap-16 lg:gap-24 shadow-2xl overflow-hidden">
-                    
+
                     {/* Warm background glow from bottom left to match screenshot */}
                     <div className="absolute -bottom-[20%] -left-[10%] w-[60%] h-[70%] bg-[radial-gradient(ellipse_at_bottom_left,rgba(168,135,70,0.3)_0%,rgba(0,0,0,0)_70%)] pointer-events-none"></div>
 
@@ -89,9 +89,9 @@ export function FeatureShowcase() {
 
                         {/* Logo Footer */}
                         <div className="flex items-center justify-center gap-4 text-4xl sm:text-5xl md:text-[3.5rem] font-bold tracking-tighter text-white">
-                            <img 
-                                src={scrolledLogo} 
-                                alt="TIMA Logo" 
+                            <img
+                                src={scrolledLogo}
+                                alt="TIMA Logo"
                                 className="h-14 sm:h-16 md:h-20 opacity-90 brightness-0 invert object-contain"
                             />
                             <span>TIMA</span>
@@ -104,7 +104,7 @@ export function FeatureShowcase() {
                             {features.map((feature, idx) => {
                                 // Calculate offset distance: 0 is front, 1 is next, 2 is behind that
                                 const offset = (idx - active + features.length) % features.length;
-                                
+
                                 return (
                                     <motion.div
                                         key={feature.id}
@@ -118,7 +118,7 @@ export function FeatureShowcase() {
                                             rotate: -5,
                                             opacity: 1 - offset * 0.15,
                                         }}
-                                        transition={{ 
+                                        transition={{
                                             type: "spring",
                                             stiffness: 70,
                                             damping: 15,
@@ -143,9 +143,9 @@ export function FeatureShowcase() {
 
                                         {/* Card Image */}
                                         <div className="absolute inset-x-0 bottom-0 top-[90px] sm:top-[105px]">
-                                            <img 
-                                                src={feature.image} 
-                                                alt={feature.title} 
+                                            <img
+                                                src={feature.image}
+                                                alt={feature.title}
                                                 className="w-full h-full object-cover object-top opacity-90 transition-opacity duration-300 pointer-events-none"
                                             />
                                             {/* Gradient fade to black at bottom */}

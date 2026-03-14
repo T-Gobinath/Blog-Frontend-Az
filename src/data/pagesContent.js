@@ -208,18 +208,18 @@ export const pagesContent = {
         title: 'Industrial Laser Cutting & Engraving',
         subtitle: 'High-powered fiber and CO₂ laser systems delivering clean, burr-free cuts.',
         metaDescription: 'Discover TIMA\'s precision laser cutting and engraving services. We use high-powered fiber lasers for metal, plastics, and rapid prototyping with zero tooling costs.',
-        heroImage: 'https://images.unsplash.com/photo-1635348729498-ef4a0218e7d0?auto=format&fit=crop&w=1920&q=80',
+        heroImage: 'https://images.unsplash.com/photo-1576203912185-11e2f4728f3a?auto=format&fit=crop&w=1920&q=80',
         
     gridImages: [
-        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
+        'https://images.unsplash.com/photo-1610484826917-0f101a7bf7f4?auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1635348729498-ef4a0218e7d0?auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1629739688326-805187747806?auto=format&fit=crop&w=600&q=80',
+        'https://images.unsplash.com/photo-1549413240-02324e931e97?auto=format&fit=crop&w=600&q=80'
     ],
     paragraphs: [
-        "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
-        "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
-        "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
+        "TIMA leverages cutting-edge laser technologies to provide unparalleled precision in sheet metal profiling and intricate component engraving. Our facility is equipped with multi-kilowatt fiber lasers that offer the perfect balance of speed, accuracy, and edge quality, even on highly reflective materials like brass and copper.",
+        "Our laser cutting services are fully integrated with our digital ecosystem. By utilizing advanced CAD/CAM algorithms, we can move from your digital design to a finished physical part in record time, with zero tooling costs. This makes laser cutting the ideal solution for both rapid prototyping and high-volume production runs where consistency is paramount.",
+        "Beyond flat-sheet cutting, our high-precision engraving systems allow for permanent, high-contrast marking of serial numbers, logos, and traceability codes. We strictly adhere to aerospace and medical standards, ensuring that every mark is as durable as the component itself."
     ],
     linkText: 'new customer enquiry',
     content: [

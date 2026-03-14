@@ -119,80 +119,111 @@ export function DynamicPage() {
                 <div className="max-w-[1200px] mx-auto px-6 sm:px-10 md:px-14 py-16 sm:py-24">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
                         
-                        {/* Main Content Body */}
-                        <div className="lg:col-span-12">
-                            <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
-                                
-                                {/* Left Side: Text Paragraphs */}
+                                {/* Left Side: Text Paragraphs & Content Sections */}
                                 <motion.div 
                                     initial={{ opacity: 0, x: -30 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true, margin: "-100px" }}
                                     transition={{ duration: 0.6 }}
-                                    className="lg:w-1/2 prose prose-lg max-w-none"
+                                    className="lg:col-span-8 space-y-16"
                                 >
-                                    <h2 className={`text-3xl sm:text-4xl font-bold mb-8 tracking-tight ${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>
-                                        Overview
-                                    </h2>
-                                    <div className="w-16 h-1 bg-tima-gold mb-10 rounded-full"></div>
-                                    
-                                    {pageData.paragraphs ? (
-                                        <div className="space-y-6">
-                                            {pageData.paragraphs.map((p, i) => (
-                                                <p key={i} className={`leading-relaxed text-[16px] sm:text-[18px] ${theme === 'light' ? 'text-gray-700' : 'text-gray-300'}`}>
-                                                    {p}
-                                                </p>
-                                            ))}
-                                            
-                                            {/* Enquiry Link */}
-                                            {pageData.linkText && (
-                                                <div className="pt-6">
-                                                    <Link 
-                                                        to="/contact" 
-                                                        className={`inline-block border px-6 py-2 rounded-full text-sm hover:bg-tima-gold hover:text-black hover:border-tima-gold transition-all duration-300 ${theme === 'light' ? 'border-gray-300 text-gray-700' : 'border-gray-700 text-gray-300'}`}
-                                                    >
-                                                        {pageData.linkText} <span className="ml-1 opacity-70">↗</span>
-                                                    </Link>
+                                    {/* Overview Section */}
+                                    <div className="prose prose-lg max-w-none">
+                                        <h2 className={`text-3xl sm:text-4xl font-bold mb-8 tracking-tight ${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>
+                                            Overview
+                                        </h2>
+                                        <div className="w-16 h-1 bg-tima-gold mb-10 rounded-full"></div>
+                                        
+                                        {pageData.paragraphs ? (
+                                            <div className="space-y-6">
+                                                {pageData.paragraphs.map((p, i) => (
+                                                    <p key={i} className={`leading-relaxed text-[16px] sm:text-[18px] ${theme === 'light' ? 'text-gray-700' : 'text-gray-300'}`}>
+                                                        {p}
+                                                    </p>
+                                                ))}
+                                            </div>
+                                        ) : (
+                                            <p className={`leading-relaxed text-[16px] sm:text-[18px] ${theme === 'light' ? 'text-gray-700' : 'text-gray-300'}`}>
+                                                Content loading...
+                                            </p>
+                                        )}
+                                    </div>
+
+                                    {/* Rich Content Sections */}
+                                    {pageData.content && pageData.content.map((section, idx) => (
+                                        <div key={idx} className="space-y-8">
+                                            {section.type === 'text' && (
+                                                <div className="prose prose-lg max-w-none">
+                                                    <h3 className={`text-2xl sm:text-3xl font-bold mb-6 ${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>
+                                                        {section.heading}
+                                                    </h3>
+                                                    <p className={`leading-relaxed text-[16px] sm:text-[18px] ${theme === 'light' ? 'text-gray-700' : 'text-gray-300'}`}>
+                                                        {section.body}
+                                                    </p>
+                                                </div>
+                                            )}
+
+                                            {section.type === 'features' && (
+                                                <div className="space-y-8">
+                                                    <h3 className={`text-2xl sm:text-3xl font-bold ${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>
+                                                        {section.heading}
+                                                    </h3>
+                                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                                        {section.items.map((item, i) => (
+                                                            <div 
+                                                                key={i} 
+                                                                className={`p-6 rounded-2xl border ${theme === 'light' ? 'bg-gray-50 border-gray-100 shadow-sm' : 'bg-white/[0.03] border-white/10'}`}
+                                                            >
+                                                                <h4 className={`text-lg font-bold mb-3 ${theme === 'light' ? 'text-gray-900' : 'text-tima-gold'}`}>
+                                                                    {item.title}
+                                                                </h4>
+                                                                <p className={`text-sm leading-relaxed ${theme === 'light' ? 'text-gray-600' : 'text-gray-400'}`}>
+                                                                    {item.description}
+                                                                </p>
+                                                            </div>
+                                                        ))}
+                                                    </div>
                                                 </div>
                                             )}
                                         </div>
-                                    ) : (
-                                        <p className={`leading-relaxed text-[16px] sm:text-[18px] ${theme === 'light' ? 'text-gray-700' : 'text-gray-300'}`}>
-                                            Content loading...
-                                        </p>
+                                    ))}
+
+                                    {/* Enquiry Link */}
+                                    {pageData.linkText && (
+                                        <div className="pt-8">
+                                            <Link 
+                                                to="/contact" 
+                                                className={`inline-block border px-8 py-3 rounded-full text-base font-medium hover:bg-tima-gold hover:text-black hover:border-tima-gold transition-all duration-300 ${theme === 'light' ? 'border-gray-300 text-gray-700' : 'border-gray-700 text-gray-300'}`}
+                                            >
+                                                {pageData.linkText} <span className="ml-2 opacity-70">↗</span>
+                                            </Link>
+                                        </div>
                                     )}
                                 </motion.div>
 
-                                {/* Right Side: 2x2 Image Grid */}
+                                {/* Right Side: Images or other elements */}
                                 <motion.div 
                                     initial={{ opacity: 0, x: 30 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true, margin: "-100px" }}
                                     transition={{ duration: 0.6, delay: 0.2 }}
-                                    className="lg:w-1/2"
+                                    className="lg:col-span-4 space-y-8"
                                 >
-                                    {pageData.gridImages && pageData.gridImages.length === 4 ? (
-                                        <div className="grid grid-cols-2 gap-4 h-full min-h-[400px]">
+                                    {pageData.gridImages && (
+                                        <div className="grid grid-cols-1 gap-6">
                                             {pageData.gridImages.map((src, i) => (
-                                                <div key={i} className="relative w-full h-full overflow-hidden rounded-md group">
+                                                <div key={i} className="relative aspect-[4/5] overflow-hidden rounded-2xl group border border-white/5">
                                                     <img 
                                                         src={src} 
-                                                        alt={`Grid image ${i+1}`}
+                                                        alt={`Industry visual ${i+1}`}
                                                         className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                                                     />
-                                                    <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300" />
+                                                    <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300" />
                                                 </div>
                                             ))}
                                         </div>
-                                    ) : (
-                                        <div className={`w-full h-full min-h-[400px] rounded-md flex items-center justify-center ${theme === 'light' ? 'bg-gray-100' : 'bg-gray-800'}`}>
-                                            <span className="text-gray-500">Images unavailable</span>
-                                        </div>
                                     )}
                                 </motion.div>
-                                
-                            </div>
-                        </div>
 
                         {/* Sidebar / Quick Contact */}
                         <div className="lg:col-span-4">
