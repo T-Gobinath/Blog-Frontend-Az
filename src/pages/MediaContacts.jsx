@@ -66,8 +66,8 @@ export function MediaContacts() {
                                         <path d="M21 0H3C1.35 0 0.015 1.35 0.015 3L0 15C0 16.65 1.35 18 3 18H21C22.65 18 24 16.65 24 15V3C24 1.35 22.65 0 21 0ZM21 4.5L12 10.125L3 4.5V3L12 8.625L21 3V4.5Z" fill="currentColor" />
                                     </svg>
                                 </div>
-                                <a href="mailto:info@techneural.com" className="text-lg sm:text-xl text-[#3b82f6] font-light hover:underline">
-                                    info@techneural.com
+                                <a href="mailto:support@thetima.com" className="text-lg sm:text-xl text-[#3b82f6] font-light hover:underline">
+                                    support@thetima.com
                                 </a>
                             </div>
 

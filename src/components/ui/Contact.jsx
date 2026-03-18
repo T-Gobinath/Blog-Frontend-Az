@@ -100,7 +100,7 @@ export function Contact() {
                 ? 'bg-gray-50 text-gray-500 border-gray-200'
                 : 'bg-black text-gray-600 border-white/5'
                 }`}>
-                <p>&copy; {new Date().getFullYear()} TIMA Group. All Rights Reserved.</p>
+                <p>&copy; {new Date().getFullYear()} TIMA. All Rights Reserved.</p>
             </footer>
         </div>
     )

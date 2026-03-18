@@ -9,7 +9,7 @@ const backgroundImages = [
     'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80', // tech circuits
     'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80', // corporate structure
     'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80', // teamwork/tech
-    'https://images.unsplash.com/photo-1531297122539-5692b6982261?auto=format&fit=crop&q=80', // digital networking
+    'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80', // digital networking
     'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80', // modern corporate
 ]
 

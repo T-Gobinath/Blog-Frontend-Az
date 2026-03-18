@@ -5,20 +5,20 @@ export const pagesContent = {
         subtitle: 'Visionaries guiding TIMA towards a sustainable and innovative future.',
         metaDescription: 'Meet the TIMA Board of Directors. Our experienced executives and founders guide our global manufacturing and enterprise IT strategy with visionary leadership.',
         heroImage: 'https://images.unsplash.com/photo-1556761175-5973dc0f32b7?auto=format&fit=crop&w=1920&q=80',
-        
-    gridImages: [
-        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
-    ],
-    paragraphs: [
-        "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
-        "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
-        "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
-    ],
-    linkText: 'new customer enquiry',
-    content: [
+
+        gridImages: [
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
+        ],
+        paragraphs: [
+            "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
+            "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
+            "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
+        ],
+        linkText: 'new customer enquiry',
+        content: [
             {
                 type: 'text',
                 heading: 'Leadership That Drives Global Innovation',
@@ -45,20 +45,20 @@ export const pagesContent = {
         subtitle: 'A legacy of engineering excellence and digital innovation spanning decades.',
         metaDescription: 'Explore the definitive history and timeline of TIMA. Discover how we evolved from dedicated engineering roots to a global leader in manufacturing and IT solutions.',
         heroImage: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&q=80',
-        
-    gridImages: [
-        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
-    ],
-    paragraphs: [
-        "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
-        "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
-        "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
-    ],
-    linkText: 'new customer enquiry',
-    content: [
+
+        gridImages: [
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
+        ],
+        paragraphs: [
+            "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
+            "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
+            "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
+        ],
+        linkText: 'new customer enquiry',
+        content: [
             {
                 type: 'text',
                 heading: 'A Journey of Continuous Industrial Growth',
@@ -82,20 +82,20 @@ export const pagesContent = {
         subtitle: 'Sourcing, processing, and certifying the finest inputs for precision manufacturing.',
         metaDescription: 'TIMA sources, processes, and tests high-grade industrial raw materials. We provide aerospace alloys, medical polymers, and sustainable composites for precision manufacturing.',
         heroImage: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1920&q=80',
-        
-    gridImages: [
-        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
-    ],
-    paragraphs: [
-        "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
-        "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
-        "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
-    ],
-    linkText: 'new customer enquiry',
-    content: [
+
+        gridImages: [
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
+        ],
+        paragraphs: [
+            "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
+            "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
+            "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
+        ],
+        linkText: 'new customer enquiry',
+        content: [
             {
                 type: 'text',
                 heading: 'The Foundation of Manufacturing Quality',
@@ -129,20 +129,20 @@ export const pagesContent = {
         subtitle: 'Expert custom die design and fabrication engineered for mass production.',
         metaDescription: 'Industry-leading precision die making services. TIMA engineers highly durable stamping, forging, and casting dies with micron-level accuracy for high-volume manufacturing.',
         heroImage: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1920&q=80',
-        
-    gridImages: [
-        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
-    ],
-    paragraphs: [
-        "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
-        "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
-        "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
-    ],
-    linkText: 'new customer enquiry',
-    content: [
+
+        gridImages: [
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
+        ],
+        paragraphs: [
+            "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
+            "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
+            "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
+        ],
+        linkText: 'new customer enquiry',
+        content: [
             {
                 type: 'text',
                 heading: 'Custom Engineered for Maximum Durability',
@@ -169,20 +169,20 @@ export const pagesContent = {
         subtitle: '5-axis milling, precision turning, and automated subtractive manufacturing.',
         metaDescription: 'Partner with TIMA for multi-axis CNC machining services. We offer automated CNC milling and turning with tight tolerances down to ±0.01mm for complex geometries.',
         heroImage: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1920&q=80',
-        
-    gridImages: [
-        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
-    ],
-    paragraphs: [
-        "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
-        "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
-        "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
-    ],
-    linkText: 'new customer enquiry',
-    content: [
+
+        gridImages: [
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
+        ],
+        paragraphs: [
+            "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
+            "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
+            "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
+        ],
+        linkText: 'new customer enquiry',
+        content: [
             {
                 type: 'text',
                 heading: 'Automated Precision Machining at Global Scale',
@@ -208,21 +208,21 @@ export const pagesContent = {
         title: 'Industrial Laser Cutting & Engraving',
         subtitle: 'High-powered fiber and CO₂ laser systems delivering clean, burr-free cuts.',
         metaDescription: 'Discover TIMA\'s precision laser cutting and engraving services. We use high-powered fiber lasers for metal, plastics, and rapid prototyping with zero tooling costs.',
-        heroImage: 'https://images.unsplash.com/photo-1576203912185-11e2f4728f3a?auto=format&fit=crop&w=1920&q=80',
-        
-    gridImages: [
-        'https://images.unsplash.com/photo-1610484826917-0f101a7bf7f4?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1635348729498-ef4a0218e7d0?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1629739688326-805187747806?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1549413240-02324e931e97?auto=format&fit=crop&w=600&q=80'
-    ],
-    paragraphs: [
-        "TIMA leverages cutting-edge laser technologies to provide unparalleled precision in sheet metal profiling and intricate component engraving. Our facility is equipped with multi-kilowatt fiber lasers that offer the perfect balance of speed, accuracy, and edge quality, even on highly reflective materials like brass and copper.",
-        "Our laser cutting services are fully integrated with our digital ecosystem. By utilizing advanced CAD/CAM algorithms, we can move from your digital design to a finished physical part in record time, with zero tooling costs. This makes laser cutting the ideal solution for both rapid prototyping and high-volume production runs where consistency is paramount.",
-        "Beyond flat-sheet cutting, our high-precision engraving systems allow for permanent, high-contrast marking of serial numbers, logos, and traceability codes. We strictly adhere to aerospace and medical standards, ensuring that every mark is as durable as the component itself."
-    ],
-    linkText: 'new customer enquiry',
-    content: [
+        heroImage: 'https://images.unsplash.com/photo-1610484826917-0f101a7bf7f4?auto=format&fit=crop&w=1920&q=80',
+
+        gridImages: [
+            'https://images.unsplash.com/photo-1610484826917-0f101a7bf7f4?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1635348729498-ef4a0218e7d0?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1629739688326-805187747806?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1549413240-02324e931e97?auto=format&fit=crop&w=600&q=80'
+        ],
+        paragraphs: [
+            "TIMA leverages cutting-edge laser technologies to provide unparalleled precision in sheet metal profiling and intricate component engraving. Our facility is equipped with multi-kilowatt fiber lasers that offer the perfect balance of speed, accuracy, and edge quality, even on highly reflective materials like brass and copper.",
+            "Our laser cutting services are fully integrated with our digital ecosystem. By utilizing advanced CAD/CAM algorithms, we can move from your digital design to a finished physical part in record time, with zero tooling costs. This makes laser cutting the ideal solution for both rapid prototyping and high-volume production runs where consistency is paramount.",
+            "Beyond flat-sheet cutting, our high-precision engraving systems allow for permanent, high-contrast marking of serial numbers, logos, and traceability codes. We strictly adhere to aerospace and medical standards, ensuring that every mark is as durable as the component itself."
+        ],
+        linkText: 'new customer enquiry',
+        content: [
             {
                 type: 'text',
                 heading: 'Unmatched Speed and Algorithmic Accuracy',
@@ -249,20 +249,20 @@ export const pagesContent = {
         subtitle: 'Specializing in bending, forming, and certified welding of structural metals.',
         metaDescription: 'Comprehensive light metal fabrication services by TIMA. From precise press braking to certified TIG/MIG welding for aerospace, IT enclosures, and EV chassis.',
         heroImage: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1920&q=80',
-        
-    gridImages: [
-        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
-    ],
-    paragraphs: [
-        "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
-        "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
-        "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
-    ],
-    linkText: 'new customer enquiry',
-    content: [
+
+        gridImages: [
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
+        ],
+        paragraphs: [
+            "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
+            "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
+            "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
+        ],
+        linkText: 'new customer enquiry',
+        content: [
             {
                 type: 'text',
                 heading: 'Comprehensive Custom Metalwork & Integration',
@@ -289,20 +289,20 @@ export const pagesContent = {
         subtitle: 'Bespoke tooling solutions rigorously validated through digital twin simulation.',
         metaDescription: 'TIMA engineers custom jigs, fixtures, and QA tools optimizing production line efficiency. We utilize state-of-the-art CAD/CAM and digital twin simulation.',
         heroImage: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80',
-        
-    gridImages: [
-        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
-    ],
-    paragraphs: [
-        "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
-        "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
-        "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
-    ],
-    linkText: 'new customer enquiry',
-    content: [
+
+        gridImages: [
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
+        ],
+        paragraphs: [
+            "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
+            "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
+            "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
+        ],
+        linkText: 'new customer enquiry',
+        content: [
             {
                 type: 'text',
                 heading: 'Optimizing the Global Production Line from the Ground Up',
@@ -323,21 +323,21 @@ export const pagesContent = {
         title: 'Advanced Plastic Injection Molding',
         subtitle: 'High-volume thermoplastic and thermoset part production with scientific parameters.',
         metaDescription: 'Complete injection molding lifecycle services from TIMA. We handle high-volume production of complex plastics securely, from mold design to final delivery.',
-        heroImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?auto=format&fit=crop&w=1920&q=80',
-        
-    gridImages: [
-        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
-    ],
-    paragraphs: [
-        "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
-        "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
-        "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
-    ],
-    linkText: 'new customer enquiry',
-    content: [
+        heroImage: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80',
+
+        gridImages: [
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
+        ],
+        paragraphs: [
+            "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
+            "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
+            "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
+        ],
+        linkText: 'new customer enquiry',
+        content: [
             {
                 type: 'text',
                 heading: 'Molding the Future with Advanced Polymers',
@@ -358,21 +358,21 @@ export const pagesContent = {
         title: 'Rapid Prototype & Innovation Development',
         subtitle: 'Accelerating iterative product development from paper concept to functional physical prototype.',
         metaDescription: 'Rapid physical prototyping services by TIMA using industrial 3D printing, rapid CNC, and urethane casting. Go from digital concept to functional prototype in days.',
-        heroImage: 'https://images.unsplash.com/photo-1631281956016-3219b63a61b5?auto=format&fit=crop&w=1920&q=80',
-        
-    gridImages: [
-        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
-    ],
-    paragraphs: [
-        "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
-        "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
-        "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
-    ],
-    linkText: 'new customer enquiry',
-    content: [
+        heroImage: 'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=1920&q=80',
+
+        gridImages: [
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
+        ],
+        paragraphs: [
+            "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
+            "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
+            "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
+        ],
+        linkText: 'new customer enquiry',
+        content: [
             {
                 type: 'text',
                 heading: 'Iterate Faster, Launch to Market Exponentially Sooner',
@@ -394,20 +394,20 @@ export const pagesContent = {
         subtitle: 'End-to-end electronic engineering for smart devices, robust IoT, and industrial controls.',
         metaDescription: 'TIMA builds electronic brains powering smart devices and industrial IoT apps. We offer end-to-end custom PCB layout, high-speed SMT assembly, and embedded firmware development.',
         heroImage: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80',
-        
-    gridImages: [
-        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
-    ],
-    paragraphs: [
-        "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
-        "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
-        "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
-    ],
-    linkText: 'new customer enquiry',
-    content: [
+
+        gridImages: [
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
+        ],
+        paragraphs: [
+            "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
+            "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
+            "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
+        ],
+        linkText: 'new customer enquiry',
+        content: [
             {
                 type: 'text',
                 heading: 'Powering Advanced Smart Industrial Technology',
@@ -429,20 +429,20 @@ export const pagesContent = {
         subtitle: 'Strict ISO 13485-compliant production of life-saving surgical and diagnostic components.',
         metaDescription: 'Require precision and total traceability? TIMA offers ISO 13485-compliant medical grade manufacturing for surgical devices, orthopedic implants, and complex diagnostics.',
         heroImage: 'https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1920&q=80',
-        
-    gridImages: [
-        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
-    ],
-    paragraphs: [
-        "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
-        "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
-        "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
-    ],
-    linkText: 'new customer enquiry',
-    content: [
+
+        gridImages: [
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
+        ],
+        paragraphs: [
+            "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
+            "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
+            "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
+        ],
+        linkText: 'new customer enquiry',
+        content: [
             {
                 type: 'text',
                 heading: 'Uncompromising Quality for Global Healthcare',
@@ -465,21 +465,21 @@ export const pagesContent = {
         title: 'Global On-Site Installation & Rigging',
         subtitle: 'Professional, safe deployment and complete system commissioning directly at your facility.',
         metaDescription: 'TIMA provides professional on-site installation, heavy machinery rigging, and system commissioning services ensuring seamless operational handovers globally.',
-        heroImage: 'https://images.unsplash.com/photo-1581092334884-699748bdfb8e?auto=format&fit=crop&w=1920&q=80',
-        
-    gridImages: [
-        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
-    ],
-    paragraphs: [
-        "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
-        "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
-        "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
-    ],
-    linkText: 'new customer enquiry',
-    content: [
+        heroImage: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1920&q=80',
+
+        gridImages: [
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
+        ],
+        paragraphs: [
+            "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
+            "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
+            "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
+        ],
+        linkText: 'new customer enquiry',
+        content: [
             {
                 type: 'text',
                 heading: 'Seamless, Turnkey Factory Integration Strategies',
@@ -501,20 +501,20 @@ export const pagesContent = {
         subtitle: 'Continuous IoT monitoring, preventive maintenance protocols, and facility optimization.',
         metaDescription: 'Keep your factory operations running smoothly. TIMA delivers premium post-installation support, predictive IIoT maintenance programs, and 24/7 technical assistance.',
         heroImage: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1920&q=80',
-        
-    gridImages: [
-        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
-    ],
-    paragraphs: [
-        "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
-        "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
-        "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
-    ],
-    linkText: 'new customer enquiry',
-    content: [
+
+        gridImages: [
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
+        ],
+        paragraphs: [
+            "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
+            "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
+            "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
+        ],
+        linkText: 'new customer enquiry',
+        content: [
             {
                 type: 'text',
                 heading: 'Partnering for the Long Haul to Maximize OEE',
@@ -536,20 +536,20 @@ export const pagesContent = {
         subtitle: 'Highly scalable manufacturing supply chains designed for massive, sustained global output.',
         metaDescription: 'Scale your product lines dramatically with TIMA’s bulk production services. Leverage our high-volume global manufacturing infrastructure ensuring absolute quality consistency.',
         heroImage: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1920&q=80',
-        
-    gridImages: [
-        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
-    ],
-    paragraphs: [
-        "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
-        "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
-        "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
-    ],
-    linkText: 'new customer enquiry',
-    content: [
+
+        gridImages: [
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
+        ],
+        paragraphs: [
+            "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
+            "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
+            "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
+        ],
+        linkText: 'new customer enquiry',
+        content: [
             {
                 type: 'text',
                 heading: 'Scaling Up Without Ever Sacrificing Micro-Precision Quality',
@@ -573,20 +573,20 @@ export const pagesContent = {
         subtitle: 'Scalable, secure custom enterprise software meticulously built utilizing modern cloud-native architectures.',
         metaDescription: 'Transform your enterprise with modern microservices, cloud-native architecture, and AI-powered custom software development by TIMA IT Solutions. We build scalable digital ecosystems.',
         heroImage: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1920&q=80',
-        
-    gridImages: [
-        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
-    ],
-    paragraphs: [
-        "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
-        "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
-        "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
-    ],
-    linkText: 'new customer enquiry',
-    content: [
+
+        gridImages: [
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
+        ],
+        paragraphs: [
+            "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
+            "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
+            "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
+        ],
+        linkText: 'new customer enquiry',
+        content: [
             {
                 type: 'text',
                 heading: 'Executing Deep Digital Transformation at Massive Scale',
@@ -613,20 +613,20 @@ export const pagesContent = {
         subtitle: 'Conversion-optimized digital platforms that drive monumental revenue, speed, and deep user engagement.',
         metaDescription: 'Deploy blazing fast, full-stack headless web platforms and B2B/B2C e-commerce solutions with seamless global payment integration. Build your ultimate digital storefront with TIMA.',
         heroImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1920&q=80',
-        
-    gridImages: [
-        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
-    ],
-    paragraphs: [
-        "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
-        "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
-        "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
-    ],
-    linkText: 'new customer enquiry',
-    content: [
+
+        gridImages: [
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
+        ],
+        paragraphs: [
+            "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
+            "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
+            "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
+        ],
+        linkText: 'new customer enquiry',
+        content: [
             {
                 type: 'text',
                 heading: 'Crafting Exquisite Digital Experiences That Exponentially Convert',
@@ -648,20 +648,20 @@ export const pagesContent = {
         subtitle: 'Eradicate manual data entry through Robotic Process Automation (RPA), AI agents, and bespoke mobile integrations.',
         metaDescription: 'Significantly reduce manual human effort and costly error through advanced RPA, autonomous AI workflow agents, and custom enterprise mobile applications. Discover TIMA Apps & Automation.',
         heroImage: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1920&q=80',
-        
-    gridImages: [
-        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
-    ],
-    paragraphs: [
-        "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
-        "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
-        "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
-    ],
-    linkText: 'new customer enquiry',
-    content: [
+
+        gridImages: [
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
+        ],
+        paragraphs: [
+            "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
+            "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
+            "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
+        ],
+        linkText: 'new customer enquiry',
+        content: [
             {
                 type: 'text',
                 heading: 'Aggressively Streamlining Bloated Enterprise Operations',
@@ -683,20 +683,20 @@ export const pagesContent = {
         subtitle: 'Architecting highly secure, globally resilient, and incredibly cost-effective multi-cloud ecosystems.',
         metaDescription: 'TIMA architects, seamlessly migrates, and actively manages complex cloud infrastructure on AWS, Azure, and Google Cloud (GCP) ensuring highly secure, infinitely scalable, and resilient systems.',
         heroImage: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80',
-        
-    gridImages: [
-        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
-    ],
-    paragraphs: [
-        "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
-        "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
-        "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
-    ],
-    linkText: 'new customer enquiry',
-    content: [
+
+        gridImages: [
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
+        ],
+        paragraphs: [
+            "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
+            "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
+            "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
+        ],
+        linkText: 'new customer enquiry',
+        content: [
             {
                 type: 'text',
                 heading: 'Building Impregnable, Future-Proof Cloud Infrastructure',
@@ -718,20 +718,20 @@ export const pagesContent = {
         subtitle: 'Round-the-clock proactive technical monitoring, deep cybersecurity, and rapid incident response.',
         metaDescription: 'TIMA provides 24/7 managed IT support, dedicated technical account management, advanced cybersecurity SOC monitoring, and continuous infrastructure improvement programs.',
         heroImage: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1920&q=80',
-        
-    gridImages: [
-        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
-    ],
-    paragraphs: [
-        "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
-        "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
-        "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
-    ],
-    linkText: 'new customer enquiry',
-    content: [
+
+        gridImages: [
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
+        ],
+        paragraphs: [
+            "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
+            "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
+            "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
+        ],
+        linkText: 'new customer enquiry',
+        content: [
             {
                 type: 'text',
                 heading: 'Always On. Always Secure. Always Optimized.',
@@ -755,20 +755,20 @@ export const pagesContent = {
         subtitle: 'Strategic, deeply integrated technological and manufacturing partnerships that amplify our collective global impact.',
         metaDescription: 'Discover the incredibly powerful TIMA strategic partner ecosystem. We collaborate heavily with leading research institutions, massive enterprise software vendors, and global logistics giants to drive mutual growth.',
         heroImage: 'https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1920&q=80',
-        
-    gridImages: [
-        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
-    ],
-    paragraphs: [
-        "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
-        "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
-        "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
-    ],
-    linkText: 'new customer enquiry',
-    content: [
+
+        gridImages: [
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
+        ],
+        paragraphs: [
+            "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
+            "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
+            "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
+        ],
+        linkText: 'new customer enquiry',
+        content: [
             {
                 type: 'text',
                 heading: 'Collaborating Innovatively for Exponential Mutual Success',
@@ -790,28 +790,28 @@ export const pagesContent = {
     'careers': {
         title: 'Build Your Legacy Career at TIMA',
         subtitle: 'Join an elite, incredibly diverse global team of brilliant engineers, digital innovators, and relentless software problem solvers.',
-        metaDescription: 'Explore intensely exciting, high-impact career opportunities at TIMA group. Join an inclusive, highly diverse team physically shaping the bleeding-edge future of global manufacturing and enterprise IT.',
+        metaDescription: 'Explore intensely exciting, high-impact career opportunities at TIMA. Join an inclusive, highly diverse team physically shaping the bleeding-edge future of global manufacturing and enterprise IT.',
         heroImage: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80',
-        
-    gridImages: [
-        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
-    ],
-    paragraphs: [
-        "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
-        "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
-        "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
-    ],
-    linkText: 'new customer enquiry',
-    content: [
+
+        gridImages: [
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
+        ],
+        paragraphs: [
+            "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
+            "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
+            "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
+        ],
+        linkText: 'new customer enquiry',
+        content: [
             {
                 type: 'text',
                 heading: 'Come Meaningfully Shape the Physical and Digital Future With Us',
                 body: 'At TIMA, we are definitively not just building basic consumer products or simple CRUD applications; we are actively, aggressively tackling some of the absolute most complex, high-stakes industrial, logistical, and technological integration challenges currently facing the planet. We offer a highly dynamic, intensely inclusive, and incredibly rapidly paced global working environment where your localized, individual engineering ideas can directly, immediately, and profoundly influence extreme physical products and massive software platforms heavily utilized by millions of people worldwide. We are consistently searching the globe for top-tier, exceptionally brilliant talent who point-blank refuse to accept the bureaucratic status quo and actively possess an insatiable, burning hunger to push the absolute boundaries of what is scientifically possible in mechanical engineering and theoretical computer science.',
             },
-             {
+            {
                 type: 'features',
                 heading: 'Why Build Your Masterpiece Career Here?',
                 items: [
@@ -827,20 +827,20 @@ export const pagesContent = {
         subtitle: 'Discover currently open, highly impactful roles that perfectly, harmoniously match your unique, distinguished technical skill set.',
         metaDescription: 'Search the global enterprise job board and apply directly for open career positions at TIMA across complex mechanical engineering, full-stack software development, technical management, and global supply chain operations.',
         heroImage: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=1920&q=80',
-        
-    gridImages: [
-        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
-    ],
-    paragraphs: [
-        "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
-        "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
-        "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
-    ],
-    linkText: 'new customer enquiry',
-    content: [
+
+        gridImages: [
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
+        ],
+        paragraphs: [
+            "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
+            "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
+            "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
+        ],
+        linkText: 'new customer enquiry',
+        content: [
             {
                 type: 'text',
                 heading: 'Find Your Next Immense, Defining Challenge',
@@ -853,20 +853,20 @@ export const pagesContent = {
         subtitle: 'Take a deep, transparent dive into our highly inclusive culture, incredibly premium benefits, and unwavering financial commitment to continuous professional growth.',
         metaDescription: 'Learn exactly what it is truly like working daily at TIMA. Discover our exceptional, top-tier employee benefits, highly inclusive company culture, and extensive, fully-funded professional development programs.',
         heroImage: 'https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?auto=format&fit=crop&w=1920&q=80',
-        
-    gridImages: [
-        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
-        'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
-    ],
-    paragraphs: [
-        "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
-        "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
-        "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
-    ],
-    linkText: 'new customer enquiry',
-    content: [
+
+        gridImages: [
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
+        ],
+        paragraphs: [
+            "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
+            "Our strategic dedication to sustainable, environmentally eco-friendly methodologies heavily reinforces our long-term corporate vision for a greener industrial future. We partner collaboratively with multinational enterprises to solve their most intensely complex supply chain and digital transformation bottlenecks. Through heavy, continuous investment in cutting-edge robotics, advanced AI automation, and unparalleled human talent, TIMA consistently delivers immense, quantifiable value to our shareholders and partners globally. We operate strictly within certified, bio-burden monitored ISO regulated cleanroom environments, expertly manufacturing critical, high-precision components for the global industry.",
+            "Equipped with an expansive, interconnected fleet of state-of-the-art 5-axis CNC machining centers and Swiss-style multi-spindle lathes, our production facility handles the most complex geometrical and volumetric challenges with unparalleled repeatability. We are foremost experts in highly advanced subtractive manufacturing, reliably machining a massive variety of materials ranging from standard aerospace aluminum and naval brass to notoriously difficult exotic alloys like Tungsten, Invar, and Hastelloy. Our strict, localized quality control protocols and in-machine spindle probing ensure we consistently hold tight tolerances across massive production runs."
+        ],
+        linkText: 'new customer enquiry',
+        content: [
             {
                 type: 'text',
                 heading: 'Vastly More Than Just a Factory or a Cubicle Office',

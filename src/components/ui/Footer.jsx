@@ -79,7 +79,7 @@ export function Footer() {
             <div className="border-t border-gray-200">
                 <div className="max-w-[1400px] mx-auto px-6 sm:px-10 md:px-14 lg:px-20 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
                     <p className="text-gray-400 text-sm sm:text-[15px]">
-                        © {new Date().getFullYear()} TIMA Group. All rights reserved.
+                        © {new Date().getFullYear()} TIMA. All rights reserved.
                     </p>
                     <div className="flex items-center gap-6 sm:gap-8 text-sm sm:text-[15px]">
                         <a href="#" className="text-gray-500 hover:text-tima-gold transition-colors">Privacy Policy</a>

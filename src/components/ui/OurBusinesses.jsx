@@ -26,7 +26,7 @@ const leftTopics = [
         id: 'laser-cutting',
         label: 'Laser Cutting & Engraving',
         abstract: 'High-powered fiber and CO₂ laser systems for clean, burr-free cuts on metals, plastics and composites. Ideal for intricate designs and rapid prototyping.',
-        image: 'https://images.unsplash.com/photo-1635348729498-ef4a0218e7d0?auto=format&fit=crop&w=1200&q=80',
+        image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80',
     },
     {
         id: 'metal-fabrication',
@@ -38,19 +38,19 @@ const leftTopics = [
         id: 'tool-design',
         label: 'Tool Design',
         abstract: 'Custom tooling solutions designed with CAD/CAM software and validated through simulation. We engineer jigs, fixtures, and molds that maximize production efficiency.',
-        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80',
+        image: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1200&q=80',
     },
     {
         id: 'injection-molding',
         label: 'Injection Molding',
         abstract: 'Thermoplastic and thermoset injection molding with multi-cavity molds for high-volume production. From design to delivery, we handle the complete molding lifecycle.',
-        image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?auto=format&fit=crop&w=1200&q=80',
+        image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80',
     },
     {
         id: 'prototype-dev',
         label: 'Prototype Development',
         abstract: 'Rapid prototyping using 3D printing, CNC, and soft tooling. We accelerate your product development cycle from concept to functional prototype in days, not weeks.',
-        image: 'https://images.unsplash.com/photo-1631281956016-3219b63a61b5?auto=format&fit=crop&w=1200&q=80',
+        image: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1200&q=80',
     },
     {
         id: 'pcb-embedded',
@@ -373,7 +373,7 @@ export function OurBusinesses() {
                                             className={`block rounded-full flex-shrink-0 transition-all duration-300 ${i === mfgIndex
                                                 ? 'w-[20px] h-[6px] bg-tima-gold'
                                                 : 'w-[6px] h-[6px] bg-white/25 hover:bg-white/40'
-                                            }`}
+                                                }`}
                                         />
                                     ))}
                                 </div>
@@ -437,46 +437,46 @@ export function OurBusinesses() {
                                 >
                                     <div className="w-full sm:w-1/2 bg-[#0c0c0c] p-5 pb-16 sm:p-6 md:p-8 flex flex-col justify-center relative z-10 order-2 sm:order-1">
                                         <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white tracking-tight mb-2 sm:mb-3">
-                                                {currentItTopic.label}
-                                            </h3>
+                                            {currentItTopic.label}
+                                        </h3>
                                         <div className="w-10 h-[2px] bg-tima-gold rounded-full mb-3 sm:mb-5"></div>
                                         <p className="text-white/60 text-xs sm:text-sm md:text-[15px] leading-relaxed mb-4 sm:mb-6 line-clamp-4 sm:line-clamp-none">
-                                                {currentItTopic.abstract}
-                                            </p>
-                                            <Link
-                                                to={`/it-solutions/${currentItTopic.label.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(/&/g, '')}`}
-                                                className="animated-button self-start"
-                                            >
-                                                <svg viewBox="0 0 24 24" className="arr-2" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                                                    ></path>
-                                                </svg>
-                                                <span className="text">read more</span>
-                                                <span className="circle"></span>
-                                                <svg viewBox="0 0 24 24" className="arr-1" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                                                    ></path>
-                                                </svg>
-                                            </Link>
-                                        </div>
+                                            {currentItTopic.abstract}
+                                        </p>
+                                        <Link
+                                            to={`/it-solutions/${currentItTopic.label.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(/&/g, '')}`}
+                                            className="animated-button self-start"
+                                        >
+                                            <svg viewBox="0 0 24 24" className="arr-2" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                                ></path>
+                                            </svg>
+                                            <span className="text">read more</span>
+                                            <span className="circle"></span>
+                                            <svg viewBox="0 0 24 24" className="arr-1" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                                ></path>
+                                            </svg>
+                                        </Link>
+                                    </div>
 
                                     {/* Image */}
                                     <div className="w-full h-[180px] sm:h-auto sm:w-1/2 relative overflow-hidden order-1 sm:order-2">
-                                            <motion.img
-                                                key={currentItTopic.id + '-img'}
-                                                src={currentItTopic.image}
-                                                alt={currentItTopic.label}
-                                                className="w-full h-full object-cover"
-                                                initial={{ scale: 1.1, opacity: 0 }}
-                                                animate={{ scale: 1, opacity: 1 }}
-                                                transition={{ duration: 0.6, ease: 'easeOut' }}
-                                            />
+                                        <motion.img
+                                            key={currentItTopic.id + '-img'}
+                                            src={currentItTopic.image}
+                                            alt={currentItTopic.label}
+                                            className="w-full h-full object-cover"
+                                            initial={{ scale: 1.1, opacity: 0 }}
+                                            animate={{ scale: 1, opacity: 1 }}
+                                            transition={{ duration: 0.6, ease: 'easeOut' }}
+                                        />
                                         <div className="absolute inset-0 bg-gradient-to-r from-[#0c0c0c] via-transparent to-transparent w-1/3 hidden sm:block"></div>
                                         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0c0c0c]/80 sm:hidden"></div>
                                         <div className="absolute inset-0 bg-black/20"></div>
-                                        </div>
+                                    </div>
                                 </motion.div>
                             </AnimatePresence>
 
@@ -491,7 +491,7 @@ export function OurBusinesses() {
                                             className={`block rounded-full flex-shrink-0 transition-all duration-300 ${i === itIndex
                                                 ? 'w-[20px] h-[6px] bg-tima-gold'
                                                 : 'w-[6px] h-[6px] bg-white/25 hover:bg-white/40'
-                                            }`}
+                                                }`}
                                         />
                                     ))}
                                 </div>

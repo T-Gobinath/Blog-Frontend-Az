@@ -228,8 +228,8 @@ export function DynamicPage() {
                                     <p className={`text-xs font-semibold uppercase tracking-wider mb-2 ${theme === 'light' ? 'text-gray-500' : 'text-gray-500'}`}>
                                         Direct Inquiries
                                     </p>
-                                    <a href="mailto:info@techneural.com" className={`text-sm font-medium hover:text-tima-gold transition-colors ${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>
-                                        info@techneural.com
+                                    <a href="mailto:support@thetima.com" className={`text-sm font-medium hover:text-tima-gold transition-colors ${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>
+                                        support@thetima.com
                                     </a>
                                 </div>
                             </motion.div>
