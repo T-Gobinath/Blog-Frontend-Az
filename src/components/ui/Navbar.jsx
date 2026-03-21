@@ -115,32 +115,14 @@ export function Navbar() {
             transition={{ duration: 2.0, delay: 0.2, ease: "easeInOut" }}
             ref={navRef}
             className={`fixed top-0 left-0 right-[10px] z-50 pointer-events-auto transition-all duration-700 delay-75 ${isScrolled
-                ? (activeTheme === 'light' ? 'bg-white/90 backdrop-blur-md py-0.5 text-gray-900' : 'bg-[#1a2234]/85 backdrop-blur-md py-0.5')
+                ? (activeTheme === 'light' ? 'bg-white/90 backdrop-blur-md py-0.5 text-gray-900' : 'bg-[#0B0E4F]/95 backdrop-blur-md py-0.5')
                 : (activeTheme === 'light' ? 'bg-transparent pt-3 pb-1 text-gray-900' : 'bg-transparent xl:bg-gradient-to-b xl:from-black/70 xl:via-black/70 xl:to-transparent pt-3 pb-1 xl:pb-16')
                 }`}
             onMouseLeave={() => setActiveDropdown(null)}
         >
 
 
-            {/* Scrolling Marquee Banner — mobile/tablet only, hidden on lg desktop */}
-            {!isScrolled && (
-                <div className={`lg:hidden overflow-hidden py-2 text-[11px] sm:text-[12px] md:text-[13px] ${activeTheme === 'light' ? 'text-gray-600' : 'text-white/90'}`}>
-                    <div className="marquee-scroll whitespace-nowrap font-medium tracking-wide">
-                        <span className="inline-block">
-                            <span className="px-10 sm:px-12">Together we Raise, Together we Thrive.</span>
-                            <span className="px-10 sm:px-12">Together we Raise, Together we Thrive.</span>
-                            <span className="px-10 sm:px-12">Together we Raise, Together we Thrive.</span>
-                            <span className="px-10 sm:px-12">Together we Raise, Together we Thrive.</span>
-                        </span>
-                        <span className="inline-block">
-                            <span className="px-10 sm:px-12">Together we Raise, Together we Thrive.</span>
-                            <span className="px-10 sm:px-12">Together we Raise, Together we Thrive.</span>
-                            <span className="px-10 sm:px-12">Together we Raise, Together we Thrive.</span>
-                            <span className="px-10 sm:px-12">Together we Raise, Together we Thrive.</span>
-                        </span>
-                    </div>
-                </div>
-            )}
+
 
             {/* Desktop Layout Wrapper */}
             <div className={`max-w-[1920px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 2xl:px-40 flex items-center justify-between transition-all duration-700 ${isScrolled ? 'h-12 sm:h-14 md:h-16' : 'h-16 sm:h-20 md:h-24 lg:h-26 xl:h-28'}`}>
@@ -151,40 +133,14 @@ export function Navbar() {
                             src={isScrolled ? scrolledLogo : defaultLogo}
                             onError={(e) => { e.target.style.display = 'none' }}
                             alt="TIMA Logo"
-                            className={`w-auto object-contain mr-2 sm:mr-3 md:mr-4 drop-shadow-md transition-all duration-700 cursor-pointer ${isScrolled ? 'h-10 sm:h-12 md:h-14 lg:h-14' : 'h-14 sm:h-18 md:h-20 lg:h-[80px] xl:h-[90px]'}`}
+                            className={`w-auto object-contain mr-2 sm:mr-3 md:mr-4 drop-shadow-md transition-all duration-700 cursor-pointer ${isScrolled ? 'h-10 sm:h-12 md:h-14 lg:h-16' : 'h-14 sm:h-18 md:h-20 lg:h-[100px] xl:h-[110px]'}`}
                         />
                     </Link>
                 </div>
 
-                {/* Right Column: Rows */}
+                {/* Right Column: Nav Links */}
                 <div className="hidden lg:flex flex-col justify-center h-full flex-1 min-w-0 lg:pl-8 xl:pl-12 2xl:pl-24">
-                    {/* Top Row: Utilities - hidden when scrolled */}
-                    {!isScrolled && (
-                        <div className={`flex justify-between items-center pt-3 pb-6 border-b text-[12px] sm:text-[13px] ${activeTheme === 'light' ? 'border-gray-300 text-gray-700' : 'border-white text-white/95'}`}>
-                            <div className="flex-1 overflow-hidden mr-6">
-                                <div className="marquee-scroll whitespace-nowrap font-medium tracking-wide">
-                                    <span className="inline-block">
-                                        <span className="px-12">Together we Raise, Together we Thrive.</span>
-                                        <span className="px-12">Together we Raise, Together we Thrive.</span>
-                                        <span className="px-12">Together we Raise, Together we Thrive.</span>
-                                        <span className="px-12">Together we Raise, Together we Thrive.</span>
-                                    </span>
-                                    <span className="inline-block">
-                                        <span className="px-12">Together we Raise, Together we Thrive.</span>
-                                        <span className="px-12">Together we Raise, Together we Thrive.</span>
-                                        <span className="px-12">Together we Raise, Together we Thrive.</span>
-                                        <span className="px-12">Together we Raise, Together we Thrive.</span>
-                                    </span>
-                                </div>
-                            </div>
-                            <div className="flex items-center gap-4 sm:gap-6 font-medium flex-shrink-0">
-                                <Link to="/contact" className={`transition-colors ${activeTheme === 'light' ? 'hover:text-gray-400' : 'hover:text-white/70'}`}>Contact Us</Link>
-                            </div>
-                        </div>
-                    )}
-
-                    {/* Bottom Row: Nav Links + Icons */}
-                    <div className={`flex items-center ${isScrolled ? 'py-0' : 'pt-4'}`}>
+                    <div className="flex items-center w-full">
                         {/* Left-Aligned Links (matching the marquee above) */}
                         <div className="flex items-center gap-4 lg:gap-6 xl:gap-8 2xl:gap-12">
                             <Link to="/" className={`relative group flex items-center gap-1.5 text-[13px] lg:text-[14px] 2xl:text-[16px] font-medium tracking-wide whitespace-nowrap transition-colors py-1 ${activeTheme === 'light' ? 'text-gray-600 hover:text-gray-900' : 'text-white/80 hover:text-white'}`}>
@@ -214,6 +170,13 @@ export function Navbar() {
                                     />
                                 </button>
                             ))}
+
+                            <Link to="/contact" className={`relative group flex items-center gap-1.5 text-[13px] lg:text-[14px] 2xl:text-[16px] font-medium tracking-wide whitespace-nowrap transition-colors py-1 ${activeTheme === 'light' ? 'text-gray-600 hover:text-gray-900' : 'text-white/80 hover:text-white'}`}>
+                                <span className="relative pb-1">
+                                    Contact Us
+                                    <span className="absolute left-0 bottom-0 h-[4px] bg-tima-gold transition-all duration-300 rounded-full w-0 group-hover:w-full"></span>
+                                </span>
+                            </Link>
                         </div>
 
                         {/* Right-aligned Icons pushed to the end */}
@@ -267,7 +230,7 @@ export function Navbar() {
                                                                     const basePath = cat.title === 'Manufacturing' ? '/manufacturing' : '/it-solutions';
                                                                     const slug = item.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(/&/g, '');
                                                                     const targetPath = basePath + '/' + slug;
-                                                                    
+
                                                                     return (
                                                                         <li key={item}>
                                                                             <Link
@@ -302,12 +265,12 @@ export function Navbar() {
                         <div className="max-w-7xl mx-auto px-10 py-5">
                             <div className="flex gap-12">
                                 {activeLink.items?.map((item) => {
-                                    const basePath = activeLink.label === 'Partners' ? '/partners' : 
-                                                    activeLink.label === 'Careers' ? '/careers' : '/about';
+                                    const basePath = activeLink.label === 'Partners' ? '/partners' :
+                                        activeLink.label === 'Careers' ? '/careers' : '/about';
                                     const targetPath = item === 'Overview' ? '/overview' :
-                                                    item === 'Careers' ? '/careers' : 
-                                                    basePath + '/' + item.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(/&/g, '');
-                                    
+                                        item === 'Careers' ? '/careers' :
+                                            basePath + '/' + item.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(/&/g, '');
+
                                     return (
                                         <Link
                                             key={item}
@@ -383,11 +346,11 @@ export function Navbar() {
                                     ) : (
                                         // Standard items for other nav links
                                         link.items?.map((item) => {
-                                            const basePath = link.label === 'Partners' ? '/partners' : 
-                                                            link.label === 'Careers' ? '/careers' : '/about';
+                                            const basePath = link.label === 'Partners' ? '/partners' :
+                                                link.label === 'Careers' ? '/careers' : '/about';
                                             const targetPath = item === 'Overview' ? '/overview' :
-                                                            item === 'Careers' ? '/careers' : 
-                                                            basePath + '/' + item.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(/&/g, '');
+                                                item === 'Careers' ? '/careers' :
+                                                    basePath + '/' + item.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(/&/g, '');
                                             return (
                                                 <Link
                                                     key={item}

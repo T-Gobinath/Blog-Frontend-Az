@@ -59,23 +59,6 @@ export function Hero() {
 
             {/* "Growth is Life" Headline + CTAs */}
             <div className="relative z-10 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-44 pb-32 sm:pb-16 md:pb-24 lg:pb-32 flex-1 flex flex-col justify-end items-center sm:items-start text-center sm:text-left max-w-[1920px] mx-auto w-full">
-                <motion.h1
-                    initial={{ y: 100, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 1.5, ease: "easeOut" }}
-                    className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[110px] text-white drop-shadow-2xl leading-tight tracking-tight px-4 sm:px-0"
-                    style={{ fontFamily: "'Playfair Display', 'Georgia', serif", fontWeight: 400 }}
-                >
-                    Growth is Life
-                </motion.h1>
-
-                {/* Gold underline */}
-                <motion.div
-                    initial={{ y: 100, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 1.5, delay: 0.4, ease: "easeOut" }}
-                    className="w-24 sm:w-48 md:w-64 lg:w-80 h-[2px] bg-[#dcb671] mt-3 sm:mt-6 mb-8 sm:mb-8 md:mb-12 mx-auto sm:mx-0"
-                />
 
                 {/* CTA Buttons - Reliance style (both white bg, dark text) */}
                 <motion.div
