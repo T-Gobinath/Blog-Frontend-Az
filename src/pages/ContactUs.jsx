@@ -14,7 +14,7 @@ export function ContactUs() {
     return (
         <Layout>
             <Navbar />
-            <div className="relative min-h-screen flex flex-col items-center justify-center bg-[#030014] text-white pt-32 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden font-sans">
+            <div className="relative min-h-[100dvh] flex flex-col items-center justify-start bg-[#030014] text-white pt-32 pb-16 px-4 sm:px-6 lg:px-8 font-sans">
                 
                 {/* Background Gradient Blobs */}
                 <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-[120px] pointer-events-none"></div>
@@ -22,7 +22,7 @@ export function ContactUs() {
 
                 {/* Main Content Container with Fade-up Animation */}
                 <div 
-                    className={`relative z-10 w-full max-w-5xl mx-auto flex flex-col items-center text-center transition-all duration-1000 transform ${
+                    className={`relative z-10 w-full max-w-5xl mx-auto my-auto flex flex-col items-center text-center transition-all duration-1000 transform ${
                         isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
                     }`}
                 >
