@@ -114,7 +114,7 @@ export function Navbar() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 2.0, delay: 0.2, ease: "easeInOut" }}
             ref={navRef}
-            className={`fixed top-0 left-0 right-[10px] z-50 pointer-events-auto transition-all duration-700 delay-75 ${isScrolled
+            className={`fixed top-0 left-0 right-0 lg:right-[10px] z-50 pointer-events-auto transition-all duration-700 delay-75 ${isScrolled
                 ? (activeTheme === 'light' ? 'bg-white/90 backdrop-blur-md py-0.5 text-gray-900' : 'bg-[#0B0E4F]/95 backdrop-blur-md py-0.5')
                 : (activeTheme === 'light' ? 'bg-transparent pt-3 pb-1 text-gray-900' : 'bg-transparent xl:bg-gradient-to-b xl:from-black/70 xl:via-black/70 xl:to-transparent pt-3 pb-1 xl:pb-16')
                 }`}
@@ -290,7 +290,10 @@ export function Navbar() {
 
             {/* Mobile menu */}
             {mobileOpen && (
-                <div className={`lg:hidden border-t px-4 sm:px-6 py-4 max-h-[70vh] overflow-y-auto ${activeTheme === 'light' ? 'bg-white border-gray-200' : 'bg-[#1a2234] border-white/10'}`}>
+                <div
+                    className={`lg:hidden border-t px-4 sm:px-6 py-4 max-h-[75vh] overflow-y-auto overscroll-contain ${activeTheme === 'light' ? 'bg-white border-gray-200' : 'bg-[#1a2234] border-white/10'}`}
+                    style={{ WebkitOverflowScrolling: 'touch' }}
+                >
                     <Link
                         to="/"
                         onClick={() => setMobileOpen(false)}
