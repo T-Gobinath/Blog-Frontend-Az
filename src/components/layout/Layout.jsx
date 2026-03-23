@@ -56,7 +56,7 @@ export function Layout({ children }) {
     }
 
     return (
-        <div className={`relative w-full h-screen overflow-hidden transition-colors duration-500 ${theme === 'light'
+        <div className={`relative w-full h-[100dvh] overflow-hidden transition-colors duration-500 ${theme === 'light'
             ? 'bg-transparent text-gray-900'
             : 'bg-transparent text-tima-white'
             }`}>

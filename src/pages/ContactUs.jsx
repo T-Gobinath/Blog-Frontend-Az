@@ -14,7 +14,7 @@ export function ContactUs() {
     return (
         <Layout>
             <Navbar />
-            <div className="relative min-h-[100dvh] flex flex-col items-center justify-start bg-[#030014] text-white pt-32 pb-16 px-4 sm:px-6 lg:px-8 font-sans">
+            <div className="relative min-h-[100dvh] flex flex-col items-center justify-start bg-[#030014] text-white pt-32 pb-24 md:pb-32 px-4 sm:px-6 lg:px-8 font-sans">
                 
                 {/* Background Gradient Blobs */}
                 <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-[120px] pointer-events-none"></div>
