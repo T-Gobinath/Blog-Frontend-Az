@@ -44,19 +44,21 @@ export function ContactUs() {
                             to="/services" 
                             className="group relative flex flex-col items-center text-center p-8 sm:p-10 md:p-12 
                                        w-full md:w-1/2 max-w-md mx-auto
-                                       bg-white/[0.03] backdrop-blur-xl
-                                       border border-white/[0.08] rounded-[24px]
-                                       hover:bg-white/[0.06] hover:border-blue-500/30
-                                       hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(59,130,246,0.15)]
+                                       bg-white/[0.04] backdrop-blur-2xl
+                                       border border-white/[0.12] rounded-[24px]
+                                       shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_1px_rgba(255,255,255,0.1)]
+                                       hover:bg-white/[0.06] hover:border-blue-400/50
+                                       active:scale-[0.98] active:bg-white/[0.08]
+                                       hover:-translate-y-1.5 hover:shadow-[0_16px_40px_rgba(59,130,246,0.2),inset_0_1px_1px_rgba(255,255,255,0.2)]
                                        transition-all duration-500 ease-out overflow-hidden"
                         >
                             {/* Card Hover Glow Effect */}
-                            <div className="absolute inset-0 bg-gradient-to-b from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                            <div className="absolute inset-0 bg-gradient-to-b from-blue-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                             
-                            <div className="relative z-10 w-16 h-16 rounded-2xl bg-blue-500/10 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-blue-500/20 transition-all duration-500">
+                            <div className="relative z-10 w-16 h-16 rounded-2xl bg-blue-500/10 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-blue-500/20 transition-all duration-500 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]">
                                 <Briefcase size={32} className="text-blue-400" strokeWidth={1.5} />
                             </div>
-                            <h3 className="relative z-10 text-2xl font-semibold text-white mb-3 tracking-wide">Request for Services</h3>
+                            <h3 className="relative z-10 text-xl sm:text-2xl font-bold text-white mb-3 tracking-wide">Request for Services</h3>
                             <p className="relative z-10 text-gray-400 text-sm md:text-base leading-relaxed">
                                 Explore how our tailored services can help grow and scale your business.
                             </p>
@@ -67,19 +69,21 @@ export function ContactUs() {
                             to="/media-contacts" 
                             className="group relative flex flex-col items-center text-center p-8 sm:p-10 md:p-12 
                                        w-full md:w-1/2 max-w-md mx-auto
-                                       bg-white/[0.03] backdrop-blur-xl
-                                       border border-white/[0.08] rounded-[24px]
-                                       hover:bg-white/[0.06] hover:border-cyan-500/30
-                                       hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(6,182,212,0.15)]
+                                       bg-white/[0.04] backdrop-blur-2xl
+                                       border border-white/[0.12] rounded-[24px]
+                                       shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_1px_rgba(255,255,255,0.1)]
+                                       hover:bg-white/[0.06] hover:border-cyan-400/50
+                                       active:scale-[0.98] active:bg-white/[0.08]
+                                       hover:-translate-y-1.5 hover:shadow-[0_16px_40px_rgba(6,182,212,0.2),inset_0_1px_1px_rgba(255,255,255,0.2)]
                                        transition-all duration-500 ease-out overflow-hidden"
                         >
                             {/* Card Hover Glow Effect */}
-                            <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                            <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                             
-                            <div className="relative z-10 w-16 h-16 rounded-2xl bg-cyan-500/10 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-cyan-500/20 transition-all duration-500">
+                            <div className="relative z-10 w-16 h-16 rounded-2xl bg-cyan-500/10 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-cyan-500/20 transition-all duration-500 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]">
                                 <Wifi size={32} className="text-cyan-400" strokeWidth={1.5} />
                             </div>
-                            <h3 className="relative z-10 text-2xl font-semibold text-white mb-3 tracking-wide">Media Contacts</h3>
+                            <h3 className="relative z-10 text-xl sm:text-2xl font-bold text-white mb-3 tracking-wide">Media Contacts</h3>
                             <p className="relative z-10 text-gray-400 text-sm md:text-base leading-relaxed">
                                 Get in touch with our PR and communications team for media inquiries.
                             </p>
