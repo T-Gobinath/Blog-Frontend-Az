@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react'
 import { useStore } from '../../stores/useStore'
 import { useLocation } from 'react-router-dom'
 import { ArrowUp } from 'lucide-react'
+import { Navbar } from '../ui/Navbar'
 
 export function Layout({ children }) {
     const theme = useStore((state) => state.theme)
@@ -61,18 +62,18 @@ export function Layout({ children }) {
             : 'bg-transparent text-tima-white'
             }`}>
 
+            <Navbar />
+
             {/* UI Overlay */}
             <main
                 id="main-scroll"
                 ref={scrollContainerRef}
-                className="relative z-10 w-full h-full overflow-y-auto overflow-x-hidden scroll-smooth"
+                className={`relative z-10 w-full h-full overflow-y-auto overflow-x-hidden scroll-smooth transition-all duration-700 ease-out transform ${
+                    isAnimating ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+                }`}
             >
                 {/* Enable pointer events for children content with Animated "Pop Up / Scroll Up" wrapper */}
-                <div 
-                    className={`pointer-events-auto min-h-full transition-all duration-700 ease-out transform ${
-                        isAnimating ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-                    }`}
-                >
+                <div className="pointer-events-auto min-h-full">
                     {children}
                 </div>
             </main>

@@ -3,45 +3,27 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const timelineData = [
     {
-        year: '1904',
-        title: 'The Origin Story',
-        description: 'The foundation was laid, setting a new benchmark for corporate excellence and purposeful transformation.',
+        year: '1995',
+        title: 'Foundation of TIM',
+        description: 'TIM was established as a small-scale manufacturing industry by Mr. Thomas Edison, laying a strong foundation in industrial production.',
         image: 'https://images.unsplash.com/photo-1577401239170-897942555fb3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
     },
     {
-        year: '1932',
-        title: 'Taking Flight',
-        description: 'A dedicated focus on aviation and transport connected new regions bridging distances across continents.',
+        year: '2017',
+        title: 'Birth of TIMA TECH',
+        description: 'TIMA TECH was initiated by Mr. T. Manos Simson, marking a significant expansion into BPO services, back-office operations, cryptocurrency mining, and CAD modeling solutions, strengthening the company\'s technical and operational footprint.',
         image: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
     },
     {
-        year: '1945',
-        title: 'Scientific Endeavour',
-        description: 'A commitment to fundamental research brought forth an era of advanced atomic and scientific exploration.',
+        year: '2025',
+        title: 'Evolution into TIMA Integrated Technologies',
+        description: 'The organization transformed into TIMA Integrated Technologies Private Limited, with expanded leadership under Mr. T. Manos Simson and Mrs. Joys Anita. This phase represents a strategic evolution into advanced manufacturing, artificial intelligence, cloud computing, and industrial automation, positioning TIMA as a multi-domain technology company.',
         image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
     },
     {
-        year: '1954',
-        title: 'Industrial Expansion',
-        description: 'Venturing into heavy manufacturing and locomotives accelerated infrastructure development significantly.',
-        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
-    },
-    {
-        year: '1968',
-        title: 'The Digital Frontier',
-        description: 'Recognizing the potential of computing, global consultancy services were established early on.',
-        image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
-    },
-    {
-        year: '1991',
-        title: 'Global Reforms',
-        description: 'Economic liberalization paved the way for massive international expansion and competitive market positioning.',
-        image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
-    },
-    {
-        year: '2025',
-        title: 'Future Ready',
-        description: 'Driving toward sustainable futures, clean energy adoption, and sophisticated AI-driven transformations.',
+        year: '2035',
+        title: 'Vision for the Future',
+        description: 'TIMA envisions becoming a global leader in innovation and deep technology, with a focus on:\n• Large-scale sustainable energy systems\n• Advanced manufacturing and engineering technologies\n• Blockchain ecosystems with proprietary digital currency\n• Fuel cell and next-generation energy solutions\n• Quantum computing and deep-tech research',
         image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80',
     }
 ];
@@ -176,7 +158,7 @@ export function HomeTimeline() {
                             <h3 className="text-white/90 text-lg sm:text-xl md:text-2xl font-light tracking-wide mb-2 sm:mb-3">
                                 {currentItem.title}
                             </h3>
-                            <p className="text-white/60 text-sm sm:text-base md:text-lg font-light leading-relaxed max-w-md lg:max-w-lg">
+                            <p className="text-white/60 text-sm sm:text-base md:text-lg font-light leading-relaxed max-w-md lg:max-w-xl whitespace-pre-line">
                                 {currentItem.description}
                             </p>
                         </motion.div>

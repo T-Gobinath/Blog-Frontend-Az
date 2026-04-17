@@ -1,13 +1,11 @@
 import React from 'react'
 import { Layout } from '../components/layout/Layout'
-import { Navbar } from '../components/ui/Navbar'
 import { Radio, ChevronLeft } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 export function MediaContacts() {
     return (
         <Layout>
-            <Navbar />
             <div className="w-full min-h-screen bg-black text-white pt-48 sm:pt-56 pb-16 px-4 sm:px-8 md:px-16 lg:px-32 xl:px-44">
 
                 {/* BACK Button */}
@@ -30,7 +28,7 @@ export function MediaContacts() {
                         </h1>
                     </div>
                     <p className="text-gray-300 max-w-3xl text-lg sm:text-lg leading-relaxed">
-                        For press inquiries, interview requests, and media relations, please connect with our communications team. We are happy to provide information regarding our current initiatives.
+                        Contact our communications team for interview requests and the latest updates on our initiatives.
                     </p>
                 </div>
 
@@ -54,9 +52,9 @@ export function MediaContacts() {
                                             <path d="M12 0C5.37258 0 0 5.37258 0 12C0 21 12 28 12 28C12 28 24 21 24 12C24 5.37258 18.6274 0 12 0ZM12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12C16 14.2091 14.2091 16 12 16Z" fill="currentColor" />
                                         </svg>
                                     </div>
-                                    <div className="text-lg sm:text-xl leading-relaxed text-white/80 font-light">
-                                        <p>Kennet Nagar, Alagappa Nagar</p>
-                                        <p>8th, Madurai (Tamil Nadu) – 625003</p>
+                                    <div className="text-lg sm:text-lg leading-relaxed text-white/80 font-light">
+                                        <p>4th street, Kennet Nagar, Airport road</p>
+                                        <p>Alagapan Nagar Extn, Madurai - 625003</p>
                                     </div>
                                 </div>
 
@@ -79,9 +77,15 @@ export function MediaContacts() {
                                                 <path d="M6.62 10.79C8.06 13.62 10.38 15.93 13.21 17.38L15.41 15.18C15.68 14.91 16.08 14.82 16.43 14.94C17.55 15.31 18.76 15.51 20 15.51C20.55 15.51 21 15.96 21 16.51V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z" fill="currentColor" />
                                             </svg>
                                         </div>
-                                        <a href="tel:+918015001407" className="text-lg sm:text-xl text-[#3b82f6] font-light hover:underline tracking-wide">
-                                            +91 80150 01407
-                                        </a>
+                                        <div className="text-lg sm:text-xl text-[#3b82f6] font-light tracking-wide flex items-center gap-2 flex-wrap">
+                                            <a href="tel:+919363721147" className="hover:underline">
+                                                +91 93637 21147
+                                            </a>
+                                            <span className="text-white/30 text-sm pb-0.5">/</span>
+                                            <a href="tel:+918015001407" className="hover:underline">
+                                                80150 01407
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -90,7 +94,7 @@ export function MediaContacts() {
                         {/* Map Frame */}
                         <div className="w-full lg:w-1/2 max-w-[400px] aspect-square rounded-2xl overflow-hidden border border-white/5 shadow-2xl relative self-start">
                             <iframe 
-                                src="https://www.google.com/maps?q=11.119451,77.789879&hl=en&z=15&output=embed"
+                                src="https://www.google.com/maps?q=Kennet+Nagar,+Muthu+Patti,+Madurai,+Tamil+Nadu+625003&hl=en&z=15&output=embed"
                                 width="100%" 
                                 height="100%" 
                                 style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) contrast(105%)' }} 

@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Layout } from '../components/layout/Layout'
-import { Navbar } from '../components/ui/Navbar'
 import { Building2, ChevronLeft, ChevronDown } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
@@ -75,7 +74,6 @@ export function RequestServices() {
 
     return (
         <Layout>
-            <Navbar />
             {/* Main Wrapper - Split Screen Layout */}
             <div className="relative w-full min-h-screen bg-[#060713] text-white flex flex-col lg:flex-row">
                 {/* Custom CSS for checkbox hack without extra plugins */}

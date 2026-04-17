@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Layout } from '../components/layout/Layout'
-import { Navbar } from '../components/ui/Navbar'
 import { Briefcase, Wifi } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
@@ -13,7 +12,6 @@ export function ContactUs() {
 
     return (
         <Layout>
-            <Navbar />
             <div className="relative min-h-[100dvh] flex flex-col items-center justify-start bg-[#030014] text-white pt-32 pb-24 md:pb-32 px-4 sm:px-6 lg:px-8 font-sans">
                 
                 {/* Background Gradient Blobs */}

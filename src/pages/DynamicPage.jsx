@@ -2,7 +2,6 @@ import React, { useEffect, useMemo } from 'react';
 import { useLocation, Link, Navigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, ChevronRight, LayoutTemplate } from 'lucide-react';
-import { Navbar } from '../components/ui/Navbar';
 import { Footer } from '../components/ui/Footer';
 import { useStore } from '../stores/useStore';
 import { pagesContent } from '../data/pagesContent';
@@ -48,7 +47,6 @@ export function DynamicPage() {
         return (
             <Layout>
                 <div className={`min-h-[100dvh] flex flex-col items-center justify-center ${theme === 'light' ? 'bg-white text-gray-900' : 'bg-[#0a0f1a] text-white'}`}>
-                    <Navbar />
                     <h1 className="text-4xl font-bold mb-4">Page Not Found</h1>
                     <p className="text-gray-500 mb-8">The page you are looking for does not exist or has been moved.</p>
                     <Link to="/" className="px-6 py-3 bg-tima-gold text-black font-semibold rounded-full hover:bg-white transition-colors">
@@ -66,7 +64,6 @@ export function DynamicPage() {
     return (
         <Layout>
             <div className={`min-h-[100dvh] flex flex-col font-sans transition-colors duration-500 ${theme === 'light' ? 'bg-[#fcfcfc]' : 'bg-[#0a0f1a]'}`}>
-                <Navbar />
                 
                 <main className="flex-grow pt-16 sm:pt-20 md:pt-24 xl:pt-28">
                 {/* ── HERO SECTION ── */}

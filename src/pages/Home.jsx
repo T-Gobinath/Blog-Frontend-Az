@@ -2,10 +2,11 @@ import React from 'react'
 import { Layout } from '../components/layout/Layout'
 import { Hero } from '../components/ui/Hero'
 import { TechNeural } from '../components/ui/TechNeural'
+import { BusinessSlider } from '../components/ui/BusinessSlider'
 import { HomeTimeline } from '../components/ui/HomeTimeline'
 import { FeatureShowcase } from '../components/ui/FeatureShowcase'
-import { OurBusinesses } from '../components/ui/OurBusinesses'
-import { BoardOfDirectors } from '../components/ui/BoardOfDirectors'
+
+
 import { Footer } from '../components/ui/Footer'
 
 export function Home() {
@@ -16,11 +17,8 @@ export function Home() {
             {/* GREEN SPHERE Section */}
             <TechNeural />
 
-            {/* Our Businesses Section */}
-            <OurBusinesses />
-
-            {/* Board of Directors Section */}
-            <BoardOfDirectors />
+            {/* Horizontal Image Slider Section */}
+            <BusinessSlider />
 
             {/* Interactive Timeline Section */}
             <HomeTimeline />
