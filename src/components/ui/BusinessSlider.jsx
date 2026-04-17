@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 import CircularGallery from './CircularGallery';
 
@@ -13,14 +14,16 @@ import img7 from '../../assets/img/Automation & Workflow Engineering.png';
 
 export function BusinessSlider() {
     const items = [
-        { image: img1, text: 'Solar Projects &\\nRenewable Energy' },
-        { image: img2, text: 'Advanced Manufacturing\\n& Engineering' },
-        { image: img3, text: 'Electronics, Robotics &\\nIntelligent Automation' },
-        { image: img4, text: '3D Printing &\\nPrototyping Services' },
-        { image: img5, text: 'IT Software &\\nCloud Solutions' },
-        { image: img6, text: 'Artificial Intelligence\\n(AI) Solutions' },
-        { image: img7, text: 'Automation &\\nWorkflow Engineering' }
+        { image: img1, text: 'Solar Projects &\\nRenewable Energy', link: '/ventures/solar-projects' },
+        { image: img2, text: 'Advanced Manufacturing\\n& Engineering', link: '/ventures/advanced-manufacturing' },
+        { image: img3, text: 'Electronics, Robotics &\\nIntelligent Automation', link: '/ventures/electronics-robotics' },
+        { image: img4, text: '3D Printing &\\nPrototyping Services', link: '/ventures/3d-printing' },
+        { image: img5, text: 'IT Software &\\nCloud Solutions', link: '/ventures/it-software' },
+        { image: img6, text: 'Artificial Intelligence\\n(AI) Solutions', link: '/ventures/artificial-intelligence' },
+        { image: img7, text: 'Automation &\\nWorkflow Engineering', link: '/ventures/automation-workflow' }
     ];
+
+    const navigate = useNavigate();
 
     return (
         <section className="relative w-full pt-24 pb-12 bg-[#050810] text-white overflow-hidden">
@@ -60,9 +63,9 @@ export function BusinessSlider() {
                     borderRadius={0.05} 
                     scrollSpeed={2}
                     scrollEase={0.05}
+                    onItemClick={(link) => navigate(link)}
                 />
             </div>
         </section>
     );
 }
-

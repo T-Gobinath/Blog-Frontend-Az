@@ -125,13 +125,13 @@ export function DynamicPage() {
                                     className="lg:col-span-8 space-y-16"
                                 >
                                     {/* Overview Section */}
-                                    <div className="prose prose-lg max-w-none">
-                                        <h2 className={`text-3xl sm:text-4xl font-bold mb-8 tracking-tight ${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>
-                                            Overview
-                                        </h2>
-                                        <div className="w-16 h-1 bg-tima-gold mb-10 rounded-full"></div>
-                                        
-                                        {pageData.paragraphs ? (
+                                    {pageData.paragraphs && (
+                                        <div className="prose prose-lg max-w-none">
+                                            <h2 className={`text-3xl sm:text-4xl font-bold mb-8 tracking-tight ${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>
+                                                Overview
+                                            </h2>
+                                            <div className="w-16 h-1 bg-tima-gold mb-10 rounded-full"></div>
+                                            
                                             <div className="space-y-6">
                                                 {pageData.paragraphs.map((p, i) => (
                                                     <p key={i} className={`leading-relaxed text-[16px] sm:text-[18px] ${theme === 'light' ? 'text-gray-700' : 'text-gray-300'}`}>
@@ -139,12 +139,8 @@ export function DynamicPage() {
                                                     </p>
                                                 ))}
                                             </div>
-                                        ) : (
-                                            <p className={`leading-relaxed text-[16px] sm:text-[18px] ${theme === 'light' ? 'text-gray-700' : 'text-gray-300'}`}>
-                                                Content loading...
-                                            </p>
-                                        )}
-                                    </div>
+                                        </div>
+                                    )}
 
                                     {/* Rich Content Sections */}
                                     {pageData.content && pageData.content.map((section, idx) => (

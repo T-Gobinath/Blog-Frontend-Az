@@ -3,14 +3,24 @@ import { createPortal } from 'react-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 
+import { Link } from 'react-router-dom'
+
+import img1 from '../../assets/img/Solar Projects & Renewable Energy.png'
+import img2 from '../../assets/img/Advanced Manufacturing & Engineering.png'
+import img3 from '../../assets/img/Electronics, Robotics & Intelligent Automation.png'
+import img4 from '../../assets/img/3D Printing & Prototyping Services.png'
+import img5 from '../../assets/img/IT Software & Cloud Solutions.png'
+import img6 from '../../assets/img/Artificial Intelligence (AI) Solutions.png'
+import img7 from '../../assets/img/Automation & Workflow Engineering.png'
+
 const carouselItems = [
-    { src: 'https://images.unsplash.com/photo-1503694978374-8a2fa686963a?auto=format&fit=crop&q=80', title: 'Solar panel' },
-    { src: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80', title: 'Manufacturing CAD modeling, Mould making machine, prototype' },
-    { src: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80', title: 'Electronic gadgets, automation device, PCB design, toys, robots' },
-    { src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80', title: 'Home decors, wall panel, Led light shells' },
-    { src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80', title: 'IT software and development' },
-    { src: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80', title: 'Artificial Intelligence' },
-    { src: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80', title: 'Automation' },
+    { src: img1, title: 'Solar Projects & Renewable Energy', link: '/ventures/solar-projects' },
+    { src: img2, title: 'Advanced Manufacturing & Engineering', link: '/ventures/advanced-manufacturing' },
+    { src: img3, title: 'Electronics, Robotics & Intelligent Automation', link: '/ventures/electronics-robotics' },
+    { src: img4, title: '3D Printing & Prototyping Services', link: '/ventures/3d-printing' },
+    { src: img5, title: 'IT Software & Cloud Solutions', link: '/ventures/it-software' },
+    { src: img6, title: 'Artificial Intelligence (AI) Solutions', link: '/ventures/artificial-intelligence' },
+    { src: img7, title: 'Automation & Workflow Engineering', link: '/ventures/automation-workflow' }
 ]
 
 const WhatsAppIcon = () => (
@@ -49,7 +59,7 @@ export function Hero() {
                     transition={{ duration: 2, ease: "easeInOut" }}
                     className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
                     style={{
-                        backgroundImage: `url(${carouselItems[currentImage].src})`,
+                        backgroundImage: `url("${carouselItems[currentImage].src}")`,
                         animation: 'kenburns 8s linear forwards',
                     }}
                 />
@@ -84,13 +94,13 @@ export function Hero() {
                     transition={{ duration: 1.5, delay: 0.8, ease: "easeOut" }}
                     className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:justify-start w-full sm:w-auto px-6 sm:px-0"
                 >
-                    <a
-                        href="#details"
+                    <Link
+                        to={carouselItems[currentImage].link}
                         className="group flex items-center justify-center gap-2 px-8 sm:px-10 md:px-12 py-3.5 sm:py-3 bg-transparent border border-white/70 rounded-[6px] text-white text-sm sm:text-base font-medium tracking-wide hover:bg-white hover:text-black hover:border-white transition-colors duration-300"
                     >
                         <span>Details</span>
                         <ArrowRight size={18} strokeWidth={1.5} className="group-hover:translate-x-0.5 transition-transform" />
-                    </a>
+                    </Link>
                 </motion.div>
             </div>
 

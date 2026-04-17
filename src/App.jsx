@@ -18,6 +18,7 @@ function App() {
         <Route path="/media-contacts" element={<MediaContacts />} />
         
         {/* Dynamic Pages */}
+        <Route path="/ventures/:slug" element={<DynamicPage />} />
         <Route path="/about/:slug" element={<DynamicPage />} />
         <Route path="/manufacturing/:slug" element={<DynamicPage />} />
         <Route path="/it-solutions/:slug" element={<DynamicPage />} />

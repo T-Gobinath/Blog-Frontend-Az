@@ -352,12 +352,14 @@ class App {
       borderRadius = 0,
       font = 'bold 30px Figtree',
       scrollSpeed = 2,
-      scrollEase = 0.05
+      scrollEase = 0.05,
+      onItemClick
     } = {}
   ) {
     document.documentElement.classList.remove('no-js');
     this.container = container;
     this.scrollSpeed = scrollSpeed;
+    this.onItemClick = onItemClick;
     this.scroll = { ease: scrollEase, current: 0, target: 0, last: 0 };
     this.onCheckDebounce = debounce(this.onCheck, 200);
     this.createRenderer();
@@ -436,8 +438,39 @@ class App {
     const distance = (this.start - x) * (this.scrollSpeed * 0.025);
     this.scroll.target = this.scroll.position + distance;
   }
-  onTouchUp() {
+  onTouchUp(e) {
     this.isDown = false;
+
+    // Check if it was a genuine tap/click (drag distance is tiny)
+    if (this.start !== undefined && e) {
+      const x = e.changedTouches ? e.changedTouches[0].clientX : e.clientX;
+      const distance = Math.abs(this.start - x);
+      
+      if (distance < 10 && this.onItemClick && this.medias && this.medias[0] && this.mediasImages) {
+        const width = this.medias[0].width;
+        // Use scroll.current (what the user actually sees on screen right now)
+        const scrollVal = this.scroll.current;
+        const centerIndexFloat = scrollVal / width;
+        
+        // Calculate offset natively in WebGL world units
+        const screenCenterX = window.innerWidth / 2;
+        const clickPixelOffset = x - screenCenterX;
+        const worldOffset = clickPixelOffset * (this.viewport.width / window.innerWidth);
+        
+        // Translate visual offset fractional coordinate directly into index bounds
+        const exactClickedIndexFloat = centerIndexFloat + (worldOffset / width);
+        const finalCalculatedIndex = Math.round(exactClickedIndexFloat);
+        
+        const len = this.mediasImages.length;
+        const trueIndex = ((finalCalculatedIndex % len) + len) % len;
+        
+        const activeItem = this.mediasImages[trueIndex];
+        if (activeItem && activeItem.link) {
+          this.onItemClick(activeItem.link);
+        }
+      }
+    }
+
     this.onCheck();
   }
   onWheel(e) {
@@ -524,14 +557,15 @@ export default function CircularGallery({
   borderRadius = 0.05,
   font = 'bold 30px Figtree',
   scrollSpeed = 2,
-  scrollEase = 0.05
+  scrollEase = 0.05,
+  onItemClick
 }) {
   const containerRef = useRef(null);
   useEffect(() => {
-    const app = new App(containerRef.current, { items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase });
+    const app = new App(containerRef.current, { items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase, onItemClick });
     return () => {
       app.destroy();
     };
-  }, [items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase]);
+  }, [items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase, onItemClick]);
   return <div className="circular-gallery" ref={containerRef} />;
 }
