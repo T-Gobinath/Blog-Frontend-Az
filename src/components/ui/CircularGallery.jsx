@@ -123,15 +123,14 @@ class Title {
   }
   onResize() {
     if (!this.mesh) return;
-    // Normalize relative local scale against parent anisotropic distortions
-    const textHeight = 0.16; // Fix text visually at exactly 16% height relative to the tile
+    const textHeight = 0.14; // Fix text visually at exactly 14% height relative to the tile
     const inverseParentAspect = this.plane.scale.y / this.plane.scale.x;
     const textWidth = textHeight * this.aspect * inverseParentAspect;
     
     this.mesh.scale.set(textWidth, textHeight, 1);
     
     // Y = -0.5 is accurately the bottom bounding box extreme of the scaled parent mesh.
-    this.mesh.position.y = -0.5 - (textHeight * 0.5) - 0.08;
+    this.mesh.position.y = -0.5 - (textHeight * 0.5) - 0.04;
   }
 }
 
@@ -324,8 +323,8 @@ class Media {
     this.scale = this.screen.height / 1500;
     
     // Tweak mobile portrait proportions so image cards aren't too massive or tall
-    const widthFactor = isMobile ? 550 : 700;
-    const heightFactor = isMobile ? 800 : 900;
+    const widthFactor = isMobile ? 550 : 580;
+    const heightFactor = isMobile ? 800 : 750;
     
     this.plane.scale.y = (this.viewport.height * (heightFactor * this.scale)) / this.screen.height;
     this.plane.scale.x = (this.viewport.width * (widthFactor * this.scale)) / this.screen.width;
@@ -428,6 +427,9 @@ class App {
     });
   }
   onTouchDown(e) {
+    // Only handle interaction if the event started inside the gallery container
+    const target = e.target || e.touches?.[0]?.target;
+    if (!this.container.contains(target) && e.type !== 'touchstart') return;
     this.isDown = true;
     this.scroll.position = this.scroll.current;
     this.start = e.touches ? e.touches[0].clientX : e.clientX;
@@ -498,6 +500,16 @@ class App {
     const height = 2 * Math.tan(fov / 2) * this.camera.position.z;
     const width = height * this.camera.aspect;
     this.viewport = { width, height };
+    
+    // Shift scene up slightly on desktop to prevent the taller scaled cards and text from clipping at the bottom
+    if (this.scene) {
+      if (this.screen.width >= 768) {
+        this.scene.position.y = height * 0.06;
+      } else {
+        this.scene.position.y = 0;
+      }
+    }
+
     if (this.medias) {
       this.medias.forEach(media => media.onResize({ screen: this.screen, viewport: this.viewport }));
     }

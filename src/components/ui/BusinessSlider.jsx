@@ -33,7 +33,7 @@ export function BusinessSlider() {
 
             <div className="max-w-[1920px] mx-auto px-4 sm:px-8 md:px-16 lg:px-24">
                 <div className="flex flex-col items-center justify-center mb-6 sm:mb-8 relative z-10 px-2 sm:px-0">
-                    <motion.span 
+                    <motion.span
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -41,7 +41,7 @@ export function BusinessSlider() {
                     >
                         Our Core Ventures
                     </motion.span>
-                    <motion.h2 
+                    <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -55,12 +55,12 @@ export function BusinessSlider() {
             </div>
 
             {/* Circular Gallery Container */}
-            <div className="h-[380px] sm:h-[450px] md:h-[500px] relative w-full z-10 cursor-grab active:cursor-grabbing">
-                <CircularGallery 
+            <div className="h-[380px] sm:h-[450px] md:h-[500px] lg:h-[800px] xl:h-[900px] relative w-full z-10 cursor-grab active:cursor-grabbing">
+                <CircularGallery
                     items={items}
-                    bend={3} 
-                    textColor="#ffffff" 
-                    borderRadius={0.05} 
+                    bend={3}
+                    textColor="#ffffff"
+                    borderRadius={0.05}
                     scrollSpeed={2}
                     scrollEase={0.05}
                     onItemClick={(link) => navigate(link)}
