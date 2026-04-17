@@ -428,8 +428,8 @@ class App {
   }
   onTouchDown(e) {
     // Only handle interaction if the event started inside the gallery container
-    const target = e.target || e.touches?.[0]?.target;
-    if (!this.container.contains(target) && e.type !== 'touchstart') return;
+    const target = e.touches ? e.touches[0]?.target : e.target;
+    if (!this.container.contains(target)) return;
     this.isDown = true;
     this.scroll.position = this.scroll.current;
     this.start = e.touches ? e.touches[0].clientX : e.clientX;
