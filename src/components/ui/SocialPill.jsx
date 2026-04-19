@@ -12,13 +12,13 @@ const socialLinks = [
 
 export function SocialPill() {
   return (
-    <div className="flex justify-center items-center py-16 px-4">
+    <div className="flex justify-center items-center py-12 md:py-16 px-4 mb-8">
       <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="bg-white/[0.04] backdrop-blur-2xl border border-white/5 rounded-full p-2 flex flex-wrap justify-center items-center gap-1 shadow-2xl"
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="bg-[#111111]/80 backdrop-blur-3xl border border-white/10 rounded-[2.5rem] md:rounded-full p-2 md:p-3 grid grid-cols-2 lg:flex lg:flex-row items-center justify-center gap-1.5 sm:gap-2 shadow-[0_20px_50px_rgba(0,0,0,0.5)] max-w-[90vw] sm:max-w-none"
       >
         {socialLinks.map((link, idx) => (
           <a
@@ -26,22 +26,25 @@ export function SocialPill() {
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative flex items-center gap-3 px-6 py-3 rounded-full transition-all duration-500 ease-in-out"
+            className={`
+              group relative flex items-center gap-2.5 px-4 md:px-6 py-2.5 md:py-3.5 rounded-full transition-all duration-300
+              ${idx === socialLinks.length - 1 ? 'col-span-2 lg:col-span-1 border-t border-white/5 lg:border-none pt-4 lg:pt-3.5' : ''}
+            `}
           >
-            {/* Minimal Background Highlight - Mimicking the "Efficiency" tab in the reference image */}
+            {/* Minimal Background Highlight */}
             <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full z-0"></div>
             
             <link.icon 
               size={18} 
-              className="relative z-10 text-gray-400 group-hover:text-black transition-colors duration-300" 
+              className="relative z-10 text-gray-400 group-hover:text-black transition-colors duration-300 flex-shrink-0" 
               strokeWidth={2}
             />
-            <span className="relative z-10 text-sm font-semibold tracking-wide text-gray-300 group-hover:text-black transition-colors duration-300 whitespace-nowrap">
+            <span className="relative z-10 text-[13px] md:text-sm font-semibold tracking-wide text-gray-300 group-hover:text-black transition-colors duration-300 whitespace-nowrap">
               {link.name}
             </span>
             
             {/* Subtle light glow on hover */}
-            <div className="absolute inset-0 bg-white/40 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none -z-10"></div>
+            <div className="absolute inset-0 bg-white/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none -z-10"></div>
           </a>
         ))}
       </motion.div>
