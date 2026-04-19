@@ -67,7 +67,7 @@ export function Hero() {
             <div className="absolute inset-0 z-10 cursor-default" onClick={(e) => e.preventDefault()} />
 
             {/* Hero Text Overlay */}
-            <div className="absolute inset-0 z-20 flex items-end justify-start pointer-events-none pb-40 px-6 sm:px-14 md:px-20 lg:px-28">
+            <div className="absolute inset-0 z-20 flex items-end justify-start pointer-events-none pb-56 sm:pb-40 px-6 sm:px-14 md:px-20 lg:px-28">
                 {/* Subtle dark vignette for text readability */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
 
