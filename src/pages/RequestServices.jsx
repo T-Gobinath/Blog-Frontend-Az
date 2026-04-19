@@ -111,7 +111,7 @@ export function RequestServices() {
                             </h1>
                         </div>
                         <p className="text-gray-300 max-w-lg text-lg sm:text-[22px] leading-[1.6] font-light">
-                            We've driven growth and purposeful transformation across every industry and we're excited to build on your belief. Tell us a bit more about yourself, so we can get the ball rolling.
+                            We transform ideas into impact across industries. Share a little about your vision, and let's get started.
                         </p>
                     </div>
 

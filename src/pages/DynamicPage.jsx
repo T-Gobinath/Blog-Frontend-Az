@@ -57,6 +57,15 @@ export function DynamicPage() {
         );
     }
 
+    // Empty page — show plain blank page with just navbar
+    if (pageData.empty) {
+        return (
+            <Layout>
+                <div className={`min-h-[100dvh] ${theme === 'light' ? 'bg-white' : 'bg-[#0a0f1a]'}`} />
+            </Layout>
+        );
+    }
+
     // Determine parent path for breadcrumb (e.g., "manufacturing")
     const parentPath = contentKey.split('/')[0];
     const parentName = parentPath.charAt(0).toUpperCase() + parentPath.slice(1).replace('-', ' ');

@@ -66,6 +66,35 @@ export function Hero() {
             {/* Click blocker — prevents any click on the hero area from navigating to a new page */}
             <div className="absolute inset-0 z-10 cursor-default" onClick={(e) => e.preventDefault()} />
 
+            {/* Hero Text Overlay */}
+            <div className="absolute inset-0 z-20 flex items-end justify-start pointer-events-none pb-40 px-14 sm:px-20 md:px-28">
+                {/* Subtle dark vignette for text readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1.2, ease: 'easeOut', delay: 0.3 }}
+                    className="relative text-left"
+                >
+                    <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white tracking-widest leading-tight drop-shadow-2xl"
+                        style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: '0.1em' }}
+                    >
+                        "Train.&nbsp;
+                        <span className="text-[#C9A84C]">Innovate.</span>
+                        &nbsp;Motivate.&nbsp;
+                        <span className="text-[#C9A84C]">Achieve."</span>
+                    </h1>
+                    {/* Gold underline accent */}
+                    <motion.div
+                        initial={{ scaleX: 0 }}
+                        animate={{ scaleX: 1 }}
+                        transition={{ duration: 1, ease: 'easeOut', delay: 0.9 }}
+                        className="mt-3 h-[2px] w-56 sm:w-72 rounded-full"
+                        style={{ background: 'linear-gradient(90deg, #C9A84C, transparent)', transformOrigin: 'left' }}
+                    />
+                </motion.div>
+            </div>
 
 
             {/* WhatsApp Floating Pop-up Button (Only appears when Hero is rendered) */}

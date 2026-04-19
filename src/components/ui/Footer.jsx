@@ -34,21 +34,14 @@ export function Footer() {
                     {/* Column 2: Businesses */}
                     <div>
                         <h4 className="font-bold text-gray-900 text-base sm:text-lg mb-4 tracking-wide">Businesses</h4>
-
-                        <p className="font-semibold text-gray-800 text-sm sm:text-[15px] mb-2">Manufacturing</p>
-                        <ul className="space-y-1.5 mb-5">
-                            <li><FooterLink label="Materials" to="/manufacturing/materials" /></li>
-                            <li><FooterLink label="Engineering Solutions" to="/manufacturing/die-making" /></li>
-                            <li><FooterLink label="Services" to="/manufacturing/on-site-installation" /></li>
-                        </ul>
-
-                        <p className="font-semibold text-gray-800 text-sm sm:text-[15px] mb-2">IT Solutions</p>
-                        <ul className="space-y-1.5">
-                            <li><FooterLink label="Software Development" to="/it-solutions/software-development" /></li>
-                            <li><FooterLink label="Web & E-Commerce" to="/it-solutions/web-e-commerce" /></li>
-                            <li><FooterLink label="Apps & Automation" to="/it-solutions/apps-automation" /></li>
-                            <li><FooterLink label="Cloud & Infrastructure" to="/it-solutions/cloud-infrastructure" /></li>
-                            <li><FooterLink label="Support Services" to="/it-solutions/support-services" /></li>
+                        <ul className="space-y-2">
+                            <li><FooterLink label="Solar Projects & Renewable Energy"              to="/ventures/solar-projects" /></li>
+                            <li><FooterLink label="Advanced Manufacturing & Engineering"           to="/ventures/advanced-manufacturing" /></li>
+                            <li><FooterLink label="Electronics, Robotics & Intelligent Automation" to="/ventures/electronics-robotics" /></li>
+                            <li><FooterLink label="3D Printing & Prototyping Services"             to="/ventures/3d-printing" /></li>
+                            <li><FooterLink label="IT Software & Cloud Solutions"                  to="/ventures/it-software" /></li>
+                            <li><FooterLink label="Artificial Intelligence (AI) Solutions"         to="/ventures/artificial-intelligence" /></li>
+                            <li><FooterLink label="Automation & Workflow Engineering"              to="/ventures/automation-workflow" /></li>
                         </ul>
                     </div>
 

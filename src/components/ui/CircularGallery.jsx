@@ -517,7 +517,7 @@ class App {
   update() {
     // Implement idle auto-scrolling to slide smoothly leftwards over time
     if (!this.isDown) {
-      this.scroll.target += 0.075; // Dramatically reduced speed for a subtle, slow scroll
+      this.scroll.target += 0.05; // Slow auto-scroll speed
     }
 
     this.scroll.current = lerp(this.scroll.current, this.scroll.target, this.scroll.ease);

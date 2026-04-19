@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom'
 import { useStore } from '../../stores/useStore'
 import defaultLogo from '../../assets/tima-logo.png'
 import scrolledLogo from '../../assets/Logo1.png'
-import manufacturingImg from '../../assets/manufacturing.png'
-import itSolutionsImg from '../../assets/it-solutions.png'
 
 const navLinks = [
     {
@@ -15,56 +13,14 @@ const navLinks = [
     },
     {
         label: 'Businesses',
-        isMega: true,
-        categories: [
-            {
-                title: 'Manufacturing',
-                image: manufacturingImg,
-                groups: [
-                    {
-                        heading: 'Materials',
-                        items: []
-                    },
-                    {
-                        heading: 'Engineering Solutions',
-                        items: [
-                            'Die Making',
-                            'CNC Machining',
-                            'Laser Cutting & Engraving',
-                            'Light Metal Fabrication',
-                            'Tool Design',
-                            'Injection Molding',
-                            'Prototype Development',
-                            'PCB & Embedded Systems',
-                            'Medical Grade Manufacturing'
-                        ]
-                    },
-                    {
-                        heading: 'Services',
-                        items: [
-                            'On-site Installation',
-                            'Post Installation Support',
-                            'Bulk Production Services'
-                        ]
-                    }
-                ]
-            },
-            {
-                title: 'IT Solutions',
-                image: itSolutionsImg,
-                groups: [
-                    {
-                        heading: null,
-                        items: [
-                            'Software Development',
-                            'Web & E-Commerce',
-                            'Apps & Automation',
-                            'Cloud & Infrastructure',
-                            'Support Services'
-                        ]
-                    }
-                ]
-            }
+        items: [
+            { label: 'Solar Projects & Renewable Energy',              path: '/ventures/solar-projects' },
+            { label: 'Advanced Manufacturing & Engineering',           path: '/ventures/advanced-manufacturing' },
+            { label: 'Electronics, Robotics & Intelligent Automation', path: '/ventures/electronics-robotics' },
+            { label: '3D Printing & Prototyping Services',             path: '/ventures/3d-printing' },
+            { label: 'IT Software & Cloud Solutions',                  path: '/ventures/it-software' },
+            { label: 'Artificial Intelligence (AI) Solutions',         path: '/ventures/artificial-intelligence' },
+            { label: 'Automation & Workflow Engineering',              path: '/ventures/automation-workflow' },
         ]
     },
     {
@@ -205,84 +161,54 @@ export function Navbar() {
                 const activeLink = navLinks.find(l => l.label === activeDropdown)
                 if (!activeLink) return null
 
-                // Mega menu for Businesses
-                if (activeLink.isMega) {
-                    return (
-                        <div
-                            className="hidden lg:block absolute left-0 right-0 bg-white shadow-2xl border-t-2 border-tima-gold"
-                            style={{ animation: 'slideDown 0.25s ease-out' }}
-                        >
-                            <div className="max-w-7xl mx-auto px-10 py-8">
-                                <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-tima-gold mb-6">Our Businesses</h3>
-                                <div className="grid grid-cols-2 gap-10">
-                                    {activeLink.categories.map((cat) => (
-                                        <div key={cat.title}>
-                                            <div className="flex-1">
-                                                <h4 className="text-base font-bold text-gray-900 mb-3 border-b-2 border-tima-gold pb-1 inline-block">{cat.title}</h4>
-                                                {cat.groups.map((group, gi) => (
-                                                    <div key={gi} className="mb-3">
-                                                        {group.heading && (
-                                                            <p className="text-sm font-semibold text-gray-800 mb-1">{group.heading}</p>
-                                                        )}
-                                                        {group.items.length > 0 && (
-                                                            <ul className="space-y-0.5">
-                                                                {group.items.map((item) => {
-                                                                    const basePath = cat.title === 'Manufacturing' ? '/manufacturing' : '/it-solutions';
-                                                                    const slug = item.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(/&/g, '');
-                                                                    const targetPath = basePath + '/' + slug;
-
-                                                                    return (
-                                                                        <li key={item}>
-                                                                            <Link
-                                                                                to={targetPath}
-                                                                                className="text-[13px] text-gray-600 hover:text-tima-gold hover:translate-x-1 transition-all duration-200 inline-block"
-                                                                                onClick={() => setActiveDropdown(null)}
-                                                                            >
-                                                                                {item}
-                                                                            </Link>
-                                                                        </li>
-                                                                    );
-                                                                })}
-                                                            </ul>
-                                                        )}
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    )
-                }
-
-                // Standard dropdown for other nav items
+                // Standard dropdown for all nav items (including Businesses)
                 return (
                     <div
                         className="hidden lg:block absolute left-0 right-0 bg-white shadow-xl border-t-2 border-tima-gold"
                         style={{ animation: 'slideDown 0.2s ease-out' }}
                     >
                         <div className="max-w-7xl mx-auto px-10 py-5">
-                            <div className="flex gap-12">
-                                {activeLink.items?.map((item) => {
-                                    const basePath = activeLink.label === 'Partners' ? '/partners' :
-                                        activeLink.label === 'Careers' ? '/careers' : '/about';
-                                    const targetPath = item === 'Overview' ? '/overview' :
-                                        item === 'Careers' ? '/careers' :
-                                            basePath + '/' + item.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(/&/g, '');
-
-                                    return (
-                                        <Link
-                                            key={item}
-                                            to={targetPath}
-                                            className="text-sm text-gray-700 hover:text-tima-gold transition-colors font-medium whitespace-nowrap py-1"
-                                            onClick={() => setActiveDropdown(null)}
-                                        >
-                                            {item}
-                                        </Link>
-                                    );
-                                })}
-                            </div>
+                            {activeLink.label === 'Businesses' ? (
+                                <>
+                                    <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-tima-gold mb-4">Our Businesses</h3>
+                                    <div className="grid grid-cols-2 gap-x-12 gap-y-2">
+                                        {activeLink.items?.map((item) => {
+                                            const path = typeof item === 'string' ? '#' : item.path;
+                                            const label = typeof item === 'string' ? item : item.label;
+                                            return (
+                                                <Link
+                                                    key={label}
+                                                    to={path}
+                                                    className="text-[13px] text-gray-600 hover:text-tima-gold hover:translate-x-1 transition-all duration-200 inline-block py-1 font-medium"
+                                                    onClick={() => setActiveDropdown(null)}
+                                                >
+                                                    {label}
+                                                </Link>
+                                            );
+                                        })}
+                                    </div>
+                                </>
+                            ) : (
+                                <div className="flex gap-12">
+                                    {activeLink.items?.map((item) => {
+                                        const basePath = activeLink.label === 'Partners' ? '/partners' :
+                                            activeLink.label === 'Careers' ? '/careers' : '/about';
+                                        const targetPath = item === 'Overview' ? '/overview' :
+                                            item === 'Careers' ? '/careers' :
+                                                basePath + '/' + item.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(/&/g, '');
+                                        return (
+                                            <Link
+                                                key={item}
+                                                to={targetPath}
+                                                className="text-sm text-gray-700 hover:text-tima-gold transition-colors font-medium whitespace-nowrap py-1"
+                                                onClick={() => setActiveDropdown(null)}
+                                            >
+                                                {item}
+                                            </Link>
+                                        );
+                                    })}
+                                </div>
+                            )}
                         </div>
                     </div>
                 )
@@ -317,35 +243,22 @@ export function Navbar() {
                             </button>
                             {mobileExpanded === link.label && (
                                 <div className="pl-4 pb-2">
-                                    {link.isMega ? (
-                                        // Mega menu categories for mobile
-                                        link.categories.map((cat) => (
-                                            <div key={cat.title} className="mb-3">
-                                                <p className={`text-xs font-bold uppercase tracking-wider py-1 border-b mb-1 ${activeTheme === 'light' ? 'text-gray-900 border-gray-300' : 'text-tima-gold border-white/10'}`}>{cat.title}</p>
-                                                {cat.groups.map((group, gi) => (
-                                                    <div key={gi} className="mb-2 pl-2">
-                                                        {group.heading && (
-                                                            <p className={`text-xs font-semibold py-1 ${activeTheme === 'light' ? 'text-gray-800' : 'text-white/80'}`}>{group.heading}</p>
-                                                        )}
-                                                        {group.items.map((item) => {
-                                                            const basePath = cat.title === 'Manufacturing' ? '/manufacturing' : '/it-solutions';
-                                                            const slug = item.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(/&/g, '');
-                                                            const targetPath = basePath + '/' + slug;
-                                                            return (
-                                                                <Link
-                                                                    key={item}
-                                                                    to={targetPath}
-                                                                    className={`block py-1 text-xs transition-colors ${activeTheme === 'light' ? 'text-gray-500 hover:text-tima-gold' : 'text-white/50 hover:text-tima-gold'}`}
-                                                                    onClick={() => { setMobileOpen(false); setMobileExpanded(null) }}
-                                                                >
-                                                                    {item}
-                                                                </Link>
-                                                            );
-                                                        })}
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        ))
+                                    {link.label === 'Businesses' ? (
+                                        // Venture links for Businesses on mobile
+                                        link.items?.map((item) => {
+                                            const path = typeof item === 'string' ? '#' : item.path;
+                                            const label = typeof item === 'string' ? item : item.label;
+                                            return (
+                                                <Link
+                                                    key={label}
+                                                    to={path}
+                                                    className={`block py-2 text-xs transition-colors ${activeTheme === 'light' ? 'text-gray-500 hover:text-tima-gold' : 'text-white/70 hover:text-tima-gold'}`}
+                                                    onClick={() => { setMobileOpen(false); setMobileExpanded(null) }}
+                                                >
+                                                    {label}
+                                                </Link>
+                                            );
+                                        })
                                     ) : (
                                         // Standard items for other nav links
                                         link.items?.map((item) => {
