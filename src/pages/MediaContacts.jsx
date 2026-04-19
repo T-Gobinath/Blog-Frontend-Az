@@ -89,10 +89,54 @@ export function MediaContacts() {
                                     </div>
                                 </div>
                             </div>
+
+                            {/* Social Media Section */}
+                            <div className="mt-14 pb-4">
+                                <h3 className="text-xl sm:text-2xl text-[#3b82f6] font-light mb-8">
+                                    Connect with us
+                                </h3>
+                                <div className="flex flex-wrap gap-10">
+                                    <a 
+                                        href="https://www.linkedin.com/company/106382003/" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="flex items-center gap-3 group"
+                                    >
+                                        <div className="text-white/80 group-hover:text-[#3b82f6] transition-colors">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                                        </div>
+                                        <span className="text-lg font-light text-white/70 group-hover:text-white transition-colors">LinkedIn</span>
+                                    </a>
+
+                                    <a 
+                                        href="https://www.instagram.com/timaintegrated?igsh=MXBrdGpmb3c0M3Zwaw==" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="flex items-center gap-3 group"
+                                    >
+                                        <div className="text-white/80 group-hover:text-[#3b82f6] transition-colors">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                                        </div>
+                                        <span className="text-lg font-light text-white/70 group-hover:text-white transition-colors">Instagram</span>
+                                    </a>
+
+                                    <a 
+                                        href="https://x.com/Timaintegrated" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="flex items-center gap-3 group"
+                                    >
+                                        <div className="text-white/80 group-hover:text-[#3b82f6] transition-colors">
+                                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+                                        </div>
+                                        <span className="text-lg font-light text-white/70 group-hover:text-white transition-colors">X / Twitter</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
 
                         {/* Map Frame */}
-                        <div className="w-full lg:w-1/2 max-w-[400px] aspect-square rounded-2xl overflow-hidden border border-white/5 shadow-2xl relative self-start">
+                        <div className="w-full lg:w-1/2 max-w-[400px] aspect-square rounded-2xl overflow-hidden border border-white/5 shadow-2xl relative self-start lg:mt-20">
                             <iframe 
                                 src="https://www.google.com/maps?q=Kennet+Nagar,+Muthu+Patti,+Madurai,+Tamil+Nadu+625003&hl=en&z=15&output=embed"
                                 width="100%" 
@@ -108,7 +152,7 @@ export function MediaContacts() {
                         </div>
                     </div>
 
-            </div>
+                </div>
         </Layout>
     )
 }
