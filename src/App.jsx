@@ -7,11 +7,13 @@ import { RequestServices } from './pages/RequestServices'
 import { MediaContacts } from './pages/MediaContacts'
 import { Careers } from './pages/Careers'
 import { DynamicPage } from './pages/DynamicPage'
+import { BoardOfDirectors } from './pages/BoardOfDirectors'
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/about/board-of-directors" element={<BoardOfDirectors />} />
         <Route path="/" element={<Home />} />
         <Route path="/overview" element={<Overview />} />
         <Route path="/contact" element={<ContactUs />} />

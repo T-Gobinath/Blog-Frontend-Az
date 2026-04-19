@@ -179,11 +179,6 @@ export const pagesContent = {
         ]
     },
 
-    // ── ABOUT ──
-    'about/board-of-directors': {
-        title: 'Board of Directors',
-        empty: true,
-    },
     'about/timeline': {
         title: 'Our Timeline',
         empty: true,

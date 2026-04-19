@@ -9,7 +9,11 @@ import scrolledLogo from '../../assets/Logo1.png'
 const navLinks = [
     {
         label: 'About',
-        items: ['Overview', 'Board of Directors', 'Timeline']
+        items: [
+            { label: 'Overview', path: '/overview' },
+            { label: 'Board of Directors', path: '/about/board-of-directors' },
+            { label: 'Timeline', path: '/about/timeline' }
+        ]
     },
     {
         label: 'Businesses',
@@ -191,19 +195,27 @@ export function Navbar() {
                             ) : (
                                 <div className="flex gap-12">
                                     {activeLink.items?.map((item) => {
-                                        const basePath = activeLink.label === 'Partners' ? '/partners' :
-                                            activeLink.label === 'Careers' ? '/careers' : '/about';
-                                        const targetPath = item === 'Overview' ? '/overview' :
-                                            item === 'Careers' ? '/careers' :
-                                                basePath + '/' + item.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(/&/g, '');
+                                        const label = typeof item === 'string' ? item : item.label;
+                                        const path = typeof item === 'string' ? '#' : item.path;
+                                        
+                                        // If it's the old string-based item, calculate path (fallback)
+                                        let targetPath = path;
+                                        if (typeof item === 'string') {
+                                            const basePath = activeLink.label === 'Partners' ? '/partners' :
+                                                activeLink.label === 'Careers' ? '/careers' : '/about';
+                                            targetPath = item === 'Overview' ? '/overview' :
+                                                item === 'Careers' ? '/careers' :
+                                                    basePath + '/' + item.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(/&/g, '');
+                                        }
+
                                         return (
                                             <Link
-                                                key={item}
+                                                key={label}
                                                 to={targetPath}
                                                 className="text-sm text-gray-700 hover:text-tima-gold transition-colors font-medium whitespace-nowrap py-1"
                                                 onClick={() => setActiveDropdown(null)}
                                             >
-                                                {item}
+                                                {label}
                                             </Link>
                                         );
                                     })}
@@ -262,19 +274,25 @@ export function Navbar() {
                                     ) : (
                                         // Standard items for other nav links
                                         link.items?.map((item) => {
-                                            const basePath = link.label === 'Partners' ? '/partners' :
-                                                link.label === 'Careers' ? '/careers' : '/about';
-                                            const targetPath = item === 'Overview' ? '/overview' :
-                                                item === 'Careers' ? '/careers' :
-                                                    basePath + '/' + item.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(/&/g, '');
+                                            const label = typeof item === 'string' ? item : item.label;
+                                            const path = typeof item === 'string' ? '#' : item.path;
+                                            
+                                            let targetPath = path;
+                                            if (typeof item === 'string') {
+                                                const basePath = link.label === 'Partners' ? '/partners' :
+                                                    link.label === 'Careers' ? '/careers' : '/about';
+                                                targetPath = item === 'Overview' ? '/overview' :
+                                                    item === 'Careers' ? '/careers' :
+                                                        basePath + '/' + item.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(/&/g, '');
+                                            }
                                             return (
                                                 <Link
-                                                    key={item}
+                                                    key={label}
                                                     to={targetPath}
                                                     className="block py-2 text-xs text-white/60 hover:text-tima-gold transition-colors"
                                                     onClick={() => { setMobileOpen(false); setMobileExpanded(null) }}
                                                 >
-                                                    {item}
+                                                    {label}
                                                 </Link>
                                             );
                                         })
