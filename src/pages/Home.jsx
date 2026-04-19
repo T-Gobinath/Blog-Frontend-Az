@@ -5,8 +5,7 @@ import { TechNeural } from '../components/ui/TechNeural'
 import { BusinessSlider } from '../components/ui/BusinessSlider'
 import { HomeTimeline } from '../components/ui/HomeTimeline'
 import { FeatureShowcase } from '../components/ui/FeatureShowcase'
-
-
+import { SocialPill } from '../components/ui/SocialPill'
 import { Footer } from '../components/ui/Footer'
 
 export function Home() {
@@ -25,6 +24,9 @@ export function Home() {
 
             {/* Feature Showcase Section */}
             <FeatureShowcase />
+
+            {/* Social Pill Navigation */}
+            <SocialPill />
 
             {/* Footer */}
             <Footer />
