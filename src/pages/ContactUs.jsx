@@ -25,7 +25,7 @@ export function ContactUs() {
                     }`}
                 >
                     {/* Header Section */}
-                    <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight mb-6 mt-16 md:mt-24">
+                    <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight mb-6 mt-16 md:mt-24">
                         <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
                             What's on your mind?
                         </span>

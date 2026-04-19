@@ -5,6 +5,7 @@ import { Overview } from './pages/Overview'
 import { ContactUs } from './pages/ContactUs'
 import { RequestServices } from './pages/RequestServices'
 import { MediaContacts } from './pages/MediaContacts'
+import { Careers } from './pages/Careers'
 import { DynamicPage } from './pages/DynamicPage'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/services" element={<RequestServices />} />
         <Route path="/media-contacts" element={<MediaContacts />} />
+        <Route path="/careers" element={<Careers />} />
         
         {/* Dynamic Pages */}
         <Route path="/ventures/:slug" element={<DynamicPage />} />
@@ -23,7 +25,6 @@ function App() {
         <Route path="/manufacturing/:slug" element={<DynamicPage />} />
         <Route path="/it-solutions/:slug" element={<DynamicPage />} />
         <Route path="/partners/:slug" element={<DynamicPage />} />
-        <Route path="/careers" element={<DynamicPage />} />
         <Route path="/careers/:slug" element={<DynamicPage />} />
       </Routes>
     </BrowserRouter>

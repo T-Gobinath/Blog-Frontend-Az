@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 export function MediaContacts() {
     return (
         <Layout>
-            <div className="w-full min-h-screen bg-black text-white pt-48 sm:pt-56 pb-16 px-4 sm:px-8 md:px-16 lg:px-32 xl:px-44">
+            <div className="w-full min-h-screen bg-black text-white pt-32 sm:pt-48 md:pt-56 pb-16 px-6 sm:px-10 md:px-16 lg:px-32 xl:px-44">
 
                 {/* BACK Button */}
                 <div className="mb-12">
@@ -27,7 +27,7 @@ export function MediaContacts() {
                             Media Contacts
                         </h1>
                     </div>
-                    <p className="text-gray-300 max-w-3xl text-lg sm:text-lg leading-relaxed">
+                    <p className="text-gray-300 max-w-3xl text-base sm:text-lg leading-relaxed">
                         Contact our communications team for interview requests and the latest updates on our initiatives.
                     </p>
                 </div>
@@ -59,14 +59,14 @@ export function MediaContacts() {
                                 </div>
 
                                 {/* Email & Phone */}
-                                <div className="flex flex-col sm:flex-row gap-8 sm:gap-16 pt-2">
+                                <div className="flex flex-col sm:flex-row gap-8 sm:gap-12 md:gap-16 pt-2">
                                     <div className="flex items-center gap-3 group">
                                         <div className="flex-shrink-0 text-white/80 group-hover:text-[#3b82f6] transition-colors">
-                                            <svg width="22" height="17" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg width="20" height="15" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M21 0H3C1.35 0 0.015 1.35 0.015 3L0 15C0 16.65 1.35 18 3 18H21C22.65 18 24 16.65 24 15V3C24 1.35 22.65 0 21 0ZM21 4.5L12 10.125L3 4.5V3L12 8.625L21 3V4.5Z" fill="currentColor" />
                                             </svg>
                                         </div>
-                                        <a href="mailto:support@thetima.com" className="text-lg sm:text-xl text-[#3b82f6] font-light hover:underline">
+                                        <a href="mailto:support@thetima.com" className="text-base sm:text-lg md:text-xl text-[#3b82f6] font-light hover:underline whitespace-nowrap">
                                             support@thetima.com
                                         </a>
                                     </div>
@@ -95,7 +95,7 @@ export function MediaContacts() {
                                 <h3 className="text-xl sm:text-2xl text-[#3b82f6] font-light mb-8">
                                     Connect with us
                                 </h3>
-                                <div className="flex flex-wrap gap-10">
+                                <div className="flex flex-wrap gap-x-10 gap-y-6">
                                     <a 
                                         href="https://www.linkedin.com/company/106382003/" 
                                         target="_blank" 

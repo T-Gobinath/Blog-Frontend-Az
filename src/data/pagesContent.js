@@ -871,14 +871,15 @@ export const pagesContent = {
     // ── CAREERS ──
     'careers': {
         title: 'Careers',
-        empty: true,
+        subtitle: 'Join a team of visionaries, engineers, and creators building the industrial future.',
+        metaDescription: 'Explore career opportunities at TIMA. Join our mission to innovate in advanced manufacturing, AI, robotics, and cloud solutions.',
     },
     'careers/search-apply': {
         title: 'Search & Apply',
-        empty: true,
+        subtitle: 'Find your next challenge and apply to join our global team.',
     },
     'careers/working-at-tima': {
         title: 'Working at TIMA',
-        empty: true,
+        subtitle: 'Our culture, values, and why we are the best place for your next career move.',
     }
 };

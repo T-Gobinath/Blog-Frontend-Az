@@ -89,7 +89,7 @@ export function RequestServices() {
                 `}} />
 
                 {/* Left Side: Form Container */}
-                <div className="w-full lg:w-1/2 min-h-[120vh] pt-40 sm:pt-48 lg:pt-56 pb-44 px-6 sm:px-12 md:px-20 lg:px-24 xl:px-40 flex flex-col z-10 relative">
+                <div className="w-full lg:w-1/2 min-h-[120vh] pt-32 sm:pt-48 lg:pt-56 pb-24 sm:pb-44 px-6 sm:px-12 md:px-20 lg:px-24 xl:px-40 flex flex-col z-10 relative">
 
                     {/* BACK Button */}
                     <div className="mb-12">
@@ -110,7 +110,7 @@ export function RequestServices() {
                                 REQUEST FOR SERVICES
                             </h1>
                         </div>
-                        <p className="text-gray-300 max-w-lg text-lg sm:text-[22px] leading-[1.6] font-light">
+                        <p className="text-gray-300 max-w-lg text-base sm:text-lg md:text-[22px] leading-[1.6] font-light">
                             We transform ideas into impact across industries. Share a little about your vision, and let's get started.
                         </p>
                     </div>
