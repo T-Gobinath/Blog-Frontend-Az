@@ -39,7 +39,7 @@ export function BoardOfDirectors() {
             <div className="w-full min-h-screen bg-[#0a0f1a] text-white">
                 
                 {/* ── HERO SECTION ── */}
-                <section className="relative pt-24 pb-12 px-6 sm:px-10 md:px-16 lg:px-32 xl:px-44 overflow-hidden">
+                <section className="relative pt-44 pb-12 px-6 sm:px-10 md:px-16 lg:px-32 xl:px-44 overflow-hidden">
                     {/* Background Decorative Element */}
                     <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-600/5 blur-[100px] rounded-full -translate-y-1/2 translate-x-1/2 z-0" />
                     
