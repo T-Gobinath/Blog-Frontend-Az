@@ -17,153 +17,163 @@ export const pagesContent = {
         content: [
             {
                 type: 'text',
-                heading: 'Powering a Sustainable Future',
-                body: 'We provide complete solar energy solutions designed actively for robust sustainability and long-term industrial efficiency. By seamlessly transitioning your operations to renewable energy, we drastically optimize cost-effective operations.'
+                heading: 'Solar Projects & Renewable Energy',
+                body: 'We provide complete solar energy solutions designed for sustainability and long-term efficiency, including:'
             },
             {
-                type: 'features',
-                heading: 'Solar & Energy Services',
+                type: 'list',
                 items: [
-                    { title: 'Commercial & Industrial Solar', description: 'Massive-scale industrial and commercial solar installations engineered for peak energy independence.' },
-                    { title: 'Sustainability Consulting', description: 'Deep, data-driven energy optimization and strategic sustainability consulting frameworks.' },
-                    { title: 'Scalable Infrastructure', description: 'Building resilient, highly scalable renewable infrastructure directly tailored for cost-effective mass operations.' }
+                    'Industrial and commercial solar installations',
+                    'Energy optimization and sustainability consulting',
+                    'Scalable renewable infrastructure for cost-effective operations'
                 ]
             }
         ]
     },
     'ventures/advanced-manufacturing': {
         title: 'Advanced Manufacturing & Engineering',
-        subtitle: 'Precision-driven manufacturing delivering high-performance industrial solutions.',
-        metaDescription: 'Our engineering division combines advanced 5-axis CNC machining, CAD simulation, and high-precision mould manufacturing.',
+        subtitle: 'Precision-driven manufacturing and industrial solutions combining advanced design, high-performance machining, and production expertise.',
+        metaDescription: 'Our engineering division delivers CAD modeling, ANSYS analysis, mould design, 5-Axis CNC machining, medical-grade precision manufacturing, and custom industrial machine design. Trusted by TVS Medical and leading plastic manufacturing industries.',
         heroImage: img2,
+        linkText: 'request engineering consultation',
         content: [
             {
                 type: 'text',
-                heading: 'Precision-Driven Production Expertise',
-                body: 'Our engineering division aggressively delivers precision-driven manufacturing and holistic industrial solutions, gracefully combining advanced digital design, unyielding high-performance machining, and heavy production expertise. We are highly trusted by Tier-1 clients including TVS Medical and leading global plastic manufacturing industries.'
+                heading: 'Advanced Manufacturing & Engineering',
+                body: 'Our engineering division delivers precision-driven manufacturing and industrial solutions, combining advanced design, high-performance machining, and production expertise:'
             },
             {
-                type: 'features',
-                heading: 'Engineering & Fabrication Capabilities',
+                type: 'list',
                 items: [
-                    { title: 'Digital Twin & Simulation', description: 'Advanced CAD modeling, dynamic physical simulation, and rigorous ANSYS FEA analysis.' },
-                    { title: 'Complex Mould Design', description: 'Comprehensive mold design, development, and complex silicone mold manufacturing explicitly tailored for ultra-high-detail applications.' },
-                    { title: '5-Axis CNC & Part Execution', description: 'Custom elite CNC solutions utilizing advanced simultaneous 5-Axis machining for carbon fiber, medical parts, and robust scale production.' },
-                    { title: 'Industrial Machine Building', description: 'Complete custom industrial machine design, development, and scalable robotic production cell manufacturing.' }
+                    'CAD modeling, simulation, and ANSYS analysis',
+                    'Mould design, development, and fabrication',
+                    'Complex design silicone mould manufacturing for high-detail applications',
+                    'High-precision 3D machines for medical applications and carbon fiber components',
+                    'Custom CNC solutions, including advanced 5-Axis CNC machining',
+                    'Prototype development and scalable production',
+                    'Custom industrial machine design and manufacturing',
+                    'Trusted by clients including TVS Medical and leading plastic manufacturing industries'
                 ]
             }
         ]
     },
     'ventures/electronics-robotics': {
         title: 'Electronics, Robotics & Intelligent Automation',
-        subtitle: 'Engineering next-generation electronic systems and autonomous technologies.',
-        metaDescription: 'Transforming ideas into scalable and high-performance electronic solutions with AI robotics and embedded IoT ecosystems.',
+        subtitle: 'Engineering next-generation electronic systems and autonomous technologies for the future.',
+        metaDescription: 'Transforming ideas into scalable, high-performance electronic and robotics solutions with AI-driven automation and embedded IoT ecosystems.',
         heroImage: img3,
+        linkText: 'start your electronics project',
         content: [
             {
                 type: 'text',
-                heading: 'Transforming Ideas Into Intelligent Future Technologies',
-                body: 'We heavily engineer next-generation electronic systems and autonomous technologies, aggressively transforming raw ideas into intelligent, infinitely scalable, and high-performance solutions engineered precisely for the future.'
+                heading: 'Electronics, Robotics & Intelligent Automation',
+                body: 'We engineer next-generation electronic systems and autonomous technologies, transforming ideas into intelligent, scalable, and high-performance solutions for the future:'
             },
             {
-                type: 'features',
-                heading: 'Electronics & Automation Solutions',
+                type: 'list',
                 items: [
-                    { title: 'Embedded Systems & PCB Design', description: 'Advanced multi-layer PCB design and deeply embedded systems engineering specifically crafted for ultra-high-efficiency devices.' },
-                    { title: 'Robotics & AI Integration', description: 'Robotics and AI-driven autonomous automation systems explicitly built for smart manufacturing and modern logistical operations.' },
-                    { title: 'Precision Laser Cutting', description: 'Developing heavy precision laser cutting and engraving systems adapted for demanding industrial and creative applications.' },
-                    { title: 'Smart IoT Ecosystems', description: 'Seamless integration of smart digital sensors, massive interconnected IoT ecosystems, and highly resilient real-time control systems.' }
+                    'Advanced PCB design and embedded systems engineering for high-efficiency devices',
+                    'Precision laser cutting and engraving systems for industrial and creative applications',
+                    'Robotics and AI-driven automation systems for smart manufacturing and operations',
+                    'Development of intelligent electronic products and next-gen industrial devices',
+                    'Integration of smart sensors, IoT ecosystems, and real-time control systems'
                 ]
             }
         ]
     },
     'ventures/3d-printing': {
         title: '3D Printing & Prototyping Services',
-        subtitle: 'Advanced additive manufacturing solutions tailored for rapid precision and flexibility.',
-        metaDescription: 'TIMA utilizes FDM, SLA, and SLS technologies with carbon fiber and PEEK to deliver unparalleled industrial rapid prototyping.',
+        subtitle: 'Advanced additive manufacturing solutions tailored for diverse industries — precision, flexibility, and rapid production.',
+        metaDescription: 'TIMA utilizes FDM, SLA, and SLS technologies with carbon fiber, PEEK, and resin to deliver industrial-grade rapid prototyping.',
         heroImage: img4,
+        linkText: 'get a prototyping quote',
         content: [
             {
                 type: 'text',
-                heading: 'Additive Manufacturing Excellence',
-                body: 'We offer incredibly advanced, industrial-grade additive manufacturing solutions strictly tailored for diverse, demanding industries, consistently delivering absolute precision, flawless flexibility, and incredibly rapid production speeds.'
+                heading: '3D Printing & Prototyping Services',
+                body: 'We offer advanced additive manufacturing solutions tailored for diverse industries, delivering precision, flexibility, and rapid production:'
             },
             {
-                type: 'features',
-                heading: 'Prototyping Specs & Materials',
+                type: 'list',
                 items: [
-                    { title: 'Industrial Core Technologies', description: 'Utilizing premium FDM, ultra-high-resolution SLA, and durable SLS powder-bed technologies.' },
-                    { title: 'Extensive Engineering Materials', description: 'Printing robustly in PLA, PETG, ABS, flexible TPU, super-strong Nylon (PA), Carbon Fiber (CF) infused polymers, and extreme-heat PEEK.' },
-                    { title: 'Resin & Exotic Moulding', description: 'Casting and iterating with high-detail Medical Resins, advanced Silicone, and durable Epoxy modules.' },
-                    { title: 'Primary Target Applications', description: 'Automotive components, industrial gears, shielded bearings, drone frames, mechanical prototypes, LED shells, and decorative wall panels.' }
+                    'Technologies: FDM, SLA, SLS',
+                    'Applications: Automotive components, gears, bearings, and carbon fiber detailing',
+                    'Materials: Resin, silicone, epoxy modules',
+                    'Engineering Materials: PLA, PETG, ABS, PA (Nylon), CF (Carbon Fiber), PEEK, ASA, TPU',
+                    'Products: Mechanical parts, functional prototypes, home décor, LED shells, and wall panels'
                 ]
             }
         ]
     },
     'ventures/it-software': {
         title: 'IT Software & Cloud Solutions',
-        subtitle: 'Building heavily scalable digital ecosystems and secure cloud-native solutions.',
-        metaDescription: 'Leverage deep cloud architecture across AWS and Azure, custom CRM/ERP development, and highly optimized DevOps pipelines with TIMA.',
+        subtitle: 'Building scalable digital ecosystems and cloud-native solutions across AWS, GCP, and Azure.',
+        metaDescription: 'Leverage cloud architecture across AWS, Azure, and GCP with custom CRM/ERP, DevOps pipelines, and SaaS platforms by TIMA.',
         heroImage: img5,
+        linkText: 'discuss your cloud project',
         content: [
             {
                 type: 'text',
-                heading: 'Building Resilient Digital Enterprises',
-                body: 'We actively build massively scalable digital ecosystems, cloud-native applications, and incredibly secure architectures. Behind every great, untouchable enterprise stands rock-solid IT software.'
+                heading: 'IT Software & Cloud Solutions',
+                body: 'We build scalable digital ecosystems and cloud-native solutions:'
             },
             {
-                type: 'features',
-                heading: 'Cloud & Software Engineering',
+                type: 'list',
                 items: [
-                    { title: 'Multi-Cloud Architecture', description: 'Deep operational expertise spanning AWS (including Amazon Bedrock), Google Cloud (GCP), and stable Microsoft Azure integrations. Specialized VPC setup and load balancing.' },
-                    { title: 'DevOps & Virtualization', description: 'Seamless CI/CD DevOps pipelines with integrated monitoring. Amazon DCV secure virtualization and dense containerization using Docker/Kubernetes.' },
-                    { title: 'Custom App & Cloud Software', description: 'Advanced mobile app development alongside immensely scalable SaaS and Micro-SaaS B2B architecture frameworks.' },
-                    { title: 'Proprietary Flagship Platforms', description: 'Direct access to expertly specialized CRM & ERP solutions such as our flagship deployment frameworks: DEVINEARCH and BLUEARCH.' }
+                    'AWS expertise including Amazon Bedrock',
+                    'Multi-cloud solutions: Google Cloud (GCP) & Microsoft Azure',
+                    'Cloud architecture, VPC setup, and load balancing',
+                    'DevOps pipelines with monitoring and push notifications',
+                    'Amazon DCV virtualization and containerization',
+                    'Mobile app development, SaaS & Micro SaaS platforms',
+                    'Specialized CRM & ERP solutions',
+                    'Flagship platforms: DEVINEARCH & BLUEARCH'
                 ]
             }
         ]
     },
     'ventures/artificial-intelligence': {
-        title: 'Artificial Intelligence (AI) Solutions',
-        subtitle: 'Developing intelligent, immediately business-ready AI systems tailored for your workflow.',
-        metaDescription: 'Deploying autonomous AI chatbots, aggressive LLM automations, and custom AI models to revolutionize standard workflows.',
+        title: '🤖 Artificial Intelligence (AI) Solutions',
+        subtitle: 'Developing intelligent, business-ready AI systems tailored to your workflow.',
+        metaDescription: 'TIMA deploys AI chatbots, WhatsApp/Telegram bots, and custom AI models to automate and accelerate your business.',
         heroImage: img6,
+        linkText: 'explore AI solutions',
         content: [
             {
                 type: 'text',
-                heading: 'AI Models Working Directly For You',
-                body: 'We ruthlessly develop highly intelligent, immediately business-ready AI systems designed specifically to eliminate human bottlenecking. By deeply understanding your unique processes, we train incredibly precise custom models completely tailored to maximize your specific competitive business workflows.'
+                heading: 'Artificial Intelligence (AI) Solutions',
+                body: 'We develop intelligent, business-ready AI systems:'
             },
             {
-                type: 'features',
-                heading: 'Artificial Intelligence Integration',
+                type: 'list',
                 items: [
-                    { title: 'Omnichannel AI Chatbots', description: 'Deploying incredibly smart AI bots equipped natively with advanced neural voice and natural language text capabilities.' },
-                    { title: 'Global Platform Automation Bots', description: 'Building highly secure, constantly-running WhatsApp and Telegram autonomous automation bots for absolute 24/7 client response.' },
-                    { title: 'Bespoke Private LLM Models', description: 'Architecting highly bespoke, customized AI neural models specifically tailored to digest and expedite highly sensitive business workflows.' }
+                    'AI chatbots with voice and text capabilities',
+                    'WhatsApp and Telegram automation bots',
+                    'Custom AI models tailored to business workflows'
                 ]
             }
         ]
     },
     'ventures/automation-workflow': {
         title: 'Automation & Workflow Engineering',
-        subtitle: 'Streamlining massive operations through advanced robotic automation and deep system integration.',
-        metaDescription: 'Automate completely with n8n and Zapier, local 70B AI modeling, and advanced Google Vertex AI integrations.',
+        subtitle: 'Streamlining operations through advanced automation and system integration.',
+        metaDescription: 'Automate business operations with n8n, Zapier, local AI models, and Google Vertex AI integrations by TIMA.',
         heroImage: img7,
+        linkText: 'automate your workflow',
         content: [
             {
                 type: 'text',
-                heading: 'Accelerate Operations via System Integration',
-                body: 'We actively obliterate operational inefficiencies by streamlining repetitive, bloated daily operations directly through highly advanced, autonomous workflow automation and incredibly deep overarching system API integrations.'
+                heading: 'Automation & Workflow Engineering',
+                body: 'We streamline operations through advanced automation and system integration:'
             },
             {
-                type: 'features',
-                heading: 'Automation Tools & Frameworks',
+                type: 'list',
                 items: [
-                    { title: 'API Workflow Engine Automation', description: 'Radically simplifying cross-platform data syncing using heavily automated n8n open-source nodes and premium Zapier pipelines.' },
-                    { title: 'End-to-End Smart Facilities', description: 'Executing deeply secure, scalable home and heavy industrial smart-automation hardware solutions locally.' },
-                    { title: 'Local Private & Cloud AI Deployment', description: 'Deploying extremely heavy local and heavily shielded cloud AI neural models (8B & 70B parameters) directly alongside highly scalable Google Vertex AI and GPU cluster setups.' },
-                    { title: 'Comprehensive Process Engineering', description: 'Architecting autonomous referral systems, CRMs, and robust end-to-end completely autonomous business process automations.' }
+                    'Workflow automation using n8n and Zapier',
+                    'Home and industrial automation solutions',
+                    'Local and cloud AI model deployment (8B & 70B models)',
+                    'Google Vertex AI and GPU cluster setup',
+                    'Referral systems and end-to-end business process automation'
                 ]
             }
         ]

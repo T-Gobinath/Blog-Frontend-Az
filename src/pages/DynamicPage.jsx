@@ -165,6 +165,27 @@ export function DynamicPage() {
                                                 </div>
                                             )}
 
+                                            {section.type === 'list' && (
+                                                <div className="space-y-4">
+                                                    {section.heading && (
+                                                        <h3 className={`text-2xl sm:text-3xl font-bold mb-4 ${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>
+                                                            {section.heading}
+                                                        </h3>
+                                                    )}
+                                                    <ul className="space-y-3">
+                                                        {section.items.map((item, i) => (
+                                                            <li key={i} className="flex items-start gap-3">
+                                                                <span className="mt-1.5 w-2 h-2 rounded-full bg-tima-gold flex-shrink-0" />
+                                                                <span className={`text-[16px] sm:text-[17px] leading-relaxed ${theme === 'light' ? 'text-gray-700' : 'text-gray-300'}`}>
+                                                                    {item}
+                                                                </span>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+                                            )}
+
+
                                             {section.type === 'features' && (
                                                 <div className="space-y-8">
                                                     <h3 className={`text-2xl sm:text-3xl font-bold ${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>
