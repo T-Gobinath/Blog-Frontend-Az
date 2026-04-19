@@ -67,7 +67,7 @@ export function Hero() {
             <div className="absolute inset-0 z-10 cursor-default" onClick={(e) => e.preventDefault()} />
 
             {/* Hero Text Overlay */}
-            <div className="absolute inset-0 z-20 flex items-end justify-start pointer-events-none pb-40 px-14 sm:px-20 md:px-28">
+            <div className="absolute inset-0 z-20 flex items-end justify-start pointer-events-none pb-40 px-6 sm:px-14 md:px-20 lg:px-28">
                 {/* Subtle dark vignette for text readability */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
 
@@ -75,14 +75,14 @@ export function Hero() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1.2, ease: 'easeOut', delay: 0.3 }}
-                    className="relative text-left"
+                    className="relative text-left max-w-[90vw] sm:max-w-none"
                 >
-                    <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white tracking-widest leading-tight drop-shadow-2xl"
-                        style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: '0.1em' }}
+                    <h1 className="text-base sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-snug drop-shadow-2xl flex flex-wrap gap-x-1"
+                        style={{ fontFamily: "'Outfit', sans-serif", letterSpacing: '0.08em' }}
                     >
-                        "Train.&nbsp;
+                        <span>"Train.</span>
                         <span className="text-[#C9A84C]">Innovate.</span>
-                        &nbsp;Motivate.&nbsp;
+                        <span>Motivate.</span>
                         <span className="text-[#C9A84C]">Achieve."</span>
                     </h1>
                     {/* Gold underline accent */}
@@ -90,11 +90,12 @@ export function Hero() {
                         initial={{ scaleX: 0 }}
                         animate={{ scaleX: 1 }}
                         transition={{ duration: 1, ease: 'easeOut', delay: 0.9 }}
-                        className="mt-3 h-[2px] w-56 sm:w-72 rounded-full"
+                        className="mt-3 h-[2px] w-40 sm:w-56 md:w-72 rounded-full"
                         style={{ background: 'linear-gradient(90deg, #C9A84C, transparent)', transformOrigin: 'left' }}
                     />
                 </motion.div>
             </div>
+
 
 
             {/* WhatsApp Floating Pop-up Button (Only appears when Hero is rendered) */}
