@@ -13,6 +13,7 @@ const directors = [
         name: "Mr. Manos Simson",
         title: "Founder & CEO",
         image: img1,
+        objectPosition: "center 20%",
         bio: "Visionary leader with a passion for integrating advanced technology into industrial workflows. Under his leadership, TIMA has expanded across multiple sectors including AI, Manufacturing, and Renewable Energy.",
         social: {
             linkedin: "https://linkedin.com",
@@ -24,6 +25,7 @@ const directors = [
         name: "Joys Anita",
         title: "Co-founder",
         image: img2,
+        objectPosition: "85% 20%",
         bio: "Co-founder and strategic driving force behind TIMA's operational excellence. Her expertise in business development and system integration has been pivotal to the group's global scaling.",
         social: {
             linkedin: "https://linkedin.com",

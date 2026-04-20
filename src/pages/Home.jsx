@@ -1,7 +1,7 @@
 import React from 'react'
 import { Layout } from '../components/layout/Layout'
 import { Hero } from '../components/ui/Hero'
-import { TechNeural } from '../components/ui/TechNeural'
+import { GreenSphereFrame } from '../components/ui/GreenSphereFrame'
 import { BusinessSlider } from '../components/ui/BusinessSlider'
 import { HomeTimeline } from '../components/ui/HomeTimeline'
 import { FeatureShowcase } from '../components/ui/FeatureShowcase'
@@ -13,8 +13,8 @@ export function Home() {
         <Layout>
             <Hero />
 
-            {/* GREEN SPHERE Section */}
-            <TechNeural />
+            {/* Green Sphere Framed Section */}
+            <GreenSphereFrame />
 
             {/* Horizontal Image Slider Section */}
             <BusinessSlider />
