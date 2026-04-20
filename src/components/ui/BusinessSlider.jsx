@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 import CircularGallery from './CircularGallery';
 
-import img1 from '../../assets/img/Solar Projects & Renewable Energy.webp';
+const img1 = '/assets/img/hero-first.webp';
 import img2 from '../../assets/img/Advanced Manufacturing & Engineering.webp';
 import img3 from '../../assets/img/Electronics, Robotics & Intelligent Automation.webp';
 import img4 from '../../assets/img/3D Printing & Prototyping Services.webp';

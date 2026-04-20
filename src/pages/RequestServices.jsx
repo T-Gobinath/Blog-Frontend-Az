@@ -283,8 +283,10 @@ export function RequestServices() {
                         <div className="absolute inset-0 bg-gradient-to-r from-[#060713] via-[#060713]/80 to-transparent z-10 w-1/4"></div>
                         <div className="absolute inset-0 bg-black/30 z-10"></div> {/* Global dim */}
                         <img
-                            src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+                            src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=70&fm=webp"
                             alt="Corporate services"
+                            width="800"
+                            height="1000"
                             className="w-full h-full object-cover object-right grayscale blur-[1px]"
                         />
                     </div>

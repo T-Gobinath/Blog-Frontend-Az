@@ -74,6 +74,8 @@ export function HomeTimeline() {
                     <img
                         src={currentItem.image}
                         alt={currentItem.title}
+                        width="1920"
+                        height="1080"
                         className="w-full h-full object-cover object-center"
                     />
                 </motion.div>

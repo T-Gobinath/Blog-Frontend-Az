@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import scrolledLogo from '../../assets/Logo1.png'; // Import the TIMA scrolled logo
+import scrolledLogo from '../../assets/Logo1.webp'; // Import the TIMA scrolled logo
 
 const features = [
     {
@@ -13,7 +13,7 @@ const features = [
                 <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z" />
             </svg>
         ),
-        image: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=500&q=60&fm=webp',
     },
     {
         id: 'automation',
@@ -25,7 +25,7 @@ const features = [
                 <path d="M4 12h16M12 4v16" />
             </svg>
         ),
-        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=500&q=60&fm=webp',
     },
     {
         id: 'software',
@@ -36,7 +36,7 @@ const features = [
                 <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
             </svg>
         ),
-        image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=500&q=60&fm=webp',
     }
 ];
 
@@ -92,6 +92,8 @@ export function FeatureShowcase() {
                             <img
                                 src={scrolledLogo}
                                 alt="TIMA Logo"
+                                width="80"
+                                height="80"
                                 className="h-14 sm:h-16 md:h-20 opacity-90 brightness-0 invert object-contain"
                             />
                             <span>TIMA</span>
@@ -146,6 +148,8 @@ export function FeatureShowcase() {
                                             <img
                                                 src={feature.image}
                                                 alt={feature.title}
+                                                width="420"
+                                                height="255"
                                                 className="w-full h-full object-cover object-top opacity-90 transition-opacity duration-300 pointer-events-none"
                                             />
                                             {/* Gradient fade to black at bottom */}

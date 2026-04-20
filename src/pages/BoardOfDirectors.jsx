@@ -97,6 +97,8 @@ export function BoardOfDirectors() {
                                             <img 
                                                 src={director.image} 
                                                 alt={director.name}
+                                                width="320"
+                                                height="400"
                                                 className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110"
                                             />
                                         </div>

@@ -24,6 +24,8 @@ export function GreenSphereFrame() {
                     <img 
                         src={chatGPTImg} 
                         alt="Green Sphere Branding" 
+                        width="1400"
+                        height="300"
                         className="w-full h-full object-cover sm:object-contain transition-transform duration-1000 hover:scale-105"
                     />
 

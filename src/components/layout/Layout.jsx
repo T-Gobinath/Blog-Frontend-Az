@@ -87,7 +87,7 @@ export function Layout({ children }) {
             <main
                 id="main-scroll"
                 ref={scrollContainerRef}
-                className={`relative z-10 w-full h-full overflow-y-auto overflow-x-hidden scroll-smooth transition-all duration-700 ease-out transform ${
+                className={`relative z-10 w-full h-full overflow-y-auto overflow-x-hidden scroll-smooth transition-all duration-500 ease-out transform ${
                     isAnimating ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
                 }`}
             >

@@ -82,6 +82,8 @@ export function DynamicPage() {
                         <img 
                             src={pageData.heroImage} 
                             alt={pageData.title} 
+                            width="1200"
+                            height="600"
                             className="w-full h-full object-cover object-center"
                             fetchpriority="high"
                             decoding="async"

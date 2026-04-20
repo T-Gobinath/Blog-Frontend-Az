@@ -7,14 +7,14 @@ const directors = [
         name: 'Michael Chen',
         title: 'Board of Director',
         description: 'With over 20 years of experience in industrial automation, Michael leads our global manufacturing strategy and operational excellence initiatives.',
-        image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=60&fm=webp'
     },
     {
         id: 2,
         name: 'Sarah Jenkins',
         title: 'Board of Director',
         description: 'Sarah brings a wealth of knowledge in supply chain optimization and digital transformation, driving innovation across our IT solutions division.',
-        image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=60&fm=webp'
     }
 ];
 
@@ -76,6 +76,8 @@ export function BoardOfDirectors() {
                                     <img
                                         src={director.image}
                                         alt={director.name}
+                                        width="224"
+                                        height="224"
                                         className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                                     />
                                     {/* Image Overlay */}

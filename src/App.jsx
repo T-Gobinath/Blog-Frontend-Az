@@ -1,8 +1,8 @@
 import React, { Suspense, lazy } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Home } from './pages/Home'
 
 // Lazy load pages for code splitting
-const Home = lazy(() => import('./pages/Home').then(m => ({ default: m.Home })))
 const Overview = lazy(() => import('./pages/Overview').then(m => ({ default: m.Overview })))
 const ContactUs = lazy(() => import('./pages/ContactUs').then(m => ({ default: m.ContactUs })))
 const RequestServices = lazy(() => import('./pages/RequestServices').then(m => ({ default: m.RequestServices })))

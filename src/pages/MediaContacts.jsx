@@ -63,7 +63,7 @@ export function MediaContacts() {
                                     <div className="text-white/70 font-light text-base sm:text-lg leading-relaxed">
                                         <p>
                                             4th street, Kennet Nagar, Airport road<br />
-                                            Alagapan Nagar Extn, Madurai - 6250034
+                                            Alagapan Nagar Extn, Madurai - 6250031
                                         </p>
                                     </div>
                                 </div>

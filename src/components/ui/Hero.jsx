@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 
-// Lazy load images only when needed - this drastically reduces initial bundle
-import firstHeroImage from '../../assets/img/Solar Projects & Renewable Energy.webp';
+// Preloaded critical hero image
+const firstHeroImage = '/assets/img/hero-first.webp';
 
 const carouselItems = [
     { id: 0, src: firstHeroImage },
@@ -78,12 +78,14 @@ export function Hero() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    transition={{ duration: 2, ease: "easeInOut" }}
+                    transition={{ duration: currentImage === 0 ? 0.8 : 2, ease: "easeInOut" }}
                     className="absolute inset-0 z-0 overflow-hidden"
                 >
                     <img
                         src={typeof carouselItems[currentImage].src === 'string' ? carouselItems[currentImage].src : loadedImages[currentImage]}
                         alt="Hero background"
+                        width="1920"
+                        height="1080"
                         className="w-full h-full object-cover object-center"
                         style={{
                             animation: 'kenburns 8s linear forwards',
@@ -96,8 +98,8 @@ export function Hero() {
                 </motion.div>
             </AnimatePresence>
 
-            {/* Fallback gradient while image loads */}
-            {!loadedImages[currentImage] && (
+            {/* Fallback gradient while dynamic image loads */}
+            {!loadedImages[currentImage] && typeof carouselItems[currentImage].src === 'function' && (
                 <div className="absolute inset-0 z-0 bg-gradient-to-br from-gray-900 via-black to-gray-900" />
             )}
 
