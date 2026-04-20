@@ -3,12 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://t-gobinath.github.io/Blog-Frontend-Az",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -43,8 +40,7 @@
     "globals": "^16.5.0",
     "sharp": "^0.34.5",
     "tailwindcss": "^4.1.18",
-    "vite": "^8.0.0-beta.13",
-    "gh-pages": "^6.1.1"
+    "vite": "^8.0.0-beta.13"
   },
   "overrides": {
     "vite": "^8.0.0-beta.13"

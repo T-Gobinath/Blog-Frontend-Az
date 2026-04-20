@@ -3,8 +3,6 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/tima/',   // ✅ ADD THIS LINE (VERY IMPORTANT)
-
   plugins: [
     tailwindcss(),
     react({
@@ -35,6 +33,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks(id) {
+          // Separate heavy dependencies into their own chunks
           if (id.includes('three')) return 'three'
           if (id.includes('@react-three')) return 'three'
           if (id.includes('gsap')) return 'gsap'
@@ -53,9 +52,11 @@ export default defineConfig({
       }
     },
 
+    // CSS optimization
     cssCodeSplit: true,
   },
 
+  // Optimize for performance
   ssr: {
     noExternal: ['zustand']
   }
