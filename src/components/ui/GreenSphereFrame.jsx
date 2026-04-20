@@ -17,8 +17,8 @@ export function GreenSphereFrame() {
                 transition={{ duration: 1, ease: "easeOut" }}
                 className="relative z-10 w-full h-full flex items-center justify-center px-4 sm:px-8"
             >
-                {/* Border Frame Style (Wait, the user said "green sphere frame") */}
-                <div className="relative w-full h-full max-w-[1400px] border-x border-white/10 flex items-center justify-center overflow-hidden bg-black/40">
+                {/* The Frame Container (No side borders) */}
+                <div className="relative w-full h-full max-w-[1400px] flex items-center justify-center overflow-hidden bg-black/40">
                     
                     {/* The Image inside the frame */}
                     <img 
