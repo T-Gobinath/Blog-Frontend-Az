@@ -37,12 +37,26 @@ async function run() {
 
                 console.log(`Optimizing: ${path.relative(ASSETS_DIR, inputPath)}...`);
                 
-                const isHero = inputPath.includes('img\\'); // Heuristic for large hero images
-                const targetWidth = isHero ? 1920 : 1200;
+                const fileName = path.basename(inputPath).toLowerCase();
+                const parentDir = path.dirname(inputPath).split(path.sep).pop().toLowerCase();
+                
+                let targetWidth = 800; // Default
+                let quality = 75;
+
+                if (fileName.includes('logo')) {
+                    targetWidth = 400;
+                    quality = 80;
+                } else if (parentDir === 'img' || fileName.includes('hero')) {
+                    targetWidth = 1200;
+                    quality = 70;
+                } else if (parentDir === 'dir') {
+                    targetWidth = 600;
+                    quality = 70;
+                }
                 
                 await sharp(inputPath)
                     .resize({ width: targetWidth, withoutEnlargement: true })
-                    .webp({ quality: 80 })
+                    .webp({ quality: quality })
                     .toFile(outputPath);
                 
                 const oldSize = (await fs.stat(inputPath)).size;

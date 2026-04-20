@@ -3,8 +3,10 @@ import { createPortal } from 'react-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 
 // Lazy load images only when needed - this drastically reduces initial bundle
+import firstHeroImage from '../../assets/img/Solar Projects & Renewable Energy.webp';
+
 const carouselItems = [
-    { id: 0, src: () => import('../../assets/img/Solar Projects & Renewable Energy.webp').then(m => m.default) },
+    { id: 0, src: firstHeroImage },
     { id: 1, src: () => import('../../assets/img/Advanced Manufacturing & Engineering.webp').then(m => m.default) },
     { id: 2, src: () => import('../../assets/img/Electronics, Robotics & Intelligent Automation.webp').then(m => m.default) },
     { id: 3, src: () => import('../../assets/img/3D Printing & Prototyping Services.webp').then(m => m.default) },
@@ -28,6 +30,7 @@ export function Hero() {
     // Load current image and preload next one
     useEffect(() => {
         const loadImage = async (index) => {
+            if (typeof carouselItems[index].src !== 'function') return;
             if (!loadedImages[index]) {
                 try {
                     const src = await carouselItems[index].src()
@@ -38,15 +41,19 @@ export function Hero() {
             }
         }
 
-        // Load current image immediately
-        loadImage(currentImage)
+        // Only handle dynamic loading for non-static items
+        if (typeof carouselItems[currentImage].src === 'function') {
+            loadImage(currentImage)
+        }
         
         // Preload next image
         const nextIndex = (currentImage + 1) % carouselItems.length
-        if (preloadTimeoutRef.current) clearTimeout(preloadTimeoutRef.current)
-        preloadTimeoutRef.current = setTimeout(() => {
-            loadImage(nextIndex)
-        }, 6500) // Start preloading 1.5s before next image shows
+        if (typeof carouselItems[nextIndex].src === 'function') {
+            if (preloadTimeoutRef.current) clearTimeout(preloadTimeoutRef.current)
+            preloadTimeoutRef.current = setTimeout(() => {
+                loadImage(nextIndex)
+            }, 6500)
+        }
 
         return () => {
             if (preloadTimeoutRef.current) clearTimeout(preloadTimeoutRef.current)
@@ -64,23 +71,29 @@ export function Hero() {
     return (
         <section className="relative h-screen w-full overflow-hidden flex flex-col bg-black">
 
-            {/* Auto-shifting 7 Images Background - only render loaded image */}
-            <AnimatePresence>
-                {loadedImages[currentImage] && (
-                    <motion.div
-                        key={currentImage}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 2, ease: "easeInOut" }}
-                        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat will-change-contents"
+            {/* Auto-shifting 7 Images Background */}
+            <AnimatePresence mode="wait">
+                <motion.div
+                    key={currentImage}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 2, ease: "easeInOut" }}
+                    className="absolute inset-0 z-0 overflow-hidden"
+                >
+                    <img
+                        src={typeof carouselItems[currentImage].src === 'string' ? carouselItems[currentImage].src : loadedImages[currentImage]}
+                        alt="Hero background"
+                        className="w-full h-full object-cover object-center"
                         style={{
-                            backgroundImage: `url("${loadedImages[currentImage]}")`,
                             animation: 'kenburns 8s linear forwards',
-                            pointerEvents: 'none',
+                            willChange: 'transform'
                         }}
+                        fetchpriority={currentImage === 0 ? "high" : "low"}
+                        decoding="async"
+                        loading={currentImage === 0 ? "eager" : "lazy"}
                     />
-                )}
+                </motion.div>
             </AnimatePresence>
 
             {/* Fallback gradient while image loads */}

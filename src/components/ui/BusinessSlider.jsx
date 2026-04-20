@@ -54,17 +54,35 @@ export function BusinessSlider() {
                 </div>
             </div>
 
-            {/* Circular Gallery Container */}
+            {/* Circular Gallery Container - Deferred for Performance */}
             <div className="h-[380px] sm:h-[450px] md:h-[500px] lg:h-[800px] xl:h-[900px] relative w-full z-10 cursor-grab active:cursor-grabbing">
-                <CircularGallery
-                    items={items}
-                    bend={3}
-                    textColor="#ffffff"
-                    borderRadius={0.05}
-                    scrollSpeed={2}
-                    scrollEase={0.05}
-                    onItemClick={(link) => navigate(link)}
-                />
+                <React.Suspense fallback={<div className="w-full h-full bg-black/20 animate-pulse" />}>
+                   {(() => {
+                        const [show, setShow] = React.useState(false);
+                        React.useEffect(() => {
+                            const timer = setTimeout(() => {
+                                if ('requestIdleCallback' in window) {
+                                    window.requestIdleCallback(() => setShow(true));
+                                } else {
+                                    setShow(true);
+                                }
+                            }, 1500); // 1.5s delay to let the main page settle
+                            return () => clearTimeout(timer);
+                        }, []);
+                        
+                        return show ? (
+                            <CircularGallery
+                                items={items}
+                                bend={3}
+                                textColor="#ffffff"
+                                borderRadius={0.05}
+                                scrollSpeed={2}
+                                scrollEase={0.05}
+                                onItemClick={(link) => navigate(link)}
+                            />
+                        ) : null;
+                   })()}
+                </React.Suspense>
             </div>
         </section>
     );
