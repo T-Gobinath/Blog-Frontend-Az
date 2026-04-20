@@ -5,6 +5,13 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 export function MediaContacts() {
+    const [loaded, setLoaded] = React.useState(false);
+
+    React.useEffect(() => {
+        const timer = setTimeout(() => setLoaded(true), 800);
+        return () => clearTimeout(timer);
+    }, []);
+
     const socialLinks = [
         { name: 'LinkedIn', icon: Linkedin, url: 'https://www.linkedin.com/company/106382003/' },
         { name: 'Instagram', icon: Instagram, url: 'https://www.instagram.com/timaintegrated?igsh=MXBrdGpmb3c0M3Zwaw==' },
@@ -119,18 +126,27 @@ export function MediaContacts() {
 
                     {/* Right Column: Globe/Map Section */}
                     <div className="flex-1 flex justify-center lg:justify-end items-start mt-8 lg:mt-24">
-                        <div className="w-full max-w-[500px] aspect-square rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative">
-                            <iframe
-                                src="https://www.google.com/maps?q=Kennet+Nagar,+Muthu+Patti,+Madurai,+Tamil+Nadu+625003&hl=en&z=15&output=embed"
-                                width="100%"
-                                height="100%"
-                                style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) contrast(105%)' }}
-                                allowFullScreen=""
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                                className="absolute inset-0"
-                            ></iframe>
-                            <div className="absolute inset-0 border border-white/10 rounded-3xl pointer-events-none"></div>
+                        <div className="relative w-full max-w-[500px] aspect-square rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-white/5">
+                            {/* Map Skeleton Loader */}
+                            <div className="absolute inset-0 flex items-center justify-center animate-pulse">
+                                <div className="w-12 h-12 border-2 border-[#3b82f6]/30 border-t-[#3b82f6] rounded-full animate-spin"></div>
+                            </div>
+
+                            {/* Self-invoking map loader to preserve main-thread quiet time */}
+                            {loaded && (
+                                <iframe
+                                    src="https://www.google.com/maps?q=Kennet+Nagar,+Muthu+Patti,+Madurai,+Tamil+Nadu+625003&hl=en&z=15&output=embed"
+                                    width="100%"
+                                    height="100%"
+                                    style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) contrast(105%)' }}
+                                    allowFullScreen=""
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                    className="absolute inset-0 z-10"
+                                    onLoad={(e) => e.target.parentElement.querySelector('.animate-pulse')?.remove()}
+                                ></iframe>
+                            )}
+                            <div className="absolute inset-0 border border-white/10 rounded-3xl pointer-events-none z-20"></div>
                         </div>
                     </div>
                 </div>

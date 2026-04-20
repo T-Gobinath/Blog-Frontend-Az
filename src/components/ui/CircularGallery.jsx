@@ -517,7 +517,8 @@ class App {
   }
   update() {
     if (!this.isVisible) {
-      this.raf = window.requestAnimationFrame(this.update.bind(this));
+      if (this.raf) window.cancelAnimationFrame(this.raf);
+      this.raf = null;
       return;
     }
 
@@ -584,7 +585,13 @@ export default function CircularGallery({
     
     const observer = new IntersectionObserver(
       ([entry]) => {
+        const wasVisible = app.isVisible;
         app.isVisible = entry.isIntersecting;
+        
+        // Restart the update loop if we just became visible
+        if (app.isVisible && !wasVisible) {
+          app.update();
+        }
       },
       { threshold: 0.1 }
     );
