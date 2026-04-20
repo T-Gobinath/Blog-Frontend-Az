@@ -26,6 +26,7 @@ export function GreenSphereFrame() {
                         alt="Green Sphere Branding" 
                         width="1400"
                         height="300"
+                        loading="lazy"
                         className="w-full h-full object-cover sm:object-contain transition-transform duration-1000 hover:scale-105"
                     />
 

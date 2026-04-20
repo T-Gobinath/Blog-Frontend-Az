@@ -192,10 +192,10 @@ export const pagesContent = {
         heroImage: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1200&q=70&fm=webp',
 
         gridImages: [
-            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=60&fm=webp'
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=450&q=70&fm=webp'
         ],
         paragraphs: [
             "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
@@ -239,10 +239,10 @@ export const pagesContent = {
         heroImage: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1200&q=70&fm=webp',
 
         gridImages: [
-            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=60&fm=webp'
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=450&q=70&fm=webp'
         ],
         paragraphs: [
             "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
@@ -279,10 +279,10 @@ export const pagesContent = {
         heroImage: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1200&q=70&fm=webp',
 
         gridImages: [
-            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=60&fm=webp'
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=450&q=70&fm=webp'
         ],
         paragraphs: [
             "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
@@ -319,10 +319,10 @@ export const pagesContent = {
         heroImage: 'https://images.unsplash.com/photo-1610484826917-0f101a7bf7f4?auto=format&fit=crop&w=1200&q=70&fm=webp',
 
         gridImages: [
-            'https://images.unsplash.com/photo-1610484826917-0f101a7bf7f4?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1635348729498-ef4a0218e7d0?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1629739688326-805187747806?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1549413240-02324e931e97?auto=format&fit=crop&w=600&q=60&fm=webp'
+            'https://images.unsplash.com/photo-1610484826917-0f101a7bf7f4?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1635348729498-ef4a0218e7d0?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1629739688326-805187747806?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1549413240-02324e931e97?auto=format&fit=crop&w=450&q=70&fm=webp'
         ],
         paragraphs: [
             "TIMA leverages cutting-edge laser technologies to provide unparalleled precision in sheet metal profiling and intricate component engraving. Our facility is equipped with multi-kilowatt fiber lasers that offer the perfect balance of speed, accuracy, and edge quality, even on highly reflective materials like brass and copper.",
@@ -359,10 +359,10 @@ export const pagesContent = {
         heroImage: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=70&fm=webp',
 
         gridImages: [
-            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=60&fm=webp'
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=450&q=70&fm=webp'
         ],
         paragraphs: [
             "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
@@ -399,10 +399,10 @@ export const pagesContent = {
         heroImage: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=70&fm=webp',
 
         gridImages: [
-            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=60&fm=webp'
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=450&q=70&fm=webp'
         ],
         paragraphs: [
             "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
@@ -434,10 +434,10 @@ export const pagesContent = {
         heroImage: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=70&fm=webp',
 
         gridImages: [
-            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=60&fm=webp'
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=450&q=70&fm=webp'
         ],
         paragraphs: [
             "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
@@ -469,10 +469,10 @@ export const pagesContent = {
         heroImage: 'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=1200&q=70&fm=webp',
 
         gridImages: [
-            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=60&fm=webp'
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=450&q=70&fm=webp'
         ],
         paragraphs: [
             "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
@@ -504,10 +504,10 @@ export const pagesContent = {
         heroImage: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=70&fm=webp',
 
         gridImages: [
-            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=60&fm=webp'
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=450&q=70&fm=webp'
         ],
         paragraphs: [
             "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
@@ -539,10 +539,10 @@ export const pagesContent = {
         heroImage: 'https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1200&q=70&fm=webp',
 
         gridImages: [
-            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=60&fm=webp'
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=450&q=70&fm=webp'
         ],
         paragraphs: [
             "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
@@ -576,10 +576,10 @@ export const pagesContent = {
         heroImage: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=70&fm=webp',
 
         gridImages: [
-            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=60&fm=webp'
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=450&q=70&fm=webp'
         ],
         paragraphs: [
             "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
@@ -611,10 +611,10 @@ export const pagesContent = {
         heroImage: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=70&fm=webp',
 
         gridImages: [
-            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=60&fm=webp'
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=450&q=70&fm=webp'
         ],
         paragraphs: [
             "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
@@ -646,10 +646,10 @@ export const pagesContent = {
         heroImage: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=70&fm=webp',
 
         gridImages: [
-            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=60&fm=webp'
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=450&q=70&fm=webp'
         ],
         paragraphs: [
             "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
@@ -683,10 +683,10 @@ export const pagesContent = {
         heroImage: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=70&fm=webp',
 
         gridImages: [
-            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=60&fm=webp'
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=450&q=70&fm=webp'
         ],
         paragraphs: [
             "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
@@ -723,10 +723,10 @@ export const pagesContent = {
         heroImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=70&fm=webp',
 
         gridImages: [
-            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=60&fm=webp'
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=450&q=70&fm=webp'
         ],
         paragraphs: [
             "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
@@ -758,10 +758,10 @@ export const pagesContent = {
         heroImage: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=70&fm=webp',
 
         gridImages: [
-            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=60&fm=webp'
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=450&q=70&fm=webp'
         ],
         paragraphs: [
             "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
@@ -793,10 +793,10 @@ export const pagesContent = {
         heroImage: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=70&fm=webp',
 
         gridImages: [
-            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=60&fm=webp'
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=450&q=70&fm=webp'
         ],
         paragraphs: [
             "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",
@@ -828,10 +828,10 @@ export const pagesContent = {
         heroImage: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=70&fm=webp',
 
         gridImages: [
-            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=60&fm=webp',
-            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=60&fm=webp'
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=450&q=70&fm=webp',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=450&q=70&fm=webp'
         ],
         paragraphs: [
             "At TIMA, we relentlessly pursue operational excellence. Our highly skilled engineering teams continually push the boundaries of modern manufacturing and enterprise IT solutions. We believe in providing robust, infinitely scalable solutions that seamlessly integrate with our clients' existing global infrastructure. By rigorously upholding the absolute highest standards of quality control—from initial conceptual design and digital twin simulation all the way through to final field commissioning—we ensure our deliverable products are absolutely faultless.",

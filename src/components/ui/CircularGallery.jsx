@@ -371,6 +371,7 @@ class App {
     // Add auto-scroll flag to the class
     this.isDown = false;
     this.autoScrollSpeed = 1.0; 
+    this.isVisible = true; // Visibility state for performance optimization
     
     this.update();
     this.addEventListeners();
@@ -395,8 +396,8 @@ class App {
   }
   createGeometry() {
     this.planeGeometry = new Plane(this.gl, {
-      heightSegments: 50,
-      widthSegments: 100
+      heightSegments: 20,
+      widthSegments: 40
     });
   }
   createMedias(items, bend = 1, textColor, borderRadius, font) {
@@ -515,6 +516,11 @@ class App {
     }
   }
   update() {
+    if (!this.isVisible) {
+      this.raf = window.requestAnimationFrame(this.update.bind(this));
+      return;
+    }
+
     // Implement idle auto-scrolling to slide smoothly leftwards over time
     if (!this.isDown) {
       this.scroll.target += 0.05; // Slow auto-scroll speed
@@ -575,7 +581,20 @@ export default function CircularGallery({
   const containerRef = useRef(null);
   useEffect(() => {
     const app = new App(containerRef.current, { items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase, onItemClick });
+    
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        app.isVisible = entry.isIntersecting;
+      },
+      { threshold: 0.1 }
+    );
+    
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
     return () => {
+      observer.disconnect();
       app.destroy();
     };
   }, [items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase, onItemClick]);
