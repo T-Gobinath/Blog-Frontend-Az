@@ -13,7 +13,7 @@ export function MediaContacts() {
 
     const contactDetails = [
         { name: 'Email', icon: Mail, url: 'mailto:support@thetima.com' },
-        { name: 'Phone', icon: Phone, url: 'tel:+919363721147' },
+        { name: 'Phone', icon: Phone, url: 'tel:+9193637211477' },
     ];
 
     return (
@@ -46,7 +46,7 @@ export function MediaContacts() {
 
                 {/* Main Content Sections */}
                 <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 xl:gap-24 mb-16">
-                    
+
                     {/* Left Column: Office & Connect */}
                     <div className="flex flex-col flex-1">
                         <div className="flex flex-col mb-16">
@@ -73,7 +73,7 @@ export function MediaContacts() {
                                     <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-white/40">Contact Support</h3>
                                     <div className="bg-black/80 backdrop-blur-3xl border border-white/40 rounded-full p-2 flex items-center w-fit gap-2 shadow-[0_0_30px_rgba(255,255,255,0.1)]">
                                         {contactDetails.map((contact, idx) => (
-                                            <a 
+                                            <a
                                                 key={idx}
                                                 href={contact.url}
                                                 title={contact.name}
@@ -92,7 +92,7 @@ export function MediaContacts() {
                                     <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-white/40">Connect Socially</h3>
                                     <div className="bg-black/80 backdrop-blur-3xl border border-white/40 rounded-full p-2 flex items-center w-fit gap-2 shadow-[0_0_30px_rgba(255,255,255,0.1)]">
                                         {socialLinks.map((social, idx) => (
-                                            <motion.a 
+                                            <motion.a
                                                 key={idx}
                                                 href={social.url}
                                                 target="_blank"
@@ -100,7 +100,7 @@ export function MediaContacts() {
                                                 title={social.name}
                                                 initial={{ opacity: 0, scale: 0.8 }}
                                                 whileInView={{ opacity: 1, scale: 1 }}
-                                                whileHover={{ 
+                                                whileHover={{
                                                     scale: 1.15,
                                                     transition: { type: "spring", stiffness: 400, damping: 10 }
                                                 }}
@@ -120,13 +120,13 @@ export function MediaContacts() {
                     {/* Right Column: Globe/Map Section */}
                     <div className="flex-1 flex justify-center lg:justify-end items-start mt-8 lg:mt-24">
                         <div className="w-full max-w-[500px] aspect-square rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative">
-                            <iframe 
+                            <iframe
                                 src="https://www.google.com/maps?q=Kennet+Nagar,+Muthu+Patti,+Madurai,+Tamil+Nadu+625003&hl=en&z=15&output=embed"
-                                width="100%" 
-                                height="100%" 
-                                style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) contrast(105%)' }} 
-                                allowFullScreen="" 
-                                loading="lazy" 
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) contrast(105%)' }}
+                                allowFullScreen=""
+                                loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
                                 className="absolute inset-0"
                             ></iframe>
