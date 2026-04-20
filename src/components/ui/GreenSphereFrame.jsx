@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import chatGPTImg from '../../assets/dir/ChatGPT.png';
+import chatGPTImg from '../../assets/dir/ChatGPT.webp';
 
 export function GreenSphereFrame() {
     return (

@@ -3,8 +3,8 @@ import { ChevronDown, Headphones, Sun, Moon, Menu, X } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { useStore } from '../../stores/useStore'
-import defaultLogo from '../../assets/tima-logo.png'
-import scrolledLogo from '../../assets/Logo1.png'
+import defaultLogo from '../../assets/tima-logo.webp'
+import scrolledLogo from '../../assets/Logo1.webp'
 
 const navLinks = [
     {

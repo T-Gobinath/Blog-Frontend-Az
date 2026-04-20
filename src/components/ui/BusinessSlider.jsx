@@ -4,13 +4,13 @@ import { useNavigate } from 'react-router-dom';
 
 import CircularGallery from './CircularGallery';
 
-import img1 from '../../assets/img/Solar Projects & Renewable Energy.png';
-import img2 from '../../assets/img/Advanced Manufacturing & Engineering.png';
-import img3 from '../../assets/img/Electronics, Robotics & Intelligent Automation.png';
-import img4 from '../../assets/img/3D Printing & Prototyping Services.png';
-import img5 from '../../assets/img/IT Software & Cloud Solutions.png';
-import img6 from '../../assets/img/Artificial Intelligence (AI) Solutions.png';
-import img7 from '../../assets/img/Automation & Workflow Engineering.png';
+import img1 from '../../assets/img/Solar Projects & Renewable Energy.webp';
+import img2 from '../../assets/img/Advanced Manufacturing & Engineering.webp';
+import img3 from '../../assets/img/Electronics, Robotics & Intelligent Automation.webp';
+import img4 from '../../assets/img/3D Printing & Prototyping Services.webp';
+import img5 from '../../assets/img/IT Software & Cloud Solutions.webp';
+import img6 from '../../assets/img/Artificial Intelligence (AI) Solutions.webp';
+import img7 from '../../assets/img/Automation & Workflow Engineering.webp';
 
 export function BusinessSlider() {
     const items = [

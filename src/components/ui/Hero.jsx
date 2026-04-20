@@ -4,13 +4,13 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 // Lazy load images only when needed - this drastically reduces initial bundle
 const carouselItems = [
-    { id: 0, src: () => import('../../assets/img/Solar Projects & Renewable Energy.png').then(m => m.default) },
-    { id: 1, src: () => import('../../assets/img/Advanced Manufacturing & Engineering.png').then(m => m.default) },
-    { id: 2, src: () => import('../../assets/img/Electronics, Robotics & Intelligent Automation.png').then(m => m.default) },
-    { id: 3, src: () => import('../../assets/img/3D Printing & Prototyping Services.png').then(m => m.default) },
-    { id: 4, src: () => import('../../assets/img/IT Software & Cloud Solutions.png').then(m => m.default) },
-    { id: 5, src: () => import('../../assets/img/Artificial Intelligence (AI) Solutions.png').then(m => m.default) },
-    { id: 6, src: () => import('../../assets/img/Automation & Workflow Engineering.png').then(m => m.default) }
+    { id: 0, src: () => import('../../assets/img/Solar Projects & Renewable Energy.webp').then(m => m.default) },
+    { id: 1, src: () => import('../../assets/img/Advanced Manufacturing & Engineering.webp').then(m => m.default) },
+    { id: 2, src: () => import('../../assets/img/Electronics, Robotics & Intelligent Automation.webp').then(m => m.default) },
+    { id: 3, src: () => import('../../assets/img/3D Printing & Prototyping Services.webp').then(m => m.default) },
+    { id: 4, src: () => import('../../assets/img/IT Software & Cloud Solutions.webp').then(m => m.default) },
+    { id: 5, src: () => import('../../assets/img/Artificial Intelligence (AI) Solutions.webp').then(m => m.default) },
+    { id: 6, src: () => import('../../assets/img/Automation & Workflow Engineering.webp').then(m => m.default) }
 ]
 
 const WhatsAppIcon = () => (

@@ -83,6 +83,9 @@ export function DynamicPage() {
                             src={pageData.heroImage} 
                             alt={pageData.title} 
                             className="w-full h-full object-cover object-center"
+                            fetchpriority="high"
+                            decoding="async"
+                            loading="eager"
                         />
                         <div className={`absolute inset-0 ${theme === 'light' ? 'bg-black/40' : 'bg-[#0a0f1a]/80'}`}></div>
                         <div className={`absolute inset-0 bg-gradient-to-t ${theme === 'light' ? 'from-[#fcfcfc] via-transparent' : 'from-[#0a0f1a] via-transparent'} to-transparent opacity-100`}></div>
