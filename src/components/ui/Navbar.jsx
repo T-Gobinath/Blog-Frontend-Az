@@ -12,7 +12,7 @@ const navLinks = [
         items: [
             { label: 'Overview', path: '/overview' },
             { label: 'Board of Directors', path: '/about/board-of-directors' },
-            { label: 'Timeline', path: '/about/timeline' }
+            { label: 'Timeline', path: '/#timeline' }
         ]
     },
     {
@@ -67,6 +67,36 @@ export function Navbar() {
     const toggleMobileExpanded = (label) => {
         setMobileExpanded(mobileExpanded === label ? null : label)
     }
+
+    const handleLinkClick = (e, targetPath, isMobile = false) => {
+        if (isMobile) {
+            setMobileOpen(false);
+            setMobileExpanded(null);
+        }
+        setActiveDropdown(null);
+
+        // Handle same-page hash scrolling
+        if (targetPath.startsWith('/#') && window.location.pathname === '/') {
+            e.preventDefault();
+            const id = targetPath.substring(2);
+            const element = document.getElementById(id);
+            const scrollContainer = document.getElementById('main-scroll');
+            if (element && scrollContainer) {
+                setTimeout(() => {
+                    const headerOffset = isMobile ? 80 : 100; // Mobile header is usually smaller
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + scrollContainer.scrollTop - headerOffset;
+
+                    scrollContainer.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    })
+                }, 300)
+                // Update hash without jumping
+                window.history.pushState(null, '', targetPath);
+            }
+        }
+    };
 
     return (
         <motion.nav
@@ -213,7 +243,7 @@ export function Navbar() {
                                                 key={label}
                                                 to={targetPath}
                                                 className="text-sm text-gray-700 hover:text-tima-gold transition-colors font-medium whitespace-nowrap py-1"
-                                                onClick={() => setActiveDropdown(null)}
+                                                onClick={(e) => handleLinkClick(e, targetPath)}
                                             >
                                                 {label}
                                             </Link>
@@ -290,7 +320,7 @@ export function Navbar() {
                                                     key={label}
                                                     to={targetPath}
                                                     className="block py-2 text-xs text-white/60 hover:text-tima-gold transition-colors"
-                                                    onClick={() => { setMobileOpen(false); setMobileExpanded(null) }}
+                                                    onClick={(e) => handleLinkClick(e, targetPath, true)}
                                                 >
                                                     {label}
                                                 </Link>

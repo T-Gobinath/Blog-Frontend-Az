@@ -35,17 +35,36 @@ export function Layout({ children }) {
         }
     }, [])
 
-    // Trigger page transition animation and scroll reset on route change
+    // Reset scroll position on route change AND handle hash scrolling
     useEffect(() => {
-        // Reset scroll position instantly on route change
-        if (scrollContainerRef.current) {
+        if (!scrollContainerRef.current) return;
+
+        if (location.hash) {
+            const id = location.hash.substring(1)
+            const element = document.getElementById(id)
+            if (element) {
+                // Determine if we are just scrolling or if the path changed
+                // (Optional: can add behavior: 'smooth' for same-page scrolls)
+                setTimeout(() => {
+                    const headerOffset = 100; // Account for fixed navbar
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + scrollContainerRef.current.scrollTop - headerOffset;
+
+                    scrollContainerRef.current.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    })
+                }, 300) // Slightly longer delay for reliability
+            }
+        } else {
+            // No hash, reset to top
             scrollContainerRef.current.scrollTo(0, 0)
         }
         
         setIsAnimating(false)
         const timer = setTimeout(() => setIsAnimating(true), 50)
         return () => clearTimeout(timer)
-    }, [location.pathname]) // Depend on route pathname
+    }, [location.pathname, location.hash]) // Depend on both path and hash
 
     const scrollToTop = () => {
         if (scrollContainerRef.current) {

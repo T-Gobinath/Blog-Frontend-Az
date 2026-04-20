@@ -59,7 +59,7 @@ export function HomeTimeline() {
     const currentItem = timelineData[activeIndex];
 
     return (
-        <div className="relative w-full h-screen bg-black overflow-hidden font-sans select-none">
+        <div id="timeline" className="relative w-full h-screen bg-black overflow-hidden font-sans select-none">
 
             {/* Background Images Layer */}
             <AnimatePresence mode="popLayout">
