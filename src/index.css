@@ -23,6 +23,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  /* Optimize rendering performance */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -36,6 +40,16 @@ body {
 #root {
   width: 100%;
   height: 100%;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 @keyframes slideDown {
@@ -123,7 +137,7 @@ body {
 }
 
 /* Touch-friendly adjustments */
-@media (max-pointer: coarse) {
+@media (pointer: coarse) {
   * {
     -webkit-tap-highlight-color: transparent;
   }
@@ -252,4 +266,4 @@ body {
   width: 220px;
   height: 220px;
   opacity: 1;
-}
+}

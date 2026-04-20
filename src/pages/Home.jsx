@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
 import { Layout } from '../components/layout/Layout'
 import { Hero } from '../components/ui/Hero'
-import { GreenSphereFrame } from '../components/ui/GreenSphereFrame'
-import { BusinessSlider } from '../components/ui/BusinessSlider'
-import { HomeTimeline } from '../components/ui/HomeTimeline'
-import { FeatureShowcase } from '../components/ui/FeatureShowcase'
-import { SocialPill } from '../components/ui/SocialPill'
-import { Footer } from '../components/ui/Footer'
+
+// Lazy load below-the-fold components
+const GreenSphereFrame = lazy(() => import('../components/ui/GreenSphereFrame').then(m => ({ default: m.GreenSphereFrame })))
+const BusinessSlider = lazy(() => import('../components/ui/BusinessSlider').then(m => ({ default: m.BusinessSlider })))
+const HomeTimeline = lazy(() => import('../components/ui/HomeTimeline').then(m => ({ default: m.HomeTimeline })))
+const FeatureShowcase = lazy(() => import('../components/ui/FeatureShowcase').then(m => ({ default: m.FeatureShowcase })))
+const SocialPill = lazy(() => import('../components/ui/SocialPill').then(m => ({ default: m.SocialPill })))
+const Footer = lazy(() => import('../components/ui/Footer').then(m => ({ default: m.Footer })))
+
+// Fallback loader
+const ComponentLoader = () => null
 
 export function Home() {
     return (
@@ -14,22 +19,34 @@ export function Home() {
             <Hero />
 
             {/* Green Sphere Framed Section */}
-            <GreenSphereFrame />
+            <Suspense fallback={<ComponentLoader />}>
+                <GreenSphereFrame />
+            </Suspense>
 
             {/* Horizontal Image Slider Section */}
-            <BusinessSlider />
+            <Suspense fallback={<ComponentLoader />}>
+                <BusinessSlider />
+            </Suspense>
 
             {/* Interactive Timeline Section */}
-            <HomeTimeline />
+            <Suspense fallback={<ComponentLoader />}>
+                <HomeTimeline />
+            </Suspense>
 
             {/* Feature Showcase Section */}
-            <FeatureShowcase />
+            <Suspense fallback={<ComponentLoader />}>
+                <FeatureShowcase />
+            </Suspense>
 
             {/* Social Pill Navigation */}
-            <SocialPill />
+            <Suspense fallback={<ComponentLoader />}>
+                <SocialPill />
+            </Suspense>
 
             {/* Footer */}
-            <Footer />
+            <Suspense fallback={<ComponentLoader />}>
+                <Footer />
+            </Suspense>
 
         </Layout>
     )

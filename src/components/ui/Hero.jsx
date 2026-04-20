@@ -1,23 +1,16 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 
-import img1 from '../../assets/img/Solar Projects & Renewable Energy.png'
-import img2 from '../../assets/img/Advanced Manufacturing & Engineering.png'
-import img3 from '../../assets/img/Electronics, Robotics & Intelligent Automation.png'
-import img4 from '../../assets/img/3D Printing & Prototyping Services.png'
-import img5 from '../../assets/img/IT Software & Cloud Solutions.png'
-import img6 from '../../assets/img/Artificial Intelligence (AI) Solutions.png'
-import img7 from '../../assets/img/Automation & Workflow Engineering.png'
-
+// Lazy load images only when needed - this drastically reduces initial bundle
 const carouselItems = [
-    { src: img1 },
-    { src: img2 },
-    { src: img3 },
-    { src: img4 },
-    { src: img5 },
-    { src: img6 },
-    { src: img7 }
+    { id: 0, src: () => import('../../assets/img/Solar Projects & Renewable Energy.png').then(m => m.default) },
+    { id: 1, src: () => import('../../assets/img/Advanced Manufacturing & Engineering.png').then(m => m.default) },
+    { id: 2, src: () => import('../../assets/img/Electronics, Robotics & Intelligent Automation.png').then(m => m.default) },
+    { id: 3, src: () => import('../../assets/img/3D Printing & Prototyping Services.png').then(m => m.default) },
+    { id: 4, src: () => import('../../assets/img/IT Software & Cloud Solutions.png').then(m => m.default) },
+    { id: 5, src: () => import('../../assets/img/Artificial Intelligence (AI) Solutions.png').then(m => m.default) },
+    { id: 6, src: () => import('../../assets/img/Automation & Workflow Engineering.png').then(m => m.default) }
 ]
 
 const WhatsAppIcon = () => (
@@ -29,6 +22,36 @@ const WhatsAppIcon = () => (
 export function Hero() {
     const [currentImage, setCurrentImage] = useState(0)
     const [mounted, setMounted] = useState(false)
+    const [loadedImages, setLoadedImages] = useState({})
+    const preloadTimeoutRef = useRef(null)
+
+    // Load current image and preload next one
+    useEffect(() => {
+        const loadImage = async (index) => {
+            if (!loadedImages[index]) {
+                try {
+                    const src = await carouselItems[index].src()
+                    setLoadedImages(prev => ({ ...prev, [index]: src }))
+                } catch (err) {
+                    console.error(`Failed to load image ${index}:`, err)
+                }
+            }
+        }
+
+        // Load current image immediately
+        loadImage(currentImage)
+        
+        // Preload next image
+        const nextIndex = (currentImage + 1) % carouselItems.length
+        if (preloadTimeoutRef.current) clearTimeout(preloadTimeoutRef.current)
+        preloadTimeoutRef.current = setTimeout(() => {
+            loadImage(nextIndex)
+        }, 6500) // Start preloading 1.5s before next image shows
+
+        return () => {
+            if (preloadTimeoutRef.current) clearTimeout(preloadTimeoutRef.current)
+        }
+    }, [currentImage, loadedImages])
 
     useEffect(() => {
         setMounted(true)
@@ -41,27 +64,29 @@ export function Hero() {
     return (
         <section className="relative h-screen w-full overflow-hidden flex flex-col bg-black">
 
-            {/* Hidden preloader */}
-            <div className="hidden">
-                {carouselItems.map((item, i) => <img key={i} src={item.src} alt="preload" />)}
-            </div>
-
-            {/* Auto-shifting 7 Images Background */}
+            {/* Auto-shifting 7 Images Background - only render loaded image */}
             <AnimatePresence>
-                <motion.div
-                    key={currentImage}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 2, ease: "easeInOut" }}
-                    className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-                    style={{
-                        backgroundImage: `url("${carouselItems[currentImage].src}")`,
-                        animation: 'kenburns 8s linear forwards',
-                        pointerEvents: 'none',
-                    }}
-                />
+                {loadedImages[currentImage] && (
+                    <motion.div
+                        key={currentImage}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 2, ease: "easeInOut" }}
+                        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat will-change-contents"
+                        style={{
+                            backgroundImage: `url("${loadedImages[currentImage]}")`,
+                            animation: 'kenburns 8s linear forwards',
+                            pointerEvents: 'none',
+                        }}
+                    />
+                )}
             </AnimatePresence>
+
+            {/* Fallback gradient while image loads */}
+            {!loadedImages[currentImage] && (
+                <div className="absolute inset-0 z-0 bg-gradient-to-br from-gray-900 via-black to-gray-900" />
+            )}
 
             {/* Click blocker — prevents any click on the hero area from navigating to a new page */}
             <div className="absolute inset-0 z-10 cursor-default" onClick={(e) => e.preventDefault()} />
@@ -95,8 +120,6 @@ export function Hero() {
                     />
                 </motion.div>
             </div>
-
-
 
             {/* WhatsApp Floating Pop-up Button (Only appears when Hero is rendered) */}
             {mounted && createPortal(
