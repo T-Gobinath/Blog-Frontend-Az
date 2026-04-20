@@ -1,0 +1,1 @@
+import{l as e}from"./index-CEHsDN9R.js";var t=e({default:()=>n}),n=`/Blog-Frontend-Az/assets/Solar%20Projects%20_%20Renewable%20Energy-iLVQ6QXP.webp`;export{t as n,n as t};

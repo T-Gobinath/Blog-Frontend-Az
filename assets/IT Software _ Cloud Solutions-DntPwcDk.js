@@ -1,0 +1,1 @@
+import{l as e}from"./index-CEHsDN9R.js";var t=e({default:()=>n}),n=`/Blog-Frontend-Az/assets/IT%20Software%20_%20Cloud%20Solutions-CyF_xQwO.webp`;export{t as n,n as t};

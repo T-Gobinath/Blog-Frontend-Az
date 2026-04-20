@@ -1,0 +1,1 @@
+import{l as e}from"./index-CEHsDN9R.js";var t=e({default:()=>n}),n=`/Blog-Frontend-Az/assets/Automation%20_%20Workflow%20Engineering-BMSDDNpc.webp`;export{t as n,n as t};
